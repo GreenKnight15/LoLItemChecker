@@ -118,7 +118,7 @@ var SampleApp = function() {
         	 res.sendfile("champController.js");
         	};
         	
-        	
+        	/*
         	self.routes['/allchamps']=function(req,res){
                 //use api with data from /champ
             request("https://global.api.pvp.net/api/lol/static-data/na/v1.2/champion?champData="+ req.body.msg +"&api_key="+key,
@@ -168,11 +168,12 @@ var SampleApp = function() {
                     }
                 });
             };
+            */
     };
     
     var key = "c809083c-8b8a-47e0-a14f-b32be1024db0";
-/*
-    self.post('/allchamps',function(req,res){
+
+    self.app.post('/allchamps',function(req,res){
         //use api with data from /champ
     request("https://global.api.pvp.net/api/lol/static-data/na/v1.2/champion?champData="+ req.body.msg +"&api_key="+key,
             function(error,response,body){
@@ -188,7 +189,7 @@ var SampleApp = function() {
 
 
     //get post data from /champ
-    self.post('/stats',function(req,res){
+    self.app.post('/stats',function(req,res){
         //use api with data from /champ
         var champId= req.body.msg.pop();
         console.log(champId);
@@ -208,7 +209,7 @@ var SampleApp = function() {
     });
 
     //get post data from /allitems
-    self.post('/allitems',function(req,res){
+    self.app.post('/allitems',function(req,res){
         //use api with data from /champ
         console.log();
         
@@ -222,7 +223,7 @@ var SampleApp = function() {
             }
         });
     });
-*/
+
 
     /**
      *  Initialize the server (express) and create the routes and register
