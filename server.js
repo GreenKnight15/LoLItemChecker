@@ -132,6 +132,42 @@ var SampleApp = function() {
                     }
                 });
             };
+            
+          //get post data from /champ
+            self.routes['/stats']=function(req,res){
+                //use api with data from /champ
+                var champId= req.body.msg.pop();
+                console.log(champId);
+                //var champId = req.body.msg.substr(req.body.msg.lastIndexOf('/') + 1);
+                
+                request("https://global.api.pvp.net/api/lol/static-data/na/v1.2/champion/"+champId+"?champData=all&api_key="+key,
+                    function(error,response, body){
+                
+                    
+                    console.log("making request for single champ");
+                    if (!error ){
+                        res.send(body);
+                    } else {
+                        console.log(error);
+                    }
+                });
+            };
+            
+          //get post data from /allitems
+            self.routes['/allitems']=function(req,res){
+                //use api with data from /champ
+                console.log();
+                
+                request("https://global.api.pvp.net/api/lol/static-data/na/v1.2/item?itemListData=all&api_key="+key,
+                    function(error,response, body){
+                        console.log("making request for all items");
+                    if (!error ){
+                        res.send(body);
+                    } else {
+                        console.log(error);
+                    }
+                });
+            };
     };
     
     var key = "c809083c-8b8a-47e0-a14f-b32be1024db0";
@@ -149,7 +185,7 @@ var SampleApp = function() {
             }
         });
     });
-*/
+
 
     //get post data from /champ
     self.post('/stats',function(req,res){
@@ -186,7 +222,7 @@ var SampleApp = function() {
             }
         });
     });
-
+*/
 
     /**
      *  Initialize the server (express) and create the routes and register
