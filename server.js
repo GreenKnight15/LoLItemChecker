@@ -89,6 +89,59 @@ var SampleApp = function() {
     /*  App server functions (main app logic here).                       */
     /*  ================================================================  */
 
+    var key = "c809083c-8b8a-47e0-a14f-b32be1024db0";
+
+    self.post('/allchamps',function(req,res){
+        //use api with data from /champ
+    request("https://global.api.pvp.net/api/lol/static-data/na/v1.2/champion?champData="+ req.body.msg +"&api_key="+key,
+            function(error,response,body){
+            console.log("making request for all champs");
+            if (!error ){
+                console.log('getting all champs');
+                res.send(body);
+            } else {
+                console.log(error);
+            }
+        });
+    });
+
+
+    //get post data from /champ
+    self.post('/stats',function(req,res){
+        //use api with data from /champ
+        var champId= req.body.msg.pop();
+        console.log(champId);
+        //var champId = req.body.msg.substr(req.body.msg.lastIndexOf('/') + 1);
+        
+        request("https://global.api.pvp.net/api/lol/static-data/na/v1.2/champion/"+champId+"?champData=all&api_key="+key,
+            function(error,response, body){
+        
+            
+            console.log("making request for single champ");
+            if (!error ){
+                res.send(body);
+            } else {
+                console.log(error);
+            }
+        });
+    });
+
+    //get post data from /allitems
+    self.post('/allitems',function(req,res){
+        //use api with data from /champ
+        console.log();
+        
+        request("https://global.api.pvp.net/api/lol/static-data/na/v1.2/item?itemListData=all&api_key="+key,
+            function(error,response, body){
+                console.log("making request for all items");
+            if (!error ){
+                res.send(body);
+            } else {
+                console.log(error);
+            }
+        });
+    });
+    
     /**
      *  Create the routing table entries + handlers for the application.
      */
@@ -182,58 +235,7 @@ var SampleApp = function() {
         self.createRoutes();
         self.app = express.createServer();
         
-        var key = "c809083c-8b8a-47e0-a14f-b32be1024db0";
-
-        self.app.post('/allchamps',function(req,res){
-            //use api with data from /champ
-        request("https://global.api.pvp.net/api/lol/static-data/na/v1.2/champion?champData="+ req.body.msg +"&api_key="+key,
-                function(error,response,body){
-                console.log("making request for all champs");
-                if (!error ){
-                    console.log('getting all champs');
-                    res.send(body);
-                } else {
-                    console.log(error);
-                }
-            });
-        });
-
-
-        //get post data from /champ
-        self.app.post('/stats',function(req,res){
-            //use api with data from /champ
-            var champId= req.body.msg.pop();
-            console.log(champId);
-            //var champId = req.body.msg.substr(req.body.msg.lastIndexOf('/') + 1);
-            
-            request("https://global.api.pvp.net/api/lol/static-data/na/v1.2/champion/"+champId+"?champData=all&api_key="+key,
-                function(error,response, body){
-            
-                
-                console.log("making request for single champ");
-                if (!error ){
-                    res.send(body);
-                } else {
-                    console.log(error);
-                }
-            });
-        });
-
-        //get post data from /allitems
-        self.app.post('/allitems',function(req,res){
-            //use api with data from /champ
-            console.log();
-            
-            request("https://global.api.pvp.net/api/lol/static-data/na/v1.2/item?itemListData=all&api_key="+key,
-                function(error,response, body){
-                    console.log("making request for all items");
-                if (!error ){
-                    res.send(body);
-                } else {
-                    console.log(error);
-                }
-            });
-        });
+        
 
         //  Add handlers for the app (from the routes).
         for (var r in self.routes) {
