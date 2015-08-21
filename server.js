@@ -131,7 +131,7 @@ var SampleApp = function() {
                         console.log(error);
                     }
                 });
-            });
+            };
     };
     
     var key = "c809083c-8b8a-47e0-a14f-b32be1024db0";
