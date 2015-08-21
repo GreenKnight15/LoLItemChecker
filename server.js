@@ -104,6 +104,19 @@ var SampleApp = function() {
             res.setHeader('Content-Type', 'text/html');
             res.send(self.cache_get('index.html') );
         };
+        
+        self.routes['/items']=function(req,res){
+        	  res.sendfile("items.html");
+        	console.log("get item partial");
+        	});
+        	
+        self.routes['/stats/*']=function(req,res){
+        	  res.sendfile("champ.html");
+        	});
+        	
+        self.routes['/champController.js']=function(req,res){
+        	 res.sendfile("champController.js");
+        	});
     };
 
 
