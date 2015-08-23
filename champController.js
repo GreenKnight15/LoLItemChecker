@@ -127,7 +127,7 @@ return tiles;
     $scope.showAdvanced1 = function(ev) {
     $mdDialog.show({
       controller: DialogController,
-      templateUrl: 'http://lolitemsetcreator-jamesritter15.rhcloud.com:8080/items',
+      templateUrl: '/items',
       parent: angular.element(document.body),
       targetEvent: ev,
       clickOutsideToClose:true
@@ -143,7 +143,7 @@ return tiles;
        $scope.showAdvanced2 = function(ev) {
     $mdDialog.show({
       controller: DialogController,
-      templateUrl: 'http://lolitemsetcreator-jamesritter15.rhcloud.com:8080/items',
+      templateUrl: '/items',
       parent: angular.element(document.body),
       targetEvent: ev,
       clickOutsideToClose:true
