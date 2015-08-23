@@ -125,7 +125,7 @@ return tiles;
     var currentItems = [];
 
     
-    $scope.showAdvanced = function(ev) {
+    $scope.showAdvanced1 = function(ev) {
     $mdDialog.show({
       controller: DialogController,
       templateUrl: '/items',
@@ -136,7 +136,7 @@ return tiles;
     .then(function(answer) {
         console.log(answer);
       $scope.status = answer;
-      $scope.itemName = answer.name
+      $scope.itemName1 = answer.name
       currentItems.push({
     	  name:$scope.itemName,
  
@@ -147,8 +147,30 @@ return tiles;
     });
         
     };
+    
+    $scope.showAdvanced2 = function(ev) {
+        $mdDialog.show({
+          controller: DialogController,
+          templateUrl: '/items',
+          parent: angular.element(document.body),
+          targetEvent: ev,
+          clickOutsideToClose:true
+        })
+        .then(function(answer) {
+            console.log(answer);
+          $scope.status = answer;
+          $scope.itemName2 = answer.name
+          currentItems.push({
+        	  name:$scope.itemName,
+     
+          });
+          console.log(currentItems);
+        }, function() {
+          $scope.status = 'You cancelled the dialog.';
+        });
+            
+        };
    
-
     
             function DialogController($scope, $mdDialog) {
   $scope.hide = function() {
