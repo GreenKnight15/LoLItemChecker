@@ -2,7 +2,8 @@ angular.module('myApp',['ngMaterial','ngMdIcons','ngAria','ngRoute', 'ngAnimate'
 
 .config(function($mdThemingProvider) {
 	  $mdThemingProvider.theme('default')
-	    .dark();
+	  .primaryPalette('light-blue')
+	   .accentPalette('orange');
 	})
 
 .controller('AppCtrl', function($scope, $http) {
