@@ -234,7 +234,7 @@ var SampleApp = function() {
     };
     
   
-
+    self.app = express;
 
     /**
      *  Initialize the server (express) and create the routes and register
@@ -242,7 +242,7 @@ var SampleApp = function() {
      */
     self.initializeServer = function() {
         self.createRoutes();
-        self.app = express;
+  
         self.app.createServer();
         
         self.app.post('/allchamps', self.routes['allchamps']);
