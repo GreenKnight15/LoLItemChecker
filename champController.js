@@ -86,7 +86,7 @@ return tiles;
         var tiles = [];  
       $http.post('/allitems', {msg:'all'})
             .success(function(response){
-          
+            	 
                 $.each(response.data,function(){
                     
                     

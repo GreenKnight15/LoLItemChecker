@@ -26,7 +26,7 @@ console.log("get item partial");
 });
 app.get('/stats/*',function(req,res){
   res.sendfile("champ.html");
-  res.setHeader("Content-Type", "text/html");
+ 
   
 });
 app.get('/champController.js',function(req,res){
