@@ -14,7 +14,7 @@
   </head>
     
 <body ng-app="myApp">
-<div layout="column" >
+<div layout="column" flex >
 <div ng-controller="statsController" >
   <md-content >
     <md-toolbar>
@@ -50,7 +50,7 @@
   
      <md-content flex layout="row">
 
-	<div style="border:5px solid black;" flex="55">
+	<div style="border:5px solid black;" flex="33">
     <md-button class="md-primary md-raised" ng-click="showAdvanced1($event)" layout-align="start start">
       Item 1
     </md-button>
@@ -81,7 +81,7 @@
     
      <md-content flex layout="row">
 
-	<div style="border:5px solid black;">
+	<div style="border:5px solid black;" flex="33">
     <md-button class="md-primary md-raised" ng-click="showAdvanced4($event)" layout-align="start start">
       Item 4
     </md-button>
@@ -90,7 +90,7 @@
     <img src="{{itemImage4}}" />
     </div>
     
-	<div style="border:5px solid black;">
+	<div style="border:5px solid black;" flex="33">
     <md-button class="md-primary md-raised" ng-click="showAdvanced5($event)" layout-align="start start">
       Item 5
     </md-button>
@@ -99,7 +99,7 @@
     <img src="{{itemImage5}}" />
     </div>
 
-	<div style="border:5px solid black;">
+	<div style="border:5px solid black;" flex="33">
     <md-button class="md-primary md-raised" ng-click="showAdvanced6($event)" layout-align="start start">
       Item 6
     </md-button>
