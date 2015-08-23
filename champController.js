@@ -138,7 +138,8 @@ return tiles;
     .then(function(answer) {
         console.log(answer);
       $scope.status = answer;
-      $scope.itemName1 = answer.name
+      $scope.itemName1 = answer.name;
+      $scope.itemImage1 = answer.img;
       currentItems.push({
     	  name:$scope.itemName,
  
