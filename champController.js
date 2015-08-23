@@ -1,7 +1,9 @@
 angular.module('myApp',['ngMaterial','ngMdIcons','ngAria','ngRoute', 'ngAnimate'])
 
-
-
+.config(function($mdThemingProvider) {
+	  $mdThemingProvider.theme('default')
+	    .dark();
+	})
 
 .controller('AppCtrl', function($scope, $http) {
     
