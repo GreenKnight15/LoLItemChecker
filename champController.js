@@ -169,7 +169,7 @@ return tiles;
     $mdDialog.hide(answer);
   };
 
-}
+};
             function DialogController2($scope, $mdDialog) {
             	  $scope.hide = function() {
             	    $mdDialog.hide();
@@ -180,7 +180,7 @@ return tiles;
             	  $scope.answer = function(answer) {
             	    $mdDialog.hide(answer);
             	  };
-
+            };
 
     
     
