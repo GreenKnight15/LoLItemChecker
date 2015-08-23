@@ -138,7 +138,7 @@ return tiles;
     .then(function(answer) {
         console.log(answer);
       $scope.status = answer;
-      $scope.itemName1 = answer.name;
+      $scope.itemName1 = "Name:"+answer.name;
       $scope.itemImage1 = answer.img;
       currentItems.push({
     	  name:$scope.itemName,
@@ -162,7 +162,7 @@ return tiles;
         .then(function(answer) {
             console.log(answer);
           $scope.status = answer;
-          $scope.itemName2 = answer.name
+          $scope.itemName2 = "Name:"+answer.name
           $scope.itemImage2 = answer.img;
           currentItems.push({
         	  name:$scope.itemName,
@@ -186,7 +186,7 @@ return tiles;
             .then(function(answer) {
                 console.log(answer);
               $scope.status = answer;
-              $scope.itemName3 = answer.name
+              $scope.itemName3 = "Name:"+answer.name
               $scope.itemImage3 = answer.img;
               currentItems.push({
             	  name:$scope.itemName,
@@ -210,7 +210,7 @@ return tiles;
                 .then(function(answer) {
                     console.log(answer);
                   $scope.status = answer;
-                  $scope.itemName4 = answer.name
+                  $scope.itemName4 = "Name:"+answer.name
                   $scope.itemImage4 = answer.img;
                   currentItems.push({
                 	  name:$scope.itemName,
@@ -233,7 +233,7 @@ return tiles;
                     .then(function(answer) {
                         console.log(answer);
                       $scope.status = answer;
-                      $scope.itemName5 = answer.name
+                      $scope.itemName5 = "Name:"+answer.name
                       $scope.itemImage5 = answer.img;
                       currentItems.push({
                     	  name:$scope.itemName,
@@ -256,7 +256,7 @@ return tiles;
                         .then(function(answer) {
                             console.log(answer);
                           $scope.status = answer;
-                          $scope.itemName6 = answer.name
+                          $scope.itemName6 = "Name:"+answer.name
                           $scope.itemImage6 = answer.img;
                           currentItems.push({
                         	  name:$scope.itemName,
