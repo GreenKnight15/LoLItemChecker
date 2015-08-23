@@ -46,11 +46,11 @@
   </div>
  
   
-  <div layout="column">
+  <div layout="column" ng-controller="statsController">
   
      <md-content flex layout="row">
 
-	<div style="border:5px solid black;">
+	<div style="border:5px solid black;" flex="33">
     <md-button class="md-primary md-raised" ng-click="showAdvanced1($event)" layout-align="start start">
       Item 1
     </md-button>
@@ -58,7 +58,7 @@
     <p layout-align="center end">DMG:{{itemName1}}</p>
     </div>
     
-	<div style="border:5px solid black;">
+	<div style="border:5px solid black;" flex="33">
     <md-button class="md-primary md-raised" ng-click="showAdvanced2($event)" layout-align="start start">
       Item 2
     </md-button>
@@ -66,7 +66,7 @@
     <p layout-align="center end">DMG:{{itemName2}}</p>
     </div>
 
-	<div style="border:5px solid black;">
+	<div style="border:5px solid black;" flex="33">
     <md-button class="md-primary md-raised" ng-click="showAdvanced3($event)" layout-align="start start">
       Item 3
     </md-button>
