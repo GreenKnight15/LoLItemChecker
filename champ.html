@@ -14,7 +14,7 @@
   </head>
     
 <body ng-app="myApp">
-<div layout="row" >
+<div layout="column" >
 <div ng-controller="statsController" style="height:500px" >
   <md-content >
     <md-toolbar>
@@ -47,6 +47,7 @@
  
   
   <div layout="column">
+  
      <md-content flex layout="row">
 
 	<div style="border:5px solid black;">
@@ -71,30 +72,38 @@
     </md-button>
     <p layout-align="center end">Name:{{itemName3}}</p>
     <p layout-align="center end">DMG:{{itemName3}}</p>
-    </div>
-    
-    
-    
-        
+    </div> 
     </md-content>  
-    <md-content flex layout="row">
+    
+    
+     <md-content flex layout="row">
 
-    <md-button class="md-primary md-raised" ng-click="showAdvanced4($event)"  >
+	<div style="border:5px solid black;">
+    <md-button class="md-primary md-raised" ng-click="showAdvanced4($event)" layout-align="start start">
       Item 4
     </md-button>
-    <p>{{itemName4}}</p>
+    <p layout-align="center end">Name:{{itemName4}}</p>
+    <p layout-align="center end">DMG:{{itemName4}}</p>
+    </div>
     
-    <md-button class="md-primary md-raised" ng-click="showAdvanced5($event)"  >
+	<div style="border:5px solid black;">
+    <md-button class="md-primary md-raised" ng-click="showAdvanced5($event)" layout-align="start start">
       Item 5
     </md-button>
-    <p>{{itemName5}}</p>
-    
-    <md-button class="md-primary md-raised" ng-click="showAdvanced6($event)" >
+    <p layout-align="center end">Name:{{itemName5}}</p>
+    <p layout-align="center end">DMG:{{itemName5}}</p>
+    </div>
+
+	<div style="border:5px solid black;">
+    <md-button class="md-primary md-raised" ng-click="showAdvanced6($event)" layout-align="start start">
       Item 6
     </md-button>
-    <p>{{itemName6}}</p>
-        
-    </md-content>
+    <p layout-align="center end">Name:{{itemName6}}</p>
+    <p layout-align="center end">DMG:{{itemName6}}</p>
+    </div> 
+    </md-content> 
+    
+    
 </div>
   </div>
   <p>{{itemArray}}</p>
