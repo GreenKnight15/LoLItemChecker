@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 app.use(express.static(process.env.OPENSHIFT_NODEJS_REPO_DIR+ '/public'));
 
 app.get('/',function(req,res){
-  res.sendfile("Index.html");
+  res.sendfile("index.html");
     
   
 });
