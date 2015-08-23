@@ -137,7 +137,7 @@ return tiles;
         console.log(answer);
       $scope.status = answer;
       currentItems.push({
-    	  name:$scope.status.name;
+    	  name:$scope.status.name,
  
       });
       console.log(currentItems);
