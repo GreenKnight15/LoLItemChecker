@@ -145,7 +145,7 @@ var SampleApp = function() {
     /**
      *  Create the routing table entries + handlers for the application.
      *
-	*/
+	 */
     
 	self.app.post('/allchamps', self.routes['allchamps']);
 
@@ -189,7 +189,7 @@ var SampleApp = function() {
                     }
                 });
             };
-            
+            /*
           //get post data from /champ
             self.routes['/stats']=function(req,res){
                 //use api with data from /champ
@@ -226,6 +226,7 @@ var SampleApp = function() {
                 });
             };
             */
+            
     };
     
   
