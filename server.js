@@ -90,7 +90,7 @@ var SampleApp = function() {
     /*  ================================================================  */
 
     var key = "c809083c-8b8a-47e0-a14f-b32be1024db0";
-
+/*
     self.post('/allchamps',function(req,res){
         //use api with data from /champ
     request("https://global.api.pvp.net/api/lol/static-data/na/v1.2/champion?champData="+ req.body.msg +"&api_key="+key,
@@ -141,6 +141,7 @@ var SampleApp = function() {
             }
         });
     });
+    */
     
     /**
      *  Create the routing table entries + handlers for the application.
