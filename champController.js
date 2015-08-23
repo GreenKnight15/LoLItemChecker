@@ -126,23 +126,7 @@ return tiles;
     
     $scope.showAdvanced1 = function(ev) {
     $mdDialog.show({
-      controller: DialogController,
-      templateUrl: '/items',
-      parent: angular.element(document.body),
-      targetEvent: ev,
-      clickOutsideToClose:true
-    })
-    .then(function(answer) {
-        console.log(answer);
-      $scope.status = 'You said the information was "' + answer + '".';
-    }, function() {
-      $scope.status = 'You cancelled the dialog.';
-    });
-        
-    };
-       $scope.showAdvanced2 = function(ev) {
-    $mdDialog.show({
-      controller: DialogController,
+      controller: DialogController1,
       templateUrl: '/items',
       parent: angular.element(document.body),
       targetEvent: ev,
@@ -157,7 +141,24 @@ return tiles;
         
     };
     
-            function DialogController($scope, $mdDialog) {
+       $scope.showAdvanced2 = function(ev) {
+    $mdDialog.show({
+      controller: DialogController2,
+      templateUrl: '/items',
+      parent: angular.element(document.body),
+      targetEvent: ev,
+      clickOutsideToClose:true
+    })
+    .then(function(answer) {
+        console.log(answer);
+      $scope.status = 'You said the information was "' + answer + '".';
+    }, function() {
+      $scope.status = 'You cancelled the dialog.';
+    });
+        
+    };
+    
+            function DialogController1($scope, $mdDialog) {
   $scope.hide = function() {
     $mdDialog.hide();
   };
@@ -169,6 +170,18 @@ return tiles;
   };
 
 }
+            function DialogController2($scope, $mdDialog) {
+            	  $scope.hide = function() {
+            	    $mdDialog.hide();
+            	  };
+            	  $scope.cancel = function() {
+            	    $mdDialog.cancel();
+            	  };
+            	  $scope.answer = function(answer) {
+            	    $mdDialog.hide(answer);
+            	  };
+
+
     
     
 })
