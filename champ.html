@@ -14,7 +14,7 @@
   </head>
     
 <body ng-app="myApp">
-<div >
+<div layout="row" >
 <div ng-controller="statsController" style="height:500px" >
   <md-content >
     <md-toolbar>
@@ -43,6 +43,8 @@
   </md-content>
   </div>
   </div>
+  </div>
+  
   
   <div layout="column" ng-controller="itemsController">
      <md-content flex layout="row">
@@ -84,7 +86,7 @@
 </div>
 <p>{{itemArray}}</p>
   </div>
-  </div>
+
 
 
 </body>

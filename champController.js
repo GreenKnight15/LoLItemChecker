@@ -127,7 +127,7 @@ return tiles;
 })
       
 
-.controller('itemscontroller', function(){
+.controller('itemscontroller', function($scope, $http, $mdDialog){
 
 	 
     var currentItems = [];
