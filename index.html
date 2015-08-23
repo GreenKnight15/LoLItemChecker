@@ -34,7 +34,8 @@
                     style="background-image: url({{tile.img}});  background-size: 89.25px 89.25px;" 
                     md-colspan-gt-sm="{{tile.colspan}}" 
                     md-rowspan-gt-sm="{{tile.rowspan}}" 
-                    > <md-button href="{{tile.link}}" id="{{tile.id}}"ng-click="openChamp()"  aria-label="{{tile.aria}}"> </md-button>
+                    href="{{tile.link}}" id="{{tile.id}}" ng-click="openChamp()"
+                    > <!--  <md-button href="{{tile.link}}" id="{{tile.id}}" ng-click="openChamp()"  aria-label="{{tile.aria}}"> </md-button>-->
            <md-grid-tile-footer>
         <h3>{{tile.champName}}</h3>
       </md-grid-tile-footer>
