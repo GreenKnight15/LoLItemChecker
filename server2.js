@@ -26,11 +26,12 @@ console.log("get item partial");
 });
 app.get('/stats/*',function(req,res){
   res.sendfile("champ.html");
-  
+  res.setHeader("Content-Type", "text/html");
   
 });
 app.get('/champController.js',function(req,res){
   res.sendfile("champController.js");
+  res.setHeader("Content-Type", "text/javascript");
 });
 
 var key = "c809083c-8b8a-47e0-a14f-b32be1024db0";
