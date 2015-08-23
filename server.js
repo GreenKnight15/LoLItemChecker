@@ -245,12 +245,12 @@ var SampleApp = function() {
         self.app = express;
         self.app.createServer();
         
-        
+        self.app.post('/allchamps', self.routes['allchamps']);
 
         //  Add handlers for the app (from the routes).
         for (var r in self.routes) {
             self.app.get(r, self.routes[r]);
-            self.app.post('/allchamps', self.routes['allchamps']);
+        
         }
     };
 
