@@ -127,7 +127,7 @@ return tiles;
 })
       
 
-.controller('itemcontroller', function(){
+.controller('itemscontroller', function(){
 
 	 
     var currentItems = [];
