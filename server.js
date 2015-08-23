@@ -89,8 +89,10 @@ var SampleApp = function() {
     /*  App server functions (main app logic here).                       */
     /*  ================================================================  */
 
-    var key = "c809083c-8b8a-47e0-a14f-b32be1024db0";
+   
 /*
+ * 
+ * var key = "c809083c-8b8a-47e0-a14f-b32be1024db0";
     self.post('/allchamps',function(req,res){
         //use api with data from /champ
     request("https://global.api.pvp.net/api/lol/static-data/na/v1.2/champion?champData="+ req.body.msg +"&api_key="+key,
@@ -176,6 +178,7 @@ var SampleApp = function() {
         	 res.sendfile("champController.js");
         	};
         	
+        	var key = "c809083c-8b8a-47e0-a14f-b32be1024db0";
         	
         	self.routes['/allchamps']=function(req,res){
                 //use api with data from /champ
