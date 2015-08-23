@@ -144,7 +144,11 @@ var SampleApp = function() {
     
     /**
      *  Create the routing table entries + handlers for the application.
-     */
+     *
+	*/
+    
+	self.app.post('/allchamps', self.routes['allchamps']);
+
     self.createRoutes = function() {
         self.routes = { };
 
@@ -171,7 +175,7 @@ var SampleApp = function() {
         	 res.sendfile("champController.js");
         	};
         	
-        	/*
+        	
         	self.routes['/allchamps']=function(req,res){
                 //use api with data from /champ
             request("https://global.api.pvp.net/api/lol/static-data/na/v1.2/champion?champData="+ req.body.msg +"&api_key="+key,
