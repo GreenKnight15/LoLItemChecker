@@ -14,7 +14,7 @@
   </head>
     
 <body ng-app="myApp">
-<div layout="row">
+<div >
 <div ng-controller="statsController" style="height:500px" >
   <md-content >
     <md-toolbar>
@@ -24,8 +24,8 @@
       </div>
         </md-toolbar>
       </md-content>
-    
-    <div layout="row" >
+    <div layout="row">
+    <div layout="column" >
       <md-content>
        <md-input-container layout="row">
            <label>Pick Champion Level</label>
@@ -62,9 +62,7 @@
     </md-button>
     <p>{{itemName3}}</p>
         
-    </md-content>
-    
-    
+    </md-content>  
     <md-content flex layout="row">
 
     <md-button class="md-primary md-raised" ng-click="showAdvanced4($event)" flex flex-md="100">
@@ -86,7 +84,7 @@
 </div>
 <p>{{itemArray}}</p>
   </div>
-  
+  </div>
 
 
 </body>
