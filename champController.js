@@ -148,7 +148,7 @@ return tiles;
     	  $scope.itemStats1[0]={
     		  
     		  stat:this,
-    	  });
+    	  };
     	  console.log(this);
       },
       
