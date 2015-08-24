@@ -148,6 +148,7 @@ return tiles;
     	  itemStats1.push({
     		  stat:this
     	  });
+    	  console.log(this);
       }),
       
       currentItems.push({
