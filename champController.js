@@ -126,8 +126,8 @@ return tiles;
    
 
 	 
-    var currentItems = [5];
-    $scope.itemStats1 =[5];
+    var currentItems = [0,1,2,3,4,5];
+    $scope.itemStats1 =[0,1,2,3,4,5];
    $scope.itemArray = currentItems;
     
     $scope.showAdvanced1 = function(ev) {
