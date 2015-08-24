@@ -147,7 +147,7 @@ return tiles;
       $.each(answer.stats,function(){
     	  $scope.itemStats1.push({
     		  
-    		  stat:JSON.parse(this);
+    		  stat:JSON.parse(this),
     	  });
     	  console.log(this);
       }),
