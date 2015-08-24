@@ -126,8 +126,8 @@ return tiles;
    
 
 	 
-    var currentItems = [];
-    $scope.itemStats1 =[];
+    var currentItems = [5];
+    $scope.itemStats1 =[5];
    $scope.itemArray = currentItems;
     
     $scope.showAdvanced1 = function(ev) {
@@ -145,23 +145,23 @@ return tiles;
       $scope.itemImage1 = answer.img;
       
       $.each(answer.stats,function(){
-    	  $scope.itemStats1[0]={
+    	  $scope.itemStats1.splice(0,{
     		  
-    		  stat:this,
-    	  };
+    		  stat:this
+    	  });
     	  console.log(this);
-      },
+      }),
       
-      currentItems.push({
+      currentItems.splce(0,{
     	  name:$scope.itemName,
  
       });
-      console.log(currentItems);
     }, function() {
       $scope.status = 'You cancelled the dialog.';
     });
         
     };
+    console.log(currentItems);
     
     $scope.showAdvanced2 = function(ev) {
         $mdDialog.show({
