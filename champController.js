@@ -92,16 +92,15 @@ return tiles;
             	 
                 $.each(response.data,function(){
                     
-                    
-                    
                     tiles.push({
                     id:this.id,
                     name:this.name,
                     link:"/stats/"+this.id,
                     aria:this.name,
                     img:"http://ddragon.leagueoflegends.com/cdn/5.15.1/img/item/"+this.image.full,
-                    descLong:this.sanitizedTooltip,
+                    descLong:this.sanitizedDescription,
                     cost:this.gold.total,
+                    stats:this.stats,
 
                     });
                     tiles.sort(compare);
@@ -128,6 +127,7 @@ return tiles;
 
 	 
     var currentItems = [];
+    var itemStats1 =[];
    $scope.itemArray = currentItems;
     
     $scope.showAdvanced1 = function(ev) {
@@ -143,6 +143,13 @@ return tiles;
       $scope.status = answer;
       $scope.itemName1 = "Name:"+answer.name;
       $scope.itemImage1 = answer.img;
+      $scope.stats = answer.stats,
+      $.each($scope.stats,function(){
+    	  itemStats1.push({
+    		  stat:this
+    	  });
+      }),
+      
       currentItems.push({
     	  name:$scope.itemName,
  
