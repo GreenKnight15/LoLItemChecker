@@ -143,13 +143,12 @@ return tiles;
       $scope.status = answer;
       $scope.itemName1 = "Name:"+answer.name;
       $scope.itemImage1 = answer.img;
-      $scope.stats = answer.stats,
       
       $.each(answer.stats,function(){
     	  $scope.itemStats1.push({
-    		  stat:this.stats
+    		  stat:this
     	  });
-    	  console.log(this.stats);
+    	  console.log(this);
       }),
       
       currentItems.push({
