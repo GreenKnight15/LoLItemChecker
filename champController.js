@@ -152,7 +152,7 @@ return tiles;
     	  console.log(this);
       }),
       
-      currentItems.splce(0,{
+      currentItems.splice(0,{
     	  name:$scope.itemName,
  
       });
