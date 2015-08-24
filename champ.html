@@ -46,16 +46,20 @@
   </div>
  
   
-  <div layout="column" ng-controller="statsController">
+  <div layout="column"  ng-controller="statsController">
   
      <md-content flex layout="row">
 
 	<div style="border:5px solid black;" flex="33">
-    <md-button class="md-primary md-raised" ng-click="showAdvanced1($event)" layout-align="start start">
-      Item 1
+    <md-button  class="md-primary md-raised" ng-click="showAdvanced1($event)" layout-align="start start">
+    Item 1
     </md-button>
-    <p layout-align="center end">{{itemName1}}</p>
-    <img src="{{itemImage1}}" layout-align="center end" />
+    	<p layout-align="center end">{{itemName1}}</p>
+    	<p layout-align="center end">{{dmg}}</p>
+    	<p layout-align="center end">{{ap}}</p>
+   		 <div style="" layout-align="end center"  layout="column" >
+    		<img src="{{itemImage1}}" layout-align="center end" />
+   		 </div>
     </div>
     
 	<div style="border:5px solid black;" flex="33">
@@ -67,7 +71,7 @@
     </div>
 
 	<div style="border:5px solid black;" flex="33">
-    <md-button class="md-primary md-raised" ng-click="showAdvanced3($event)" layout-align="start start">
+    <md-button class="md-primary md-raised" ng-click="showAdvanced3($event)" >
       Item 3
     </md-button>
     <p layout-align="center end">{{itemName3}}</p>
@@ -94,7 +98,7 @@
     <img src="{{itemImage5}}" />
     </div>
 
-	<div style="border:5px solid black;" flex="33">
+	<div style="border:5px solid black;"" flex="33">
     <md-button class="md-primary md-raised" ng-click="showAdvanced6($event)" layout-align="start start">
       Item 6
     </md-button>
@@ -112,6 +116,6 @@
  
 
 
-
+<p ng-controller="footerController">{{disclosure}}</p>
 </body>
 </html>
