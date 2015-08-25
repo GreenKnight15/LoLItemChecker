@@ -293,7 +293,7 @@ return tiles;
     			  }
     			  console.log("2-4");    	  
     		}
-    	  
+    	  }
     	  //3 item attributes
     	  if(Object.keys(answer.stats).length === 3){ 
     		  if($scope.itemStats1.length === 0 ){ 
