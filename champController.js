@@ -197,7 +197,6 @@ return tiles;
       clickOutsideToClose:true
     })
     .then(function(answer) {
-        console.log(answer.stats);
       $scope.status = answer;
       $scope.itemName1 = "Name:"+answer.name;
       $scope.itemImage1 = answer.img;
@@ -429,7 +428,7 @@ return tiles;
             	  name:$scope.itemName,
          
               });
-              console.log(currentItems);
+              
             }, function() {
               $scope.status = 'You cancelled the dialog.';
             });
@@ -476,7 +475,7 @@ return tiles;
                     	  name:$scope.itemName,
                  
                       });
-                      console.log(currentItems);
+                      
                     }, function() {
                       $scope.status = 'You cancelled the dialog.';
                     });
@@ -505,8 +504,10 @@ return tiles;
                         });
                             
                         };
-    
-            function DialogController($scope, $mdDialog) {
+
+                        
+                        
+  function DialogController($scope, $mdDialog) {
   $scope.hide = function() {
     $mdDialog.hide();
   };
