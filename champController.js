@@ -125,10 +125,11 @@ return tiles;
 	  var addedDmg = [0,0,0,0,0,0,0];
 	  var dmg = 0;
 	  $scope.totalDmgAdded = dmg;
+	  console.log("item set 1"+$scope.itemStats1)
 	 
 	  for(i=0; i<= $scope.itemStats1.length; i++){
-		  if($scope.itemStats1[i].statName === "Damage"){
-		  dmg += $scope.itemStats1[i].statValue;
+		  if($scope.itemStats1[i] === "Damage"){
+		  dmg += $scope.itemStats1[i];
 		  console.log("Item stats 1"+dmg );
 		  }
 	  }
