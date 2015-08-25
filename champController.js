@@ -366,10 +366,11 @@ return tiles;
     	  if(names.key === "Damage"){
     			 $scope.addDmg = 0;
     			 $scope.addDmg = $scope.addDmg + names.value;
-    			 console.log("Effect= "+ effect);
     			 $scope.addedDmg.splice(0,1,{
     				 effect
     			 });
+    			 console.log("Effect added to damage + "+ effect);
+    			 console.log("$scope.adDmg="+$scope.addDmg);
     		}
     	  
     	  
