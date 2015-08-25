@@ -207,7 +207,7 @@ return tiles;
     	  }
     	  
     	  if(Object.keys(answer.stats).length == 1){
-    		  $scope.itemStats1.splice(0,1{
+    		  $scope.itemStats1.splice(0,1,{
     			  "statName":key,
     			  "statValue":value,
     		  });
