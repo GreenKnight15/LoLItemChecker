@@ -143,16 +143,15 @@ return tiles;
       $scope.itemName1 = "Name:"+answer.name;
       $scope.itemImage1 = answer.img;
       
-      $.each(answer.stats,function(key,value){
-    
+      $.each(answer.stats,function(){
+   
     		  $scope.itemStats1.push({
     		  
-    			  statName1:this.key,
-    			  statValue:this.value,
+    			  statName1: Object.keys(this),
     			  
     		  
     		  });
-    		  console.log(this.key );
+    		  console.log(Object.keys(this) );
     		  console.log("value="+this.value );
     	  
     	  
