@@ -135,7 +135,7 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
     $scope.addedDmg = [];
 
     for (i = 0; i <= $scope.addedDmg; i++) {
-        $scope.totalDmg += $scope.addedDmg[i]
+        $scope.totalDmg += Number($scope.addedDmg[i])
     }
 
 
@@ -144,6 +144,7 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
         switch (key != "") {
             case key == "FlatPhysicalDamageMod":
                 key = "Damage"
+                value = value;
                 break;
             case key == "FlatArmorMod":
                 key = "Armor"
@@ -188,7 +189,7 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
                 key = "+Movment Speed"
                 break
             default:
-                key = key;
+                key = "";
                 break;
 
 
@@ -217,6 +218,16 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
                     counter = counter + 1;
                     var names = changeEffectName(key, value);
 
+                    if (names.key === "Damage") {
+                        var dmg = names.value;
+                        $scope.addedDmg.splice(0, 1, {
+                            dmg
+                        });
+                    }
+
+                    
+                    
+                    
                     if (Object.keys(answer.stats).length === 0) {
                         $scope.itemStats1 = [];
                     }
@@ -356,16 +367,6 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
                             console.log("3-4");
                         }
                     }
-
-
-
-                    if (names.key === "Damage") {
-                        var dmg = Number(names.value);
-                        $scope.addedDmg.splice(0, 1, {
-                            dmg
-                        });
-                    }
-
 
                 });
             })
