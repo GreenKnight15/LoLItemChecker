@@ -124,7 +124,7 @@ return tiles;
     $scope.addedDmg = [];
 
     for(i=0;i<=$scope.addedDmg;i++){
-    	$scope.totalDmg += $scope.addedDmg[i];
+    	$scope.totalDmg += $scope.addedDmg[i]
     }
 
 	  
@@ -198,6 +198,7 @@ return tiles;
       $scope.itemName1 = "Name:"+answer.name;
       $scope.itemImage1 = answer.img;
       var counter = 0;
+      
       $.each(answer.stats,function(key,value){
     	  counter = counter + 1;
     	  var names = changeEffectName(key,value);
@@ -359,16 +360,16 @@ return tiles;
     			 $scope.addedDmg.splice(0,1,{
     				 dmg
     			 });
-
     		}
     	  
     	  
       });
       
+    }
       
       
-      
-  
+    }
+}
 
                         
                         
