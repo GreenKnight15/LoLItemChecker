@@ -353,6 +353,7 @@ return tiles;
     	  
     	  $scope.addedDmg = [];
     	  $scope.totalDmgAdded = 0;
+    	  var effect = names.value;
     	 
     	  for(i=0;i<=$scope.addedDmg.length;i++){
     		  $scope.totalDmgAdded += addedDmg;
@@ -364,7 +365,7 @@ return tiles;
     			 $scope.addDmg = $scope.addDmg + names.value;
     			 
     			 $scope.addedDmg.push({
-    				 names.value,
+    				 effect,
     			 });
     		}
     			 
