@@ -143,12 +143,13 @@ return tiles;
       $scope.itemName1 = "Name:"+answer.name;
       $scope.itemImage1 = answer.img;
       
-      $.each(answer.stats,function(key, value){
-    	  $scope.itemStats1.push({
+      $.each(answer.stats,function(){
+    	  $.each(answer.stats,function(key,value){
+    		  $scope.itemStats1.push({
     		  
-    		  stat1:value.this.key,
+    			  stat1:key,
     		  
-    		  
+    		  })
     	  });
     	  console.log("Stats for Item1="+ this);
     	  console.log("Stats for Answer="+ answer.stats);
