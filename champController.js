@@ -144,10 +144,10 @@ return tiles;
       $scope.itemImage1 = answer.img;
       
       $.each(answer.stats,function(){
-    	  $.each(answer.stats,function(key,value){
+    	  $.each(this,function(key,value){
     		  $scope.itemStats1.push({
     		  
-    			  stat1:this,
+    			  stat1:key,
     		  
     		  })
     	  });
