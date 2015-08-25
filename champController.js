@@ -364,12 +364,8 @@ return tiles;
     	  
     	  
       });
-      
     })
-      
-      
-    }
-})
+    })
 
                         
                         
@@ -386,7 +382,6 @@ return tiles;
 
 };
     
-	
 })
 
 .controller('footerController', function($scope){
