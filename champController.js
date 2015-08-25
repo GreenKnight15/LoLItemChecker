@@ -159,7 +159,7 @@ return tiles;
     	  
      console.log($scope.itemStats1);
 
-    )}, function() {
+    }), function() {
       $scope.status = 'You cancelled the dialog.';
     });
         
