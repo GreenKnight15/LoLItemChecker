@@ -372,14 +372,7 @@ return tiles;
     	  }
     	  
       });
-    /*
-      $scope.itemStats1.push({
-    	  statName:Object.keys(answer.stats).value,
-    	  statValue:answer.stats.value
-      });
-      */
-    	  
-     console.log($scope.itemStats1);
+
 
     }, function() {
       $scope.status = 'You cancelled the dialog.';
