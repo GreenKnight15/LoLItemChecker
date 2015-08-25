@@ -124,9 +124,7 @@ return tiles;
 
 	  $scope.addedDmg = [];
 	  $scope.totalDmgAdded = 0;
-	  
-	  
-		  $scope.totalDmgAdded = $scope.totalDmgAdded + $scope.addedDmg[0] + $scope.addedDmg[1];
+	 
 	  
 	  
 	  console.log("All Damaged added Arry="+$scope.totalDmgAdded);
@@ -363,7 +361,7 @@ return tiles;
     			 $scope.addedDmg.splice(0,1,{
     				 value:addDmg,
     			 });
-    			 
+    			 $scope.totalDmgAdded = $scope.totalDmgAdded + $scope.addedDmg[0] ;
     			 console.log("addDmg="+ addDmg);
     			 console.log( addDmg);
     			 console.log($scope.addedDmg);
@@ -557,7 +555,7 @@ return tiles;
     	    			 $scope.addedDmg.splice(1,1,{
     	    				 value:addDmg,
     	    			 });
-    	    			 
+    	    			 $scope.totalDmgAdded = $scope.totalDmgAdded + $scope.addedDmg[1] ;
     	    			 console.log("addDmg="+ addDmg);
     	    			 console.log( addDmg);
     	    			 console.log($scope.addedDmg);
