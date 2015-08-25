@@ -351,6 +351,7 @@ return tiles;
     		  }
     	  }
     	  
+    	  $scope.test = 10;
     	  $scope.addedDmg = [];
     	  $scope.totalDmgAdded = 0;
     	  var effect = names.value;
