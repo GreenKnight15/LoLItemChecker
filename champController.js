@@ -69,10 +69,16 @@ return tiles;
              $scope.health = response.stats.hp;
              $scope.mana = response.stats.mp;
              
-             for(i=0;i<=$scope.itemStats1.length;i++){
-            	 if($scope.itemStats1[i].key === "Damage")
-            	 $scope.addDmg = $scope.addDmg + $scope.itemStats1[i].value
-             }
+             $.each($scope.itemStats1,function(key,value){
+            	 if(this.key === "Damage"){
+            	 $scope.addDmg = 0 
+            	 $scope.addDmg = $scope.addDmg + this.value
+            	 }
+            	 if(this.key === "Armour"){
+                	 $scope.addArmor = 0 
+                	 $scope.addArmour = $scope.addArmour + this.value
+                	 }
+             })
         
              
              $scope.levelChamp = function(){        
@@ -137,10 +143,10 @@ return tiles;
 	        key = "Damage"
 	        break;
 	    case key== "FlatArmorMod":
-	        key = "+Armor"
+	        key = "Armor"
 	        break;
 	    case key== "FlatMagicDamageMod":
-	        key = "+Ability Power"
+	        key = "Ability Power"
 	        break;
 	    case key== "FlatSpellBlockMod":
 	        key = "+Magic Resit"
