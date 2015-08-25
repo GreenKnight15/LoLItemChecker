@@ -68,6 +68,11 @@ return tiles;
              $scope.atkDmg = response.stats.attackdamage;
              $scope.health = response.stats.hp;
              $scope.mana = response.stats.mp;
+             
+             for(i=0;i<=itemStats1.length;i++){
+            	 if(i.key === "Damage")
+            	 $scope.addDmg = $scope.addDmg + i.value
+             }
         
              
              $scope.levelChamp = function(){        
