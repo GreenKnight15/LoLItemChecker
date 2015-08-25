@@ -507,11 +507,11 @@ return tiles;
      
 $.each($scope.itemStats1,function(key,value){
 	console.log(this);
-	 if(this.key === "FlatPhysicalDamageMod"){
+	 if(this.statName === "Damage"){
 	 $scope.addDmg = 0 
 	 $scope.addDmg = $scope.addDmg + this.value
 	 }
-	 if(this.key === "Armour"){
+	 if(this.statName === "Armour"){
    	 $scope.addArmor = 0 
    	 $scope.addArmour = $scope.addArmour + this.value
    	 }
