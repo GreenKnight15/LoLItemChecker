@@ -265,8 +265,8 @@ return tiles;
     			  $scope.itemStats1.push({
         			  "statName":key,
         			  "statValue":value,
-        			  console.log("2-3");
         		  });
+    			  console.log("2-3");
     		  }
     	  }
     	  
