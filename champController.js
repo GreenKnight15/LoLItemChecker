@@ -368,7 +368,6 @@ return tiles;
     				 addDmg
     			 });
     			 
-    			 console.log("Effect added to damage + "+ effect);
     			 console.log("addDmg="+ addDmg);
     			 console.log("addedDmg Array2="+$scope.addedDmg);
     		}
