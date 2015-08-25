@@ -126,9 +126,11 @@ return tiles;
 	  var dmg = 0;
 	  $scope.totalDmgAdded = dmg;
 	 
-	  for(i=0; i<= addedDmg.length; i++){
-		  dmg += Number(addedDmg[i]);
-		  console.log("in loop"+dmg );
+	  for(i=0; i<= itemStats1.length; i++){
+		  if(itemStats1[i].statName === "Damage"){
+		  dmg += itemStats1[i].statValue;
+		  console.log("Item stats 1"+dmg );
+		  }
 	  }
 	 
 	  console.log("All Damaged added Arry=" + $scope.totalDmgAdded);
