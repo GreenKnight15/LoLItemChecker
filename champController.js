@@ -201,7 +201,7 @@ return tiles;
     	 counter = counter + 1;
     		  
     	  
-    	  changeEffectName(key,value);
+    	  var names = changeEffectName(key,value);
     	  
     	  
     	  if(Object.keys(answer.stats).length === 0){
@@ -212,8 +212,8 @@ return tiles;
     	  if(Object.keys(answer.stats).length === 1){
     		  if($scope.itemStats1.length === 0 ){
     			  $scope.itemStats1.push({
-        			  "statName":key,
-        			  "statValue":value,
+        			  "statName":names.key,
+        			  "statValue":names.value,
         		  });
     			  console.log("0-1");
     		  }
