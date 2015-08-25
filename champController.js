@@ -229,7 +229,8 @@ return tiles;
         		  });
     		  }  
     		  if($scope.itemStats1.length === 3){
-    			  $scope.itemStats1.pop();
+    			  $scope.itemStats1 =[];
+        		  
     		  }
     	  }
     	  
