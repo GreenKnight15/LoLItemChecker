@@ -300,7 +300,7 @@ return tiles;
     			  console.log("2-3");
     		  }   
     		  else if($scope.itemStats1.length === 3){
-    			  $scope.itemStats1.splice(0,2{
+    			  $scope.itemStats1.splice(0,2,{
         			  "statName":key,
         			  "statValue":value,
         		  });
