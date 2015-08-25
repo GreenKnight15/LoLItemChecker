@@ -130,7 +130,7 @@ return tiles;
 	  for(i=0; i<= $scope.itemStats1.length; i++){
 		  if($scope.itemStats1[i] === "Damage"){
 		  dmg += $scope.itemStats1[i];
-		  console.log("Item stats 1"+dmg );
+		  console.log("Item stats 1=" $scope.itemStats1 );
 		  }
 	  }
 	 
