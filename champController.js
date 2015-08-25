@@ -218,8 +218,10 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
                     counter = counter + 1;
                     var names = changeEffectName(key, value);
 
+                    
                     if (names.key === "Damage") {
                         var dmg = names.value;
+                        console.log("dmg="+dmg);
                         $scope.addedDmg.splice(0, 1, {
                             dmg
                         });
