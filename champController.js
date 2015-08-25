@@ -147,18 +147,18 @@ return tiles;
       $.each(answer.stats,function(){
     	  $scope.itemStats1.push({
     		  
-    		  stat1:this[0].value,
-    		  stat2:this[1].value,
+    		  stat1:this[0],
+    		  stat2:this[1],
     		  
     	  });
-    	  console.log(this);
+    	  console.log("Stats for Item 1= "+this);
       }),
       
       currentItems[0]={
     	  name:$scope.itemName,
  
       };
-      console.log(currentItems);
+      console.log("current Items= "+currentItems);
     }, function() {
       $scope.status = 'You cancelled the dialog.';
     });
