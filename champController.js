@@ -53,8 +53,7 @@ return tiles;
          $http.post('/stats', {msg:url})
          
             .success(function(response){
-            console.log(response);
-            console.log(response);
+            
               
             $scope.levels = [
             { level: '1', value: '1' },
@@ -151,7 +150,8 @@ return tiles;
     		  stat2:this[1],
     		  
     	  });
-    	  console.log("Stats for Item 1= "+this);
+    	  console.log("Stats for Item1="+this);
+    	  console.log("Stats for Answer="+answer.stats);
       }),
       
       currentItems[0]={
