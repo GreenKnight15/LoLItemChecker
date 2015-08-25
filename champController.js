@@ -351,14 +351,14 @@ return tiles;
     		  }
     	  }
     	  
-    	  if(Object.keys(key).key === "FlatPhysicalDamageMod"){
+    	  if(names.key === "Damage"){
     			 $scope.addDmg = 0 
-    			 $scope.addDmg = $scope.addDmg + name.value;
+    			 $scope.addDmg = $scope.addDmg + names.value;
     			 }
     			 console.log($scope.addDmg);
-    	  if(Object.keys(key) === "Armour"){
+    	  if(names.key === "Armour"){
     		   	 $scope.addArmor = 0 
-    		   	 $scope.addArmour = $scope.addArmour + this.value
+    		   	 $scope.addArmour = $scope.addArmour + names.value;
     		   	 }
     	 
       	 
