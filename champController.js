@@ -511,6 +511,7 @@ $.each($scope.itemStats1,function(key,value){
 	 $scope.addDmg = 0 
 	 $scope.addDmg = $scope.addDmg + this.value
 	 }
+	 console.log($scope.addDmg);
 	 if(this.statName === "Armour"){
    	 $scope.addArmor = 0 
    	 $scope.addArmour = $scope.addArmour + this.value
