@@ -369,6 +369,7 @@ return tiles;
     			 });
     			 
     			 console.log("addDmg="+ addDmg);
+    			 console.log( addDmg);
     			 console.log("addedDmg Array2="+$scope.addedDmg);
     		}
     	  
