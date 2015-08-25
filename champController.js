@@ -144,7 +144,7 @@ return tiles;
       $scope.itemImage1 = answer.img;
       
       $.each(answer.stats,function(key,value){
-    	  console.log("key= "key);
+    	  console.log("key="+key);
     	 
     		  
     	  switch(key != "") {
