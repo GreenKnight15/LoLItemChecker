@@ -161,7 +161,8 @@ return tiles;
     	        break;
     	    
     	    default:
-    	        default code block
+    	        key="None" 
+    	        break;
     	}
     	  
     	  $scope.itemStats1.splice(1,0{
