@@ -125,6 +125,14 @@ return tiles;
     $scope.itemStats1 =[];
    $scope.itemArray = currentItems;
    
+
+	  $scope.addedDmg = [];
+	  $scope.totalDmgAdded = 0;
+	  for(i=0;i<=$scope.addedDmg.length;i++){
+		  $scope.totalDmgAdded += $scope.addedDmg;
+	  }
+	  console.log("All Damaged added Arry="$scope.totalDmgAdded);
+   
    function changeEffectName(key,value){
 	   switch(key != "") {
 	    case key=="FlatPhysicalDamageMod":
@@ -351,14 +359,8 @@ return tiles;
     		  }
     	  }
     	  
-    	  $scope.test = 10;
-    	  $scope.addedDmg = [];
-    	  $scope.totalDmgAdded = 0;
+    	  
     	  var effect = names.value;
-    	 
-    	  for(i=0;i<=$scope.addedDmg.length;i++){
-    		  $scope.totalDmgAdded += $scope.addedDmg;
-    	  }
     	  
     	  $scope.addedDmg = [];
     	  if(names.key === "Damage"){
