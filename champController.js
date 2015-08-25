@@ -152,8 +152,8 @@ return tiles;
     			  
     		  
     		  });
-    		  console.log("Key="+key );
-    		  console.log("value="+value );
+    		  console.log("Key="+this.key );
+    		  console.log("value="+this.value );
     	  })
     	  
     	  console.log("Stats for Answer="+ answer.stats);
