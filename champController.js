@@ -122,8 +122,8 @@ return tiles;
     $scope.itemStats2 =[];
 
 
-	  $scope.addedDmg = [];
-	  var dmg = 10;
+	  $scope.addedDmg = [0,0,0,0,0,0,0];
+	  var dmg = 0;
 	  $scope.totalDmgAdded = dmg;
 	 
 	  for(i=0; i<= $scope.addedDmg.length; i++){
