@@ -21,7 +21,7 @@ angular.module('myApp',['ngMaterial','ngMdIcons','ngAria','ngRoute', 'ngAnimate'
                     champName:this.name,
                     link:"/stats/"+this.id,
                     aria:this.name,
-                    img:"http://ddragon.leagueoflegends.com/cdn/5.15.1/img/champion/"+this.image.full,
+                    img:"http://ddragon.leagueoflegends.com/cdn/5.16.1/img/champion/"+this.image.full,
 
                     });
                     tiles.sort(compare);
@@ -63,7 +63,7 @@ return tiles;
                 
                 $scope.name = response.name;
              $scope.title = response.title;
-                $scope.imgLink = "http://ddragon.leagueoflegends.com/cdn/5.15.1/img/champion/"+response.image.full;
+                $scope.imgLink = "http://ddragon.leagueoflegends.com/cdn/5.16.1/img/champion/"+response.image.full;
              
                 $scope.range = response.stats.attackrange;
                 $scope.atkDmg = response.stats.attackdamage;
