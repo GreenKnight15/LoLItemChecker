@@ -146,7 +146,7 @@ return tiles;
       $.each(answer.stats,function(key,value){
     	  console.log(key);
     	  
-    	  switch(key) {
+    	  switch(key != "") {
     	    case key=="FlatPhysicalDamageMod":
     	        key = "Damage"
     	        break;
@@ -159,9 +159,7 @@ return tiles;
     	    case key== "FlatSpellBlockMod":
     	        key = "Magic Resit"
     	        break;
-    	    
-    	    default:
-    	        key="None" 
+    	   
     	        
     	}
     	  
