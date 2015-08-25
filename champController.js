@@ -356,7 +356,7 @@ return tiles;
     	  var effect = names.value;
     	 
     	  for(i=0;i<=$scope.addedDmg.length;i++){
-    		  $scope.totalDmgAdded += addedDmg;
+    		  $scope.totalDmgAdded += $scope.addedDmg;
     	  }
     	  
     	  $scope.addedDmg = [];
