@@ -154,10 +154,10 @@ return tiles;
     	  console.log(this);
       }),
       
-      currentItems.push({
+      currentItems[0]={
     	  name:$scope.itemName,
  
-      });
+      };
       console.log(currentItems);
     }, function() {
       $scope.status = 'You cancelled the dialog.';
