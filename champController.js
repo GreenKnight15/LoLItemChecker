@@ -145,7 +145,9 @@ return tiles;
       
       $.each(answer.stats,function(key,value){
     	  console.log(key);
-    	  
+    	  if(key = "FlatPhysicalDamageMod"){
+    		  key = "Damage"
+    	  }
     	  $scope.itemStats1.push({
         	  statName:key,
         	  statValue:value,
