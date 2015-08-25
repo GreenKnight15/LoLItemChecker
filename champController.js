@@ -150,6 +150,7 @@ return tiles;
         	  statName:key,
         	  statValue:value,
           });
+      });
     /*
       $scope.itemStats1.push({
     	  statName:Object.keys(answer.stats).value,
@@ -159,7 +160,7 @@ return tiles;
     	  
      console.log($scope.itemStats1);
 
-    }), function() {
+    }, function() {
       $scope.status = 'You cancelled the dialog.';
     });
         
