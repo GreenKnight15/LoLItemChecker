@@ -54,7 +54,7 @@
     <md-button  class="md-primary md-raised" ng-click="showAdvanced1($event)" layout-align="start start">
     Item 1
     </md-button>
-    	<p  layout-align="center end"  ng-repeat="stat in itemStats1">{{stat.statName}}</p>
+    	<p  layout-align="center end"  ng-repeat="stat in itemStats1">{{stat.statName}}{{stat.statValue}}</p>
     	
    		 <div style="" layout-align="end center"  layout="column" >
     		<img src="{{itemImage1}}" layout-align="center end" />
