@@ -119,12 +119,9 @@ return tiles;
   
     getStats();
    
-
-	 
-    var currentItems = [];
     $scope.itemStats1 =[];
-   $scope.itemArray = currentItems;
-   
+    $scope.itemStats2 =[];
+
 
 	  $scope.addedDmg = [];
 	  $scope.totalDmgAdded = 0;
@@ -375,6 +372,203 @@ return tiles;
     	  
     	  
       });
+      
+      
+      
+      $scope.showAdvanced2 = function(ev) {
+    	    $mdDialog.show({
+    	      controller: DialogController,
+    	      templateUrl: '/items',
+    	      parent: angular.element(document.body),
+    	      targetEvent: ev,
+    	      clickOutsideToClose:true
+    	    })
+    	    .then(function(answer) {
+    	      $scope.status = answer;
+    	      $scope.itemName2 = "Name:"+answer.name;
+    	      $scope.itemImage2 = answer.img;
+    	      var counter = 0;
+    	      $.each(answer.stats,function(key,value){
+    	    	  counter = counter + 1;
+    	    	  var names = changeEffectName(key,value);
+    	    	  
+    	    	  if(Object.keys(answer.stats).length === 0){
+    	    		  $scope.itemStats2 =[];
+    	    	  }
+    	    	//item with 1 attributes 
+    	    	  if(Object.keys(answer.stats).length === 1){
+    	    		  if($scope.itemStats2.length === 0 ){
+    	    			  $scope.itemStats2.push({
+    	        			  "statName":names.key,
+    	        			  "statValue":names.value,
+    	        		  });
+    	    			  console.log("0-1");
+    	    		  }
+    	    		  else if($scope.itemStats2.length === 1 ){
+    	    			  $scope.itemStats1.splice(0,1,{
+    	        			  "statName":names.key,
+    	        			  "statValue":names.value,
+    	        		  });
+    	    			  console.log("1-1");
+    	    		  }
+    	    		  else if($scope.itemStats2.length > 1){
+    	    			 $scope.itemStats2.splice(0,Number.MAX_VALUE,{
+    	       			  "statName":names.key,
+    	       			  "statValue":names.value,
+    	       		  });
+    	    			 console.log("2-1");
+    	    			 
+    	    		  }
+    	    	  }
+    	    	  
+    	    	  
+    	    	  //item with 2 attributes
+    	    	  if(Object.keys(answer.stats).length === 2){
+    	    		  if($scope.itemStats2.length === 0 ){
+    	    			  $scope.itemStats2.push({
+    	        			  "statName":names.key,
+    	        			  "statValue":names.value,
+    	        		  });
+    	    			  console.log("0-2");
+    	    		  }
+    	    		  else if($scope.itemStats2.length === 1){
+    	    			  if(counter === 1){
+    	    				  $scope.itemStats2.splice(0,1,{
+    	    					  "statName":names.key,
+    	    					  "statValue":names.value,
+    	    				  });
+    	    				  console.log("1-2-1");
+    	    			  }
+    	    			  if(counter === 2){
+    	    				  $scope.itemStats2.push({
+    	    					  "statName":names.key,
+    	    					  "statValue":names.value,
+    	    				  });
+    	    			  }
+    	    			  console.log("1-2-2");
+    	    		  }
+    	    		  else if($scope.itemStats2.length === 2){
+    	    			  if(counter === 1){
+    	    				  $scope.itemStats2.splice(0,1,{
+    	    					  "statName":names.key,
+    	    					  "statValue":names.value,
+    	    				  });
+    	    				  console.log("2-2-1");
+    	    			  }
+    	    			  if(counter === 2){
+    	    				  $scope.itemStats2.splice(1,1,{
+    	    					  "statName":names.key,
+    	    					  "statValue":names.value,
+    	    				  });
+    	    				  console.log("2-2-1");
+    	    			  }
+    	    		  }  
+    	    		  else if($scope.itemStats2.length === 3){
+    	    			  if(counter === 1){
+    	    				  $scope.itemStats2.splice(0,2,{
+    	    					  "statName":names.key,
+    	    					  "statValue":names.value,
+    	    				  });
+    	    			  }
+    	    			  console.log("2-3");
+    	    		  }
+    	    		  else if($scope.itemStats2.length === 4){
+    	    			  if(counter === 1){
+    	    				  $scope.itemStats1.splice(0,3,{
+    	    					  "statName":names.key,
+    	    					  "statValue":names.value,
+    	    				  });
+    	    			  }
+    	    			  console.log("2-4");    	  
+    	    		}
+    	    	  }
+    	    	  //3 item attributes
+    	    	  if(Object.keys(answer.stats).length === 3){ 
+    	    		  if($scope.itemStats2.length === 0 ){ 
+    	    			  $scope.itemStats2.push({
+    	        			  "statName":names.key,
+    	        			  "statValue":names.value,
+    	        		  });
+    	    			  console.log("0-3");
+    	    		  }
+    	    		  else if($scope.itemStats2.length === 1){
+    	    			  if(counter === 1){
+    	    			  $scope.itemStats2.splice(0,1,{
+    	        			  "statName":names.key,
+    	        			  "statValue":names.value,
+    	        		  });
+    	    			  console.log("1-3");
+    	    			  }
+    	    			  if(counter === 2){
+    	        			  $scope.itemStats2.push({
+    	            			  "statName":names.key,
+    	            			  "statValue":names.value,
+    	            		  });
+    	        			  console.log("1-3-2");
+    	        			 }
+    	    		  }
+    	    		  else if($scope.itemStats2.length === 2){
+    	    			  if(counter === 2){
+    	        			  $scope.itemStats2.splice(0,1,{
+    	            			  "statName":names.key,
+    	            			  "statValue":names.value,
+    	            		  });
+    	        			  console.log("2-3");
+    	        			 }
+    	    			  if(counter === 3){
+    	        			  $scope.itemStats2.push({
+    	            			  "statName":names.key,
+    	            			  "statValue":names.value,
+    	            		  });
+    	        			  console.log("1-3");
+    	        			 }
+    	    		  }   
+    	    		  else if($scope.itemStats2.length === 3){
+    	    			  if(counter === 3){
+    	        			  $scope.itemStats2.splice(0,2,{
+    	            			  "statName":names.key,
+    	            			  "statValue":names.value,
+    	            		  });
+    	        			  console.log("3-3");
+    	        			 }
+    	    		  } 
+    	    		  else if($scope.itemStats2.length === 4){
+    	    			  $scope.itemStats1 =[];
+    	    			  $scope.itemStats1.push({
+    	        			  "statName":names.key,
+    	        			  "statValue":names.value,
+    	        		  });
+    	    			  console.log("3-4");
+    	    		  }
+    	    	  }
+    	    	 
+    	    	  
+    	    	  
+    	    	  if(names.key === "Damage"){
+    	    			 var addDmg = 0;
+    	    			 addDmg  += Number(names.value);
+    	    			 $scope.addedDmg.splice(0,1,{
+    	    				 addDmg,
+    	    			 });
+    	    			 
+    	    			 console.log("addDmg="+ addDmg);
+    	    			 console.log( addDmg);
+    	    			 console.log($scope.addedDmg);
+    	    		}
+    	    	  
+    	    	  
+    	      });
+
+
+    	    }, function() {
+    	      $scope.status = 'You cancelled the dialog.';
+    	    });
+    	    
+    	 };
+    	    
+      
+      
+      
 
 
     }, function() {
@@ -386,122 +580,8 @@ return tiles;
     
     
     
-    $scope.showAdvanced2 = function(ev) {
-        $mdDialog.show({
-          controller: DialogController,
-          templateUrl: '/items',
-          parent: angular.element(document.body),
-          targetEvent: ev,
-          clickOutsideToClose:true
-        })
-        .then(function(answer) {
-            console.log(answer);
-          $scope.status = answer;
-          $scope.itemName2 = "Name:"+answer.name
-          $scope.itemImage2 = answer.img;
-          currentItems.push({
-        	  name:$scope.itemName,
-     
-          });
-          console.log(currentItems);
-        }, function() {
-          $scope.status = 'You cancelled the dialog.';
-        });
-            
-        };
-        
-        $scope.showAdvanced3 = function(ev) {
-            $mdDialog.show({
-              controller: DialogController,
-              templateUrl: '/items',
-              parent: angular.element(document.body),
-              targetEvent: ev,
-              clickOutsideToClose:true
-            })
-            .then(function(answer) {
-                console.log(answer);
-              $scope.status = answer;
-              $scope.itemName3 = "Name:"+answer.name
-              $scope.itemImage3 = answer.img;
-              currentItems.push({
-            	  name:$scope.itemName,
-         
-              });
-              
-            }, function() {
-              $scope.status = 'You cancelled the dialog.';
-            });
-                
-            };
-   
-            $scope.showAdvanced4 = function(ev) {
-                $mdDialog.show({
-                  controller: DialogController,
-                  templateUrl: '/items',
-                  parent: angular.element(document.body),
-                  targetEvent: ev,
-                  clickOutsideToClose:true
-                })
-                .then(function(answer) {
-                    console.log(answer);
-                  $scope.status = answer;
-                  $scope.itemName4 = "Name:"+answer.name
-                  $scope.itemImage4 = answer.img;
-                  currentItems.push({
-                	  name:$scope.itemName,
-             
-                  });
-                  console.log(currentItems);
-                }, function() {
-                  $scope.status = 'You cancelled the dialog.';
-                });
-                    
-                };
-                $scope.showAdvanced5 = function(ev) {
-                    $mdDialog.show({
-                      controller: DialogController,
-                      templateUrl: '/items',
-                      parent: angular.element(document.body),
-                      targetEvent: ev,
-                      clickOutsideToClose:true
-                    })
-                    .then(function(answer) {
-                        console.log(answer);
-                      $scope.status = answer;
-                      $scope.itemName5 = "Name:"+answer.name
-                      $scope.itemImage5 = answer.img;
-                      currentItems.push({
-                    	  name:$scope.itemName,
-                 
-                      });
-                      
-                    }, function() {
-                      $scope.status = 'You cancelled the dialog.';
-                    });
-                        
-                    };
-                    $scope.showAdvanced6 = function(ev) {
-                        $mdDialog.show({
-                          controller: DialogController,
-                          templateUrl: '/items',
-                          parent: angular.element(document.body),
-                          targetEvent: ev,
-                          clickOutsideToClose:true
-                        })
-                        .then(function(answer) {
-                          $scope.status = answer;
-                          $scope.itemName6 = "Name:"+answer.name
-                          $scope.itemImage6 = answer.img;
-                          currentItems.push({
-                        	  name:$scope.itemName,
-                     
-                          });
-                          console.log(currentItems);
-                        }, function() {
-                          $scope.status = 'You cancelled the dialog.';
-                        });
-                            
-                        };
+  
+  
 
                         
                         
