@@ -174,12 +174,16 @@ return tiles;
     	    case key== "FlatMPRegenMod":
     	        key = "Mana Regen"
     	        break;
+    	    case key== "FlatHPPoolMod":
+    	        key = "Health Regen"
+    	        break;
     	    default:
     	    	key="URM"
     	    	break;
     	        
     	}
     	  
+      if(key =! ""){
     	  if($scope.itemStats1.length == 0){
     		  $scope.itemStats1.push({
     			  "statName":key,
@@ -207,7 +211,9 @@ return tiles;
             		"statValue":value,
             	 });
         	  };
-        	  
+      	} else{
+      		key = "";
+      	} ; 
     	  
       });
     /*
