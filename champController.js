@@ -152,8 +152,9 @@ return tiles;
     			  
     		  
     		  })
+    		  console.log("Stats for Item1="+itemStats1 );
     	  });
-    	  console.log("Stats for Item1="+ this);
+    	  
     	  console.log("Stats for Answer="+ answer.stats);
       }),
       
