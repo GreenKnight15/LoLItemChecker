@@ -490,7 +490,6 @@ return tiles;
                           clickOutsideToClose:true
                         })
                         .then(function(answer) {
-                            console.log(answer);
                           $scope.status = answer;
                           $scope.itemName6 = "Name:"+answer.name
                           $scope.itemImage6 = answer.img;
