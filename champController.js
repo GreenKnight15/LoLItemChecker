@@ -130,10 +130,10 @@ return tiles;
 	  $scope.totalDmgAdded = 0;
 	  
 	  for(i=0;i<=$scope.addedDmg.length;i++){
-		  $scope.totalDmgAdded = ($scope.totalDmgAdded + $scope.addedDmg[i]);
+		  $scope.totalDmgAdded = ($scope.totalDmgAdded + $scope.addedDmg[i].value);
 	  }
 	  console.log("addedDmg Array2="+$scope.addedDmg);
-	  console.log("All Damaged added Arry="+$scope.totalDmgAdded);
+	  console.log("All Damaged added Arry="+$scope.totalDmgAddeds);
 	  
    
    function changeEffectName(key,value){
@@ -381,8 +381,11 @@ return tiles;
     }, function() {
       $scope.status = 'You cancelled the dialog.';
     });
-        
-    };
+    
+ };
+    
+    
+    
     
     $scope.showAdvanced2 = function(ev) {
         $mdDialog.show({
