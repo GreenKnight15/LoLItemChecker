@@ -186,9 +186,17 @@ return tiles;
     	        key = "Percent Attack Speed"
     	        value = (value*100)+"%";
     	        break;
+    	    case key== "PercentMovementSpeedMod":
+    	        key = "Percent Movment Speed"
+    	        value = (value*100)+"%";
+    	        break;
+    	    case key== "FlatMovementSpeedMod":
+    	        key = "+Movment Speed"
+    	        break
     	    default:
     	    	key = key;
     	    	break;
+    	    	
     	        
     	}
     	  if(Object.keys(answer.stats).length == 1){
@@ -199,6 +207,10 @@ return tiles;
     		  });
     	  }
     	  
+    	  if(Object.keys(answer.stats).length == 0){
+    		  $scope.itemStats1 =[];
+    		  
+    	  }
       
     	  if(Object.keys(answer.stats).length === 2){
     		  if($scope.itemStats1.length === 1){
