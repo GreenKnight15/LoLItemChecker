@@ -179,7 +179,7 @@ return tiles;
     	        key = "Health Regen"
     	        break;
     	    default:
-    	    	key="URM"
+    	    	key = key;
     	    	break;
     	        
     	}
