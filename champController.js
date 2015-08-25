@@ -127,7 +127,7 @@ return tiles;
 	  $scope.totalDmgAdded = dmg;
 	 
 	  for(i=0; i<= addedDmg.length; i++){
-		  dmg += parseInt(addedDmg[i]);
+		  dmg += Number(addedDmg[i]);
 		  console.log("in loop"+dmg );
 	  }
 	 
@@ -361,7 +361,7 @@ return tiles;
     	  
     	  if(names.key === "Damage"){
     			 var addDmg = 0;
-    			 addDmg  += parseInt(names.value);
+    			 addDmg  += Number(names.value);
     			 addedDmg.splice(0,1,{
     				 addDmg
     			 });
