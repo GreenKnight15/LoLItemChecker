@@ -121,20 +121,12 @@ return tiles;
     $scope.itemStats1 =[];
     $scope.itemStats2 =[];
 
+    $scope.addedDmg = [];
 
-	  var addedDmg = [0,0,0,0,0,0,0];
-	  var dmg = 0;
-	  $scope.totalDmgAdded = dmg;
-	  console.log("item set 1"+$scope.itemStats1)
-	 
-	  for(i=0; i<= $scope.itemStats1.length; i++){
-		  if($scope.itemStats1[i] === "Damage"){
-		  dmg += $scope.itemStats1[i];
-		  console.log("Item stats 1=" + $scope.itemStats1 );
-		  }
-	  }
-	 
-	  console.log("All Damaged added Arry=" + $scope.totalDmgAdded);
+    for(i=0;i<=$scope.addedDmg;i++){
+    	$scope.totalDmg += $scope.addedDmg[i];
+    }
+
 	  
    
    function changeEffectName(key,value){
@@ -363,16 +355,11 @@ return tiles;
     	  
     	  
     	  if(names.key === "Damage"){
-    			 var addDmg = 0;
-    			 addDmg  = Number(names.value);
-    			 console.log("before names.value="+addedDmg);
-    			 addedDmg.splice(0,1,{
-    				 addDmg
+    			var dmg = Number(names.value);
+    			 $scope.addedDmg.splice(0,1,{
+    				 dmg
     			 });
-    			 console.log("after names.value="+addedDmg);
-    			 console.log("addDmg="+ addDmg);
-    			 console.log( addDmg);
-    			 console.log(addedDmg);
+
     		}
     	  
     	  
@@ -381,219 +368,6 @@ return tiles;
       
       
       
-      
-      
-      
-      
-      
-      
-      
-      $scope.showAdvanced2 = function(ev) {
-    	    $mdDialog.show({
-    	      controller: DialogController,
-    	      templateUrl: '/items',
-    	      parent: angular.element(document.body),
-    	      targetEvent: ev,
-    	      clickOutsideToClose:true
-    	    })
-    	    .then(function(answer) {
-    	      $scope.status = answer;
-    	      $scope.itemName2 = "Name:"+answer.name;
-    	      $scope.itemImage2 = answer.img;
-    	      var counter = 0;
-    	      $.each(answer.stats,function(key,value){
-    	    	  counter = counter + 1;
-    	    	  var names = changeEffectName(key,value);
-    	    	  
-    	    	  if(Object.keys(answer.stats).length === 0){
-    	    		  $scope.itemStats2 =[];
-    	    	  }
-    	    	//item with 1 attributes 
-    	    	  if(Object.keys(answer.stats).length === 1){
-    	    		  if($scope.itemStats2.length === 0 ){
-    	    			  $scope.itemStats2.push({
-    	        			  "statName":names.key,
-    	        			  "statValue":names.value,
-    	        		  });
-    	    			  console.log("0-1");
-    	    		  }
-    	    		  else if($scope.itemStats2.length === 1 ){
-    	    			  $scope.itemStats2.splice(0,1,{
-    	        			  "statName":names.key,
-    	        			  "statValue":names.value,
-    	        		  });
-    	    			  console.log("1-1");
-    	    		  }
-    	    		  else if($scope.itemStats2.length > 1){
-    	    			 $scope.itemStats2.splice(0,Number.MAX_VALUE,{
-    	       			  "statName":names.key,
-    	       			  "statValue":names.value,
-    	       		  });
-    	    			 console.log("2-1");
-    	    			 
-    	    		  }
-    	    	  }
-    	    	  
-    	    	  
-    	    	  //item with 2 attributes
-    	    	  if(Object.keys(answer.stats).length === 2){
-    	    		  if($scope.itemStats2.length === 0 ){
-    	    			  $scope.itemStats2.push({
-    	        			  "statName":names.key,
-    	        			  "statValue":names.value,
-    	        		  });
-    	    			  console.log("0-2");
-    	    		  }
-    	    		  else if($scope.itemStats2.length === 1){
-    	    			  if(counter === 1){
-    	    				  $scope.itemStats2.splice(0,1,{
-    	    					  "statName":names.key,
-    	    					  "statValue":names.value,
-    	    				  });
-    	    				  console.log("1-2-1");
-    	    			  }
-    	    			  if(counter === 2){
-    	    				  $scope.itemStats2.push({
-    	    					  "statName":names.key,
-    	    					  "statValue":names.value,
-    	    				  });
-    	    			  }
-    	    			  console.log("1-2-2");
-    	    		  }
-    	    		  else if($scope.itemStats2.length === 2){
-    	    			  if(counter === 1){
-    	    				  $scope.itemStats2.splice(0,1,{
-    	    					  "statName":names.key,
-    	    					  "statValue":names.value,
-    	    				  });
-    	    				  console.log("2-2-1");
-    	    			  }
-    	    			  if(counter === 2){
-    	    				  $scope.itemStats2.splice(1,1,{
-    	    					  "statName":names.key,
-    	    					  "statValue":names.value,
-    	    				  });
-    	    				  console.log("2-2-1");
-    	    			  }
-    	    		  }  
-    	    		  else if($scope.itemStats2.length === 3){
-    	    			  if(counter === 1){
-    	    				  $scope.itemStats2.splice(0,2,{
-    	    					  "statName":names.key,
-    	    					  "statValue":names.value,
-    	    				  });
-    	    			  }
-    	    			  console.log("2-3");
-    	    		  }
-    	    		  else if($scope.itemStats2.length === 4){
-    	    			  if(counter === 1){
-    	    				  $scope.itemStats1.splice(0,3,{
-    	    					  "statName":names.key,
-    	    					  "statValue":names.value,
-    	    				  });
-    	    			  }
-    	    			  console.log("2-4");    	  
-    	    		}
-    	    	  }
-    	    	  //3 item attributes
-    	    	  if(Object.keys(answer.stats).length === 3){ 
-    	    		  if($scope.itemStats2.length === 0 ){ 
-    	    			  $scope.itemStats2.push({
-    	        			  "statName":names.key,
-    	        			  "statValue":names.value,
-    	        		  });
-    	    			  console.log("0-3");
-    	    		  }
-    	    		  else if($scope.itemStats2.length === 1){
-    	    			  if(counter === 1){
-    	    			  $scope.itemStats2.splice(0,1,{
-    	        			  "statName":names.key,
-    	        			  "statValue":names.value,
-    	        		  });
-    	    			  console.log("1-3");
-    	    			  }
-    	    			  if(counter === 2){
-    	        			  $scope.itemStats2.push({
-    	            			  "statName":names.key,
-    	            			  "statValue":names.value,
-    	            		  });
-    	        			  console.log("1-3-2");
-    	        			 }
-    	    		  }
-    	    		  else if($scope.itemStats2.length === 2){
-    	    			  if(counter === 2){
-    	        			  $scope.itemStats2.splice(0,1,{
-    	            			  "statName":names.key,
-    	            			  "statValue":names.value,
-    	            		  });
-    	        			  console.log("2-3");
-    	        			 }
-    	    			  if(counter === 3){
-    	        			  $scope.itemStats2.push({
-    	            			  "statName":names.key,
-    	            			  "statValue":names.value,
-    	            		  });
-    	        			  console.log("1-3");
-    	        			 }
-    	    		  }   
-    	    		  else if($scope.itemStats2.length === 3){
-    	    			  if(counter === 3){
-    	        			  $scope.itemStats2.splice(0,2,{
-    	            			  "statName":names.key,
-    	            			  "statValue":names.value,
-    	            		  });
-    	        			  console.log("3-3");
-    	        			 }
-    	    		  } 
-    	    		  else if($scope.itemStats2.length === 4){
-    	    			  $scope.itemStats2 =[];
-    	    			  $scope.itemStats2.push({
-    	        			  "statName":names.key,
-    	        			  "statValue":names.value,
-    	        		  });
-    	    			  console.log("3-4");
-    	    		  }
-    	    	  }
-    	    	 
-    	    	  
-    	    	  
-    	    	  if(names.key === "Damage"){
-    	    			 var addDmg = 0;
-    	    			 addDmg  += Number(names.value);
-    	    			 addedDmg.splice(1,1,{
-    	    				 addDmg
-    	    			 });
-    	    			 
-    	    			 console.log("addDmg="+ addDmg);
-    	    			 console.log( addDmg);
-    	    			 console.log(addedDmg);
-    	    		}
-    	    	  
-    	    	  
-    	      });
-
-
-    	    }, function() {
-    	      $scope.status = 'You cancelled the dialog.';
-    	    });
-    	    
-    	 };
-    	    
-      
-      
-      
-
-
-    }, function() {
-      $scope.status = 'You cancelled the dialog.';
-    });
-    
- };
-    
-    
-    
-    
-  
   
 
                         
