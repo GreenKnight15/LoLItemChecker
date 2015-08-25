@@ -178,7 +178,7 @@ return tiles;
     	        
     	}
     	  
-    	  $scope.itemStats1.splice(1,1,{
+    	  $scope.itemStats1.splice(0,1,{
         	  "statName":key,
         	  "statValue":value,
           });
