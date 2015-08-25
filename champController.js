@@ -130,10 +130,10 @@ return tiles;
 	  $scope.totalDmgAdded = 0;
 	  
 	  for(i=0;i<=$scope.addedDmg.length;i++){
-		  $scope.totalDmgAdded = ($scope.totalDmgAdded + $scope.addedDmg[i].value);
+		  $scope.totalDmgAdded = ($scope.totalDmgAdded + $scope.addedDmg[i]);
 	  }
 	  console.log("addedDmg Array2="+$scope.addedDmg);
-	  console.log("All Damaged added Arry="+$scope.totalDmgAddeds);
+	  console.log("All Damaged added Arry="+$scope.totalDmgAdded);
 	  
    
    function changeEffectName(key,value){
