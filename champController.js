@@ -362,7 +362,7 @@ return tiles;
     	  if(names.key === "Damage"){
     			 var addDmg = 0;
     			 addDmg  = Number(names.value);
-    			 console.log("names.value="addedDmg);
+    			 console.log("names.value="+addedDmg);
     			 addedDmg.splice(0,1,{
     				 addDmg
     			 });
