@@ -351,7 +351,7 @@ return tiles;
     		  }
     	  }
     	  
-    	  if(Object.keys(key) === "FlatPhysicalDamageMod"){
+    	  if(Object.keys(key).key === "FlatPhysicalDamageMod"){
     			 $scope.addDmg = 0 
     			 $scope.addDmg = $scope.addDmg + name.value;
     			 }
