@@ -147,7 +147,9 @@ return tiles;
     	  $.each(this,function(key,value){
     		  $scope.itemStats1.push({
     		  
-    			  stat1:key,
+    			  statName1:key,
+    			  statValue:value,
+    			  
     		  
     		  })
     	  });
