@@ -138,7 +138,7 @@ return tiles;
       clickOutsideToClose:true
     })
     .then(function(answer) {
-        console.log(answer);
+        console.log("Answer value="+answer);
       $scope.status = answer;
       $scope.itemName1 = "Name:"+answer.name;
       $scope.itemImage1 = answer.img;
@@ -150,8 +150,8 @@ return tiles;
     		  stat2:this[1],
     		  
     	  });
-    	  console.log("Stats for Item1="+this);
-    	  console.log("Stats for Answer="+answer.stats);
+    	  console.log("Stats for Item1="+ this);
+    	  console.log("Stats for Answer="+ answer.stats);
       }),
       
       currentItems[0]={
