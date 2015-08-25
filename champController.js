@@ -366,7 +366,7 @@ return tiles;
       });
     })
     })
-
+})
                         
                         
   function DialogController($scope, $mdDialog) {
