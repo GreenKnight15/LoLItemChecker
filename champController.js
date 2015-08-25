@@ -363,7 +363,7 @@ return tiles;
     			 var addDmg = 0;
     			 addDmg  += Number(names.value);
     			 $scope.addedDmg.splice(0,1,{
-    				 value:addDmg,
+    				 addDmg
     			 });
     			 
     			 console.log("addDmg="+ addDmg);
