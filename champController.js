@@ -149,34 +149,42 @@ return tiles;
     		  
     	  switch(key != "") {
     	    case key=="FlatPhysicalDamageMod":
-    	        key = "Damage"
+    	        key = "+Damage"
     	        break;
     	    case key== "FlatArmorMod":
-    	        key = "Armor"
+    	        key = "+Armor"
     	        break;
     	    case key== "FlatMagicDamageMod":
-    	        key = "Ability Power"
+    	        key = "+Ability Power"
     	        break;
     	    case key== "FlatSpellBlockMod":
-    	        key = "Magic Resit"
+    	        key = "+Magic Resit"
     	        break;
     	    case key== "PercentLifeStealMod":
     	        key = "Life Steal"
+    	        value = (value*100)+"%";
     	        break;
     	    case key== "FlatHPPoolMod":
-    	        key = "Health"
+    	        key = "+Health"
     	        break;
     	    case key== "FlatCritChanceMod":
     	        key = "Critical Chance"
+    	        value = (value*100)+"%";
     	        break;
     	    case key== "FlatMPPoolMod":
-    	        key = "Mana"
+    	        key = "+Mana"
     	        break;
     	    case key== "FlatMPRegenMod":
     	        key = "Mana Regen"
+    	        value = value+" Per Second"
     	        break;
     	    case key== "FlatHPPoolMod":
     	        key = "Health Regen"
+    	        value = value+" Per Second"
+    	        break;
+    	    case key== "PercentAttackSpeedMod":
+    	        key = "Percent Attack Speed"
+    	        value = (value*100)+"%";
     	        break;
     	    default:
     	    	key = key;
