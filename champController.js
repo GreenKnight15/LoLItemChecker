@@ -180,10 +180,33 @@ return tiles;
     	        
     	}
     	  
-    	  $scope.itemStats1.splice(0,1,{
-        	  "statName":key,
-        	  "statValue":value,
-          });
+    	  if($scope.itemStats1.length == 0){
+    		  $scope.itemStats1.push({
+    			  "statName":key,
+    			  "statValue":value,
+    		  });
+    	  
+    	  if($scope.itemStats1.length == 1){
+    		  $scope.itemStats1.splice(0,1,{
+    			  "statName":key,
+    			  "statValue":value,
+    		  });
+    		  
+        	  if($scope.itemStats1.length == 2){
+        		  $scope.itemStats1.splice(0,2,{
+        			  "statName":key,
+        			  "statValue":value,
+        		  });
+        		  
+        	  if($scope.itemStats1.length == 3){
+        		  $scope.itemStats1.splice(0,3,{
+            		"statName":key,
+            		"statValue":value,
+            	 });
+        	  
+        		  
+    	  }
+    	  
       });
     /*
       $scope.itemStats1.push({
