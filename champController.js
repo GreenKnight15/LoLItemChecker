@@ -165,9 +165,9 @@ return tiles;
     	        break;
     	}
     	  
-    	  $scope.itemStats1.splice(1,0{
-        	  statName:key,
-        	  statValue:value,
+    	  $scope.itemStats1.splice(1,0,{
+        	  "statName":key,
+        	  "statValue":value,
           });
       });
     /*
