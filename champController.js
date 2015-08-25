@@ -207,7 +207,7 @@ return tiles;
     		  $scope.itemStats1 =[];
     		  
     	  }
-    		  
+    	//item with 1 attributes 
     	  if(Object.keys(answer.stats).length === 1){
     		  if($scope.itemStats1.length === 0 ){
     			  $scope.itemStats1.push({
@@ -234,7 +234,7 @@ return tiles;
     	  }
     	  
     	  
-      
+    	  //item with 2 attributes
     	  if(Object.keys(answer.stats).length === 2){
     		  if($scope.itemStats1.length === 0 ){
     			  $scope.itemStats1.push({
@@ -244,37 +244,55 @@ return tiles;
     			  console.log("0-2");
     		  }
     		  else if($scope.itemStats1.length === 1){
-    			  $scope.itemStats1.push({
-        			  "statName":key,
-        			  "statValue":value,
-        		  });
-    			  console.log("1-2");
+    			  if(counter === 1){
+    				  $scope.itemStats1.splice(0,1,{
+    					  "statName":key,
+    					  "statValue":value,
+    				  });
+    				  console.log("1-2-1");
+    			  }
+    			  if(counter === 2){
+    				  $scope.itemStats1.push({
+    					  "statName":key,
+    					  "statValue":value,
+    				  });
+    			  }
+    			  console.log("1-2-2");
     		  }
     		  else if($scope.itemStats1.length === 2){
-    			  $scope.itemStats1.pop();
-    			  $scope.itemStats1.push({
-        			  "statName":key,
-        			  "statValue":value,
-        		  });
-    			  console.log("2-2");
+    			  if(counter === 1){
+    				  $scope.itemStats1.splice(0,1,{
+    					  "statName":key,
+    					  "statValue":value,
+    				  });
+    				  console.log("2-2-1");
+    			  }
+    			  if(counter === 2){
+    				  $scope.itemStats1.splice(1,1,{
+    					  "statName":key,
+    					  "statValue":value,
+    				  });
+    				  console.log("2-2-1");
+    			  }
     		  }  
     		  else if($scope.itemStats1.length === 3){
-    			  $scope.itemStats1 =[];
-    			  $scope.itemStats1.push({
-        			  "statName":key,
-        			  "statValue":value,
-        		  });
+    			  if(counter === 1){
+    				  $scope.itemStats1.splice(0,2,{
+    					  "statName":key,
+    					  "statValue":value,
+    				  });
+    			  }
     			  console.log("2-3");
     		  }
     		  else if($scope.itemStats1.length === 4){
-    			  $scope.itemStats1 =[];
-    			  $scope.itemStats1.push({
-        			  "statName":key,
-        			  "statValue":value,
-        		  });
-    			  console.log("2-4");
-    		  }
-    	  }
+    			  if(counter === 1){
+    				  $scope.itemStats1.splice(0,3,{
+    					  "statName":key,
+    					  "statValue":value,
+    				  });
+    			  }
+    			  console.log("2-4");    	  
+    		}
     	  
     	  //3 item attributes
     	  if(Object.keys(answer.stats).length === 3){ 
