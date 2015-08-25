@@ -174,7 +174,9 @@ return tiles;
     	    case key== "FlatMPRegenMod":
     	        key = "Mana Regen"
     	        break;
-    	   
+    	    default:
+    	    	key="URM"
+    	    	break;
     	        
     	}
     	  
