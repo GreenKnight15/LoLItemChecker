@@ -67,19 +67,7 @@ return tiles;
              $scope.range = response.stats.attackrange;
              $scope.atkDmg = response.stats.attackdamage;
              $scope.health = response.stats.hp;
-             $scope.mana = response.stats.mp;
-             
-             $.each($scope.itemStats1,function(key,value){
-            	 if(this.key === "Damage"){
-            	 $scope.addDmg = 0 
-            	 $scope.addDmg = $scope.addDmg + this.value
-            	 }
-            	 if(this.key === "Armour"){
-                	 $scope.addArmor = 0 
-                	 $scope.addArmour = $scope.addArmour + this.value
-                	 }
-             })
-        
+             $scope.mana = response.stats.mp;     
              
              $scope.levelChamp = function(){        
                 $scope.atkDmgLvl = Math.round(response.stats.attackdamageperlevel * $scope.level + $scope.atkDmg);
@@ -517,7 +505,17 @@ return tiles;
 
 };
      
-
+$.each($scope.itemStats1,function(key,value){
+	console.log(this);
+	 if(this.key === "FlatPhysicalDamageMod"){
+	 $scope.addDmg = 0 
+	 $scope.addDmg = $scope.addDmg + this.value
+	 }
+	 if(this.key === "Armour"){
+   	 $scope.addArmor = 0 
+   	 $scope.addArmour = $scope.addArmour + this.value
+   	 }
+})
 	
 })
 
