@@ -126,7 +126,7 @@ return tiles;
    $scope.itemArray = currentItems;
    
 
-	  $scope.addedDmg = [0,0,0,0,0,0];
+	  $scope.addedDmg = [];
 	  $scope.totalDmgAdded = 0;
 	  
 	  for(i=0;i<=$scope.addedDmg.length;i++){
@@ -363,9 +363,9 @@ return tiles;
     	  
     	  if(names.key === "Damage"){
     			 var addDmg = 0;
-    			 addDmg  += names.value;
+    			 addDmg  += JSON.parse(names.value);
     			 $scope.addedDmg.splice(0,1,{
-    				 addDmg
+    				 addDmg,
     			 });
     			 
     			 console.log("addDmg="+ addDmg);
