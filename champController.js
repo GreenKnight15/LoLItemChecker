@@ -134,7 +134,7 @@ return tiles;
    function changeEffectName(key,value){
 	   switch(key != "") {
 	    case key=="FlatPhysicalDamageMod":
-	        key = "+Damage"
+	        key = "Damage"
 	        break;
 	    case key== "FlatArmorMod":
 	        key = "+Armor"
