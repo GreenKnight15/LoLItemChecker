@@ -197,11 +197,8 @@ return tiles;
       var counter = 0;
       $.each(answer.stats,function(key,value){
     	  console.log("key="+key);
-    	 counter = counter + 1;
-    		  
-    	  
+    	  counter = counter + 1;
     	  var names = changeEffectName(key,value);
-    	  
     	  
     	  if(Object.keys(answer.stats).length === 0){
     		  $scope.itemStats1 =[];
@@ -354,7 +351,15 @@ return tiles;
     		  }
     	  }
     	  
-    	
+    	  if(Object.keys(key) === "FlatPhysicalDamageMod"){
+    			 $scope.addDmg = 0 
+    			 $scope.addDmg = $scope.addDmg + name.value;
+    			 }
+    			 console.log($scope.addDmg);
+    	  if(Object.keys(key) === "Armour"){
+    		   	 $scope.addArmor = 0 
+    		   	 $scope.addArmour = $scope.addArmour + this.value
+    		   	 }
     	 
       	 
     	  
@@ -504,19 +509,7 @@ return tiles;
   };
 
 };
-     
-$.each($scope.itemStats1,function(key,value){
-	console.log(this);
-	 if(this.statName === "Damage"){
-	 $scope.addDmg = 0 
-	 $scope.addDmg = $scope.addDmg + this.statValue;
-	 }
-	 console.log($scope.addDmg);
-	 if(this.statName === "Armour"){
-   	 $scope.addArmor = 0 
-   	 $scope.addArmour = $scope.addArmour + this.value
-   	 }
-})
+    
 	
 })
 
