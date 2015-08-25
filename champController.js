@@ -358,21 +358,19 @@ return tiles;
     			  console.log("3-4");
     		  }
     	  }
-    	  
-    	  
-    	  var effect = names.value;
+    	 
     	  
     	  
     	  if(names.key === "Damage"){
-    			 $scope.addDmg = 0;
-    			 $scope.addDmg = $scope.addDmg + names.value;
+    			 var addDmg = 0;
+    			 addDmg  += names.value;
     			 $scope.addedDmg.splice(0,1,{
-    				 effect
+    				 addDmg
     			 });
     			 
     			 console.log("Effect added to damage + "+ effect);
-    			 console.log("$scope.addDmg[]="+$scope.addDmg);
-    			 onsole.log("addedDmg Array2="+$scope.addedDmg);
+    			 console.log("addDmg="+ addDmg);
+    			 console.log("addedDmg Array2="+$scope.addedDmg);
     		}
     	  
     	  
