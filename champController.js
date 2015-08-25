@@ -351,15 +351,24 @@ return tiles;
     		  }
     	  }
     	  
+    	  $scope.addedDmg = [];
+    	  $scope.totalDmgAdded = 0;
+    	 
+    	  for(i=0;i<=$scope.addedDmg.length;i++){
+    		  $scope.totalDmgAdded += addedDmg;
+    	  }
+    	  
+    	  $scope.addedDmg = [];
     	  if(names.key === "Damage"){
     			 $scope.addDmg = 0 
     			 $scope.addDmg = $scope.addDmg + names.value;
-    			 }
-    			 console.log($scope.addDmg);
-    	  if(names.key === "Armour"){
-    		   	 $scope.addArmor = 0 
-    		   	 $scope.addArmour = $scope.addArmour + names.value;
-    		   	 }
+    			 
+    			 $scope.addedDmg.push({
+    				 names.value,
+    			 });
+    		}
+    			 
+}
     	 
       	 
     	  
