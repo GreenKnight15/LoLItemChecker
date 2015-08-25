@@ -128,7 +128,10 @@ return tiles;
 
 	  $scope.addedDmg = [];
 	  $scope.totalDmgAdded = 0;
-	  
+	  for(i=0;i<=$scope.addedDmg.length;i++){
+		  $scope.totalDmgAdded += $scope.addedDmg;
+	  }
+	  console.log("All Damaged added Arry="+$scope.totalDmgAdded);
 	  
    
    function changeEffectName(key,value){
@@ -202,13 +205,11 @@ return tiles;
       $scope.itemImage1 = answer.img;
       var counter = 0;
       $.each(answer.stats,function(key,value){
-    	  console.log("key="+key);
     	  counter = counter + 1;
     	  var names = changeEffectName(key,value);
     	  
     	  if(Object.keys(answer.stats).length === 0){
     		  $scope.itemStats1 =[];
-    		  
     	  }
     	//item with 1 attributes 
     	  if(Object.keys(answer.stats).length === 1){
@@ -364,18 +365,12 @@ return tiles;
     	  if(names.key === "Damage"){
     			 $scope.addDmg = 0;
     			 $scope.addDmg = $scope.addDmg + names.value;
-    			 console.log("names.key damage"+ effect);
+    			 console.log("Effect= "+ effect);
     			 $scope.addedDmg.push({
     				 effect
     			 });
     		}
-    			 
-    	  for(i=0;i<=$scope.addedDmg.length;i++){
-    		  $scope.totalDmgAdded += $scope.addedDmg;
-    	  }
-    	  console.log("All Damaged added Arry="+$scope.totalDmgAdded);
-    	 
-      	 
+    	  	 
     	  
       });
     /*
