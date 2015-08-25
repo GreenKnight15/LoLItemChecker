@@ -367,7 +367,7 @@ return tiles;
     			 $scope.addDmg = 0;
     			 $scope.addDmg = $scope.addDmg + names.value;
     			 console.log("Effect= "+ effect);
-    			 $scope.addedDmg.splice(0,1{
+    			 $scope.addedDmg.splice(0,1,{
     				 effect
     			 });
     		}
