@@ -145,7 +145,8 @@ return tiles;
       
      
       $scope.itemStats1.push({
-    	  stat:Object.keys(answer.stats),
+    	  statName:Object.keys(answer.stats).value,
+    	  statValue:answer.stats.value
       });
       
      console.log($scope.itemStats1);
