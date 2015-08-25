@@ -363,7 +363,7 @@ return tiles;
     	  
     	  if(names.key === "Damage"){
     			 var addDmg = 0;
-    			 addDmg  += JSON.parse(names.value);
+    			 addDmg  += Number(names.value);
     			 $scope.addedDmg.splice(0,1,{
     				 addDmg,
     			 });
