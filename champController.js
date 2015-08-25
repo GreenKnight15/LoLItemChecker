@@ -145,10 +145,26 @@ return tiles;
       
       $.each(answer.stats,function(key,value){
     	  console.log(key);
-    	  if(key == "FlatPhysicalDamageMod"){
-    		  key = "Damage"
-    	  }
-    	  $scope.itemStats1.push({
+    	  
+    	  switch(key) {
+    	    case key=="FlatPhysicalDamageMod":
+    	        key = "Damage"
+    	        break;
+    	    case key""== "FlatArmorMod":
+    	        key = "Armor"
+    	        break;
+    	    case key""== "FlatMagicDamageMod":
+    	        key = "Ability Power"
+    	        break;
+    	    case key""== "FlatSpellBlockMod":
+    	        key = "Magic Resit"
+    	        break;
+    	    
+    	    default:
+    	        default code block
+    	}
+    	  
+    	  $scope.itemStats1.splice(1,0{
         	  statName:key,
         	  statValue:value,
           });
