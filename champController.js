@@ -152,7 +152,7 @@ return tiles;
     			  
     		  
     		  });
-    		  console.log("Key="+this.key );
+    		  console.log(this.key );
     		  console.log("value="+this.value );
     	  
     	  
