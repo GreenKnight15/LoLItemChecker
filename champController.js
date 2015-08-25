@@ -239,6 +239,14 @@ return tiles;
         		  });
     			  console.log("3-1");
     		  }
+    		  else if($scope.itemStats1.length === 4){
+    			  $scope.itemStats1 =[];
+    			  $scope.itemStats1.push({
+        			  "statName":key,
+        			  "statValue":value,
+        		  });
+    			  console.log("1-4");
+    		  }
     	  }
     	  
     	  
@@ -274,6 +282,14 @@ return tiles;
         		  });
     			  console.log("2-3");
     		  }
+    		  else if($scope.itemStats1.length === 4){
+    			  $scope.itemStats1 =[];
+    			  $scope.itemStats1.push({
+        			  "statName":key,
+        			  "statValue":value,
+        		  });
+    			  console.log("2-4");
+    		  }
     	  }
     	  
     	  //PROBLEMS
@@ -300,11 +316,19 @@ return tiles;
     			  console.log("2-3");
     		  }   
     		  else if($scope.itemStats1.length === 3){
-    			  $scope.itemStats1.splice(0,2,{
+    			  $scope.itemStats1.splice(0,Number.MAX_VALUE,{
         			  "statName":key,
         			  "statValue":value,
         		  });
     			  console.log("3-3");
+    		  }
+    		  else if($scope.itemStats1.length === 4){
+    			  $scope.itemStats1 =[];
+    			  $scope.itemStats1.push({
+        			  "statName":key,
+        			  "statValue":value,
+        		  });
+    			  console.log("3-4");
     		  }
     	  }
     	  
