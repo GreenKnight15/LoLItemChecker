@@ -405,7 +405,7 @@ return tiles;
     	    			  console.log("0-1");
     	    		  }
     	    		  else if($scope.itemStats2.length === 1 ){
-    	    			  $scope.itemStats1.splice(0,1,{
+    	    			  $scope.itemStats2.splice(0,1,{
     	        			  "statName":names.key,
     	        			  "statValue":names.value,
     	        		  });
@@ -533,8 +533,8 @@ return tiles;
     	        			 }
     	    		  } 
     	    		  else if($scope.itemStats2.length === 4){
-    	    			  $scope.itemStats1 =[];
-    	    			  $scope.itemStats1.push({
+    	    			  $scope.itemStats2 =[];
+    	    			  $scope.itemStats2.push({
     	        			  "statName":names.key,
     	        			  "statValue":names.value,
     	        		  });
