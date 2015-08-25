@@ -151,10 +151,10 @@ return tiles;
     			  statValue:value,
     			  
     		  
-    		  })
+    		  });
     		  console.log("Key="+key );
     		  console.log("value="+value );
-    	  });
+    	  })
     	  
     	  console.log("Stats for Answer="+ answer.stats);
       }),
