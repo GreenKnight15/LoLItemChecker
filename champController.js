@@ -509,7 +509,7 @@ $.each($scope.itemStats1,function(key,value){
 	console.log(this);
 	 if(this.statName === "Damage"){
 	 $scope.addDmg = 0 
-	 $scope.addDmg = $scope.addDmg + this.value
+	 $scope.addDmg = $scope.addDmg + this.statValue;
 	 }
 	 console.log($scope.addDmg);
 	 if(this.statName === "Armour"){
