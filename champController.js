@@ -126,7 +126,7 @@ return tiles;
    $scope.itemArray = currentItems;
    
 
-	  $scope.addedDmg = [];
+	  $scope.addedDmg = [0,0,0,0,0,0];
 	  $scope.totalDmgAdded = 0;
 	  
 	  for(i=0;i<=$scope.addedDmg.length;i++){
