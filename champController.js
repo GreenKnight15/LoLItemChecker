@@ -192,28 +192,20 @@ return tiles;
     		  });
     	  };
     	  
-    	  if($scope.itemStats1.length === 1){
-    		  $scope.itemStats1.splice(0,1,{
+    	  if($scope.itemStats1.length > 0){
+    		  $scope.itemStats1.push({
     			  "statName":key,
     			  "statValue":value,
     		  });
     	  };
-    		  
-        	  if($scope.itemStats1.length === 2){
-        		  $scope.itemStats1=[];
-        		  $scope.itemStats1.push({
-        			  "statName":key,
-        			  "statValue":value,
-        		  });
-        	  };
-        		  
-        	  if($scope.itemStats1.length === 3){
-        		  $scope.itemStats1=[];
-        		  $scope.itemStats1.push({
-        			  "statName":key,
-        			  "statValue":value,
-        		  });
-        	  };
+    	  if($scope.itemStats1.length > 3){
+    		  $scope.itemStats1 =[];
+    		  $scope.itemStats1.push({
+    			  "statName":key,
+    			  "statValue":value,
+    		  });
+    	  };
+    	 
       	 
     	  
       });
