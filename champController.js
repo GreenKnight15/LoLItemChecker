@@ -243,7 +243,7 @@ return tiles;
         			  "statName":key,
         			  "statValue":value,
         		  });
-    			  console.log(0-2-1");
+    			  console.log("0-2-1");
     		  }
     		  else if($scope.itemStats1.length === 1){
     			  $scope.itemStats1.push({
