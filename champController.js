@@ -219,15 +219,15 @@ return tiles;
     		  }
     		  else if($scope.itemStats1.length === 1 ){
     			  $scope.itemStats1.splice(0,1,{
-        			  "statName":key,
-        			  "statValue":value,
+        			  "statName":names.key,
+        			  "statValue":names.value,
         		  });
     			  console.log("1-1");
     		  }
     		  else if($scope.itemStats1.length > 1){
     			 $scope.itemStats1.splice(0,Number.MAX_VALUE,{
-       			  "statName":key,
-       			  "statValue":value,
+       			  "statName":names.key,
+       			  "statValue":names.value,
        		  });
     			 console.log("2-1");
     			 
@@ -239,23 +239,23 @@ return tiles;
     	  if(Object.keys(answer.stats).length === 2){
     		  if($scope.itemStats1.length === 0 ){
     			  $scope.itemStats1.push({
-        			  "statName":key,
-        			  "statValue":value,
+        			  "statName":names.key,
+        			  "statValue":names.value,
         		  });
     			  console.log("0-2");
     		  }
     		  else if($scope.itemStats1.length === 1){
     			  if(counter === 1){
     				  $scope.itemStats1.splice(0,1,{
-    					  "statName":key,
-    					  "statValue":value,
+    					  "statName":names.key,
+    					  "statValue":names.value,
     				  });
     				  console.log("1-2-1");
     			  }
     			  if(counter === 2){
     				  $scope.itemStats1.push({
-    					  "statName":key,
-    					  "statValue":value,
+    					  "statName":names.key,
+    					  "statValue":names.value,
     				  });
     			  }
     			  console.log("1-2-2");
@@ -263,15 +263,15 @@ return tiles;
     		  else if($scope.itemStats1.length === 2){
     			  if(counter === 1){
     				  $scope.itemStats1.splice(0,1,{
-    					  "statName":key,
-    					  "statValue":value,
+    					  "statName":names.key,
+    					  "statValue":names.value,
     				  });
     				  console.log("2-2-1");
     			  }
     			  if(counter === 2){
     				  $scope.itemStats1.splice(1,1,{
-    					  "statName":key,
-    					  "statValue":value,
+    					  "statName":names.key,
+    					  "statValue":names.value,
     				  });
     				  console.log("2-2-1");
     			  }
@@ -279,8 +279,8 @@ return tiles;
     		  else if($scope.itemStats1.length === 3){
     			  if(counter === 1){
     				  $scope.itemStats1.splice(0,2,{
-    					  "statName":key,
-    					  "statValue":value,
+    					  "statName":names.key,
+    					  "statValue":names.value,
     				  });
     			  }
     			  console.log("2-3");
@@ -288,8 +288,8 @@ return tiles;
     		  else if($scope.itemStats1.length === 4){
     			  if(counter === 1){
     				  $scope.itemStats1.splice(0,3,{
-    					  "statName":key,
-    					  "statValue":value,
+    					  "statName":names.key,
+    					  "statValue":names.value,
     				  });
     			  }
     			  console.log("2-4");    	  
@@ -299,23 +299,23 @@ return tiles;
     	  if(Object.keys(answer.stats).length === 3){ 
     		  if($scope.itemStats1.length === 0 ){ 
     			  $scope.itemStats1.push({
-        			  "statName":key,
-        			  "statValue":value,
+        			  "statName":names.key,
+        			  "statValue":names.value,
         		  });
     			  console.log("0-3");
     		  }
     		  else if($scope.itemStats1.length === 1){
     			  if(counter === 1){
     			  $scope.itemStats1.splice(0,1,{
-        			  "statName":key,
-        			  "statValue":value,
+        			  "statName":names.key,
+        			  "statValue":names.value,
         		  });
     			  console.log("1-3");
     			  }
     			  if(counter === 2){
         			  $scope.itemStats1.push({
-            			  "statName":key,
-            			  "statValue":value,
+            			  "statName":names.key,
+            			  "statValue":names.value,
             		  });
         			  console.log("1-3-2");
         			 }
@@ -323,15 +323,15 @@ return tiles;
     		  else if($scope.itemStats1.length === 2){
     			  if(counter === 2){
         			  $scope.itemStats1.splice(0,1,{
-            			  "statName":key,
-            			  "statValue":value,
+            			  "statName":names.key,
+            			  "statValue":names.value,
             		  });
         			  console.log("2-3");
         			 }
     			  if(counter === 3){
         			  $scope.itemStats1.push({
-            			  "statName":key,
-            			  "statValue":value,
+            			  "statName":names.key,
+            			  "statValue":names.value,
             		  });
         			  console.log("1-3");
         			 }
@@ -339,8 +339,8 @@ return tiles;
     		  else if($scope.itemStats1.length === 3){
     			  if(counter === 3){
         			  $scope.itemStats1.splice(0,2,{
-            			  "statName":key,
-            			  "statValue":value,
+            			  "statName":names.key,
+            			  "statValue":names.value,
             		  });
         			  console.log("3-3");
         			 }
@@ -348,8 +348,8 @@ return tiles;
     		  else if($scope.itemStats1.length === 4){
     			  $scope.itemStats1 =[];
     			  $scope.itemStats1.push({
-        			  "statName":key,
-        			  "statValue":value,
+        			  "statName":names.key,
+        			  "statValue":names.value,
         		  });
     			  console.log("3-4");
     		  }
