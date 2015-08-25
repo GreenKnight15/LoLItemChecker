@@ -199,18 +199,21 @@ return tiles;
     	    	
     	        
     	}
-    	  if(Object.keys(answer.stats).length == 1){
-    		  $scope.itemStats1 =[];
-    		  $scope.itemStats1.push({
-    			  "statName":key,
-    			  "statValue":value,
-    		  });
-    	  }
+    	  
     	  
     	  if(Object.keys(answer.stats).length == 0){
     		  $scope.itemStats1 =[];
     		  
     	  }
+    	  
+    	  if(Object.keys(answer.stats).length == 1){
+    		  $scope.itemStats1.splice(0,1{
+    			  "statName":key,
+    			  "statValue":value,
+    		  });
+    	  }
+    	  
+    	  
       
     	  if(Object.keys(answer.stats).length === 2){
     		  if($scope.itemStats1.length === 1){
@@ -224,7 +227,10 @@ return tiles;
         			  "statName":key,
         			  "statValue":value,
         		  });
-    		  }    			  
+    		  }  
+    		  if($scope.itemStats1.length === 3){
+    			  $scope.itemStats1.pop();
+    		  }
     	  }
     	  
     	  
