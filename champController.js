@@ -183,7 +183,7 @@ return tiles;
     	    	break;
     	        
     	}
-    	  if(answer.stats.length == 1){
+    	  if(Object.keys(answer.stats).length == 1){
     		  $scope.itemStats1 =[];
     		  $scope.itemStats1.push({
     			  "statName":key,
@@ -192,7 +192,7 @@ return tiles;
     	  }
     	  
       
-    	  if(answer.stats.length === 2){
+    	  if(Object.keys(answer.stats).length === 2){
     		  if($scope.itemStats1.length === 1){
     			  $scope.itemStats1.splice(1,1,{
         			  "statName":key,
@@ -208,7 +208,7 @@ return tiles;
     	  }
     	  
     	  
-    	  if(answer.stats.length === 3){
+    	  if(Object.keys(answer.stats).length === 3){
     		  if($scope.itemStats1.length === 1){
     			  $scope.itemStats1.splice(1,1,{
         			  "statName":key,
