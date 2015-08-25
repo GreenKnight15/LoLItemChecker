@@ -132,7 +132,7 @@ return tiles;
 	  for(i=0;i<=$scope.addedDmg.length;i++){
 		  $scope.totalDmgAdded = ($scope.totalDmgAdded + $scope.addedDmg[i]);
 	  }
-	  
+	  console.log("addedDmg Array2="+$scope.addedDmg);
 	  console.log("All Damaged added Arry="+$scope.totalDmgAdded);
 	  
    
@@ -369,9 +369,7 @@ return tiles;
     			 $scope.addedDmg.splice(0,1,{
     				 effect
     			 });
-    			 $scope.addedDmg.splice(1,1,{
-    				 effect
-    			 });
+    			 
     			 console.log("Effect added to damage + "+ effect);
     			 console.log("$scope.addDmg[]="+$scope.addDmg);
     		}
