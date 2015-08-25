@@ -130,7 +130,7 @@ return tiles;
 	  $scope.totalDmgAdded = 0;
 	  
 	  for(i=0;i<=$scope.addedDmg.length;i++){
-		  $scope.totalDmgAdded = ($scope.totalDmgAdded + $scope.addedDmg[i]);
+		  $scope.totalDmgAdded = ($scope.totalDmgAdded + $scope.addedDmg[i].addDmg);
 	  }
 	  
 	  console.log("All Damaged added Arry="+$scope.totalDmgAdded);
