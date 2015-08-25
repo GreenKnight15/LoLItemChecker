@@ -147,12 +147,13 @@ return tiles;
     	  $.each(this,function(key,value){
     		  $scope.itemStats1.push({
     		  
-    			  statName1:this.key,
-    			  statValue:this.value,
+    			  statName1:key,
+    			  statValue:value,
     			  
     		  
     		  })
-    		  console.log("Stats for Item1="+itemStats1 );
+    		  console.log("Key="+key );
+    		  console.log("value="+value );
     	  });
     	  
     	  console.log("Stats for Answer="+ answer.stats);
