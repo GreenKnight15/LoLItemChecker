@@ -70,8 +70,8 @@ return tiles;
              $scope.mana = response.stats.mp;
              
              for(i=0;i<=$scope.itemStats1.length;i++){
-            	 if(i.key === "Damage")
-            	 $scope.addDmg = $scope.addDmg + i.value
+            	 if($scope.itemStats1[i].key === "Damage")
+            	 $scope.addDmg = $scope.addDmg + $scope.itemStats1[i].value
              }
         
              
