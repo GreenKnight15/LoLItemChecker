@@ -159,11 +159,26 @@ return tiles;
     	    case key== "FlatSpellBlockMod":
     	        key = "Magic Resit"
     	        break;
+    	    case key== "PercentLifeStealMod":
+    	        key = "Life Steal"
+    	        break;
+    	    case key== "FlatHPPoolMod":
+    	        key = "Health"
+    	        break;
+    	    case key== "FlatCritChanceMod":
+    	        key = "Critical Chance"
+    	        break;
+    	    case key== "FlatMPPoolMod":
+    	        key = "Mana"
+    	        break;
+    	    case key== "FlatMPRegenMod":
+    	        key = "Mana Regen"
+    	        break;
     	   
     	        
     	}
     	  
-    	  $scope.itemStats1.splice(1,0,{
+    	  $scope.itemStats1.splice(1,1,{
         	  "statName":key,
         	  "statValue":value,
           });
