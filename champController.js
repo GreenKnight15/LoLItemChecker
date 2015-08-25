@@ -220,7 +220,8 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
 
                     
                     if (names.key === "Damage") {
-                        var dmg = names.value;
+                         var dmg;
+                         Number(dmg) = Number(names.value);
                         console.log("dmg="+dmg);
                         $scope.addedDmg.splice(0, 1, {
                             dmg
