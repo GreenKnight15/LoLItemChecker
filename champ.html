@@ -54,7 +54,7 @@
     <md-button  class="md-primary md-raised" ng-click="showAdvanced1($event)" layout-align="start start">
     Item 1
     </md-button>
-    <div ng-repeat="stat in itemStats1">
+    <div ng-repeat="stat in itemStats1" layout="row">
     	<p  layout-align="center end"  >{{stat.statName}}</p>
     	<p>{{stat.statValue}}</p>
     </div>

@@ -54,30 +54,27 @@ return tiles;
          
             .success(function(response){
             
-              
             $scope.levels = [
             { level: '1', value: '1' },
             { level: '2', value: '2' },
             { level: '18', value: '18' },
             ];
                 
-                $scope.name = response.name;
+             $scope.name = response.name;
              $scope.title = response.title;
-                $scope.imgLink = "http://ddragon.leagueoflegends.com/cdn/5.16.1/img/champion/"+response.image.full;
+             $scope.imgLink = "http://ddragon.leagueoflegends.com/cdn/5.16.1/img/champion/"+response.image.full;
              
-                $scope.range = response.stats.attackrange;
-                $scope.atkDmg = response.stats.attackdamage;
-                $scope.health = response.stats.hp;
-                $scope.mana = response.stats.mp;
+             $scope.range = response.stats.attackrange;
+             $scope.atkDmg = response.stats.attackdamage;
+             $scope.health = response.stats.hp;
+             $scope.mana = response.stats.mp;
         
              
-                $scope.levelChamp = function(){   
-                    
-                    $scope.atkDmgLvl = Math.round(response.stats.attackdamageperlevel * $scope.level + $scope.atkDmg);
-                    $scope.hpLvl = Math.round(response.stats.hpperlevel * $scope.level + $scope.health);
-                    $scope.manaLvl = Math.round(response.stats.mpperlevel * $scope.level + $scope.mana);
-                }
-                    
+             $scope.levelChamp = function(){        
+                $scope.atkDmgLvl = Math.round(response.stats.attackdamageperlevel * $scope.level + $scope.atkDmg);
+                $scope.hpLvl = Math.round(response.stats.hpperlevel * $scope.level + $scope.health);
+                $scope.manaLvl = Math.round(response.stats.mpperlevel * $scope.level + $scope.mana);
+              }      
             })
         .error(function(){
             $scope.name = "error";
@@ -96,7 +93,7 @@ return tiles;
                     name:this.name,
                     link:"/stats/"+this.id,
                     aria:this.name,
-                    img:"http://ddragon.leagueoflegends.com/cdn/5.15.1/img/item/"+this.image.full,
+                    img:"http://ddragon.leagueoflegends.com/cdn/5.16.1/img/item/"+this.image.full,
                     descLong:this.sanitizedDescription,
                     cost:this.gold.total,
                     stats:this.stats,
@@ -128,6 +125,62 @@ return tiles;
     var currentItems = [];
     $scope.itemStats1 =[];
    $scope.itemArray = currentItems;
+   
+   function changeEffectName(key,value){
+	   switch(key != "") {
+	    case key=="FlatPhysicalDamageMod":
+	        key = "+Damage"
+	        break;
+	    case key== "FlatArmorMod":
+	        key = "+Armor"
+	        break;
+	    case key== "FlatMagicDamageMod":
+	        key = "+Ability Power"
+	        break;
+	    case key== "FlatSpellBlockMod":
+	        key = "+Magic Resit"
+	        break;
+	    case key== "PercentLifeStealMod":
+	        key = "Life Steal"
+	        value = (value*100)+"%";
+	        break;
+	    case key== "FlatHPPoolMod":
+	        key = "+Health"
+	        break;
+	    case key== "FlatCritChanceMod":
+	        key = "Critical Chance"
+	        value = (value*100)+"%";
+	        break;
+	    case key== "FlatMPPoolMod":
+	        key = "+Mana"
+	        break;
+	    case key== "FlatMPRegenMod":
+	        key = "Mana Regen"
+	        value = value+" Per Second"
+	        break;
+	    case key== "FlatHPPoolMod":
+	        key = "Health Regen"
+	        value = value+" Per Second"
+	        break;
+	    case key== "PercentAttackSpeedMod":
+	        key = "Percent Attack Speed"
+	        value = (value*100)+"%";
+	        break;
+	    case key== "PercentMovementSpeedMod":
+	        key = "Percent Movment Speed"
+	        value = (value*100)+"%";
+	        break;
+	    case key== "FlatMovementSpeedMod":
+	        key = "+Movment Speed"
+	        break
+	    default:
+	    	key = key;
+	    	break;
+	    	
+	        
+	}
+	  return(key,value);
+   }
     
     $scope.showAdvanced1 = function(ev) {
     $mdDialog.show({
@@ -147,60 +200,8 @@ return tiles;
     	  console.log("key="+key);
     	 counter = counter + 1;
     		  
-    	  switch(key != "") {
-    	    case key=="FlatPhysicalDamageMod":
-    	        key = "+Damage"
-    	        break;
-    	    case key== "FlatArmorMod":
-    	        key = "+Armor"
-    	        break;
-    	    case key== "FlatMagicDamageMod":
-    	        key = "+Ability Power"
-    	        break;
-    	    case key== "FlatSpellBlockMod":
-    	        key = "+Magic Resit"
-    	        break;
-    	    case key== "PercentLifeStealMod":
-    	        key = "Life Steal"
-    	        value = (value*100)+"%";
-    	        break;
-    	    case key== "FlatHPPoolMod":
-    	        key = "+Health"
-    	        break;
-    	    case key== "FlatCritChanceMod":
-    	        key = "Critical Chance"
-    	        value = (value*100)+"%";
-    	        break;
-    	    case key== "FlatMPPoolMod":
-    	        key = "+Mana"
-    	        break;
-    	    case key== "FlatMPRegenMod":
-    	        key = "Mana Regen"
-    	        value = value+" Per Second"
-    	        break;
-    	    case key== "FlatHPPoolMod":
-    	        key = "Health Regen"
-    	        value = value+" Per Second"
-    	        break;
-    	    case key== "PercentAttackSpeedMod":
-    	        key = "Percent Attack Speed"
-    	        value = (value*100)+"%";
-    	        break;
-    	    case key== "PercentMovementSpeedMod":
-    	        key = "Percent Movment Speed"
-    	        value = (value*100)+"%";
-    	        break;
-    	    case key== "FlatMovementSpeedMod":
-    	        key = "+Movment Speed"
-    	        break
-    	    default:
-    	    	key = key;
-    	    	break;
-    	    	
-    	        
-    	}
     	  
-    	  
+    	  changeEffectName(key,value);
     	  
     	  
     	  if(Object.keys(answer.stats).length === 0){
