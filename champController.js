@@ -364,9 +364,9 @@ return tiles;
     	  
     	  $scope.addedDmg = [];
     	  if(names.key === "Damage"){
-    			 $scope.addDmg = 0 
+    			 $scope.addDmg = 0;
     			 $scope.addDmg = $scope.addDmg + names.value;
-    			 
+    			 console.log("names.key damage"+ names.key);
     			 $scope.addedDmg.push({
     				 effect,
     			 });
