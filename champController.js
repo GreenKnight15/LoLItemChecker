@@ -554,7 +554,7 @@ return tiles;
     	    	  if(names.key === "Damage"){
     	    			 var addDmg = 0;
     	    			 addDmg  += Number(names.value);
-    	    			 $scope.addedDmg.splice(0,1,{
+    	    			 $scope.addedDmg.splice(1,1,{
     	    				 addDmg,
     	    			 });
     	    			 
