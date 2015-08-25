@@ -134,9 +134,10 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
 
     $scope.addedDmg = [];
 
-    console.log("this is Number($scope.addedDmg[i])"+Number($scope.addedDmg[i]));
+    
     for (i = 0; i <= $scope.addedDmg; i++) {
         $scope.totalDmg += Number($scope.addedDmg[i]);
+        console.log("this is Number($scope.addedDmg[i])"+Number($scope.addedDmg[i]));
     }
 
 
