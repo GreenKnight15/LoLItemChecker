@@ -49,7 +49,6 @@ return tiles;
         var url = window.location.href; 
         url = url.split('/');
         $scope.name= url[5];
-        console.log(url[5]);
          $http.post('/stats', {msg:url})
          
             .success(function(response){
@@ -372,6 +371,14 @@ return tiles;
     	  
     	  
       });
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       
