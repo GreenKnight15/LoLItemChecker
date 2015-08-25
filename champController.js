@@ -127,7 +127,7 @@ return tiles;
 	  $scope.totalDmgAdded = dmg;
 	 
 	  for(i=0; i<= $scope.addedDmg.length; i++){
-		  dmg += parseInt($scope.addedDmg[i]);
+		  dmg += parseInt($scope.addedDmg[i].addDmg);
 		  console.log("in loop"+dmg );
 	  }
 	 
