@@ -145,8 +145,8 @@ return tiles;
       
      
       $scope.itemStats1.push({
-    	  stat1:Object.keys(answer.stats),
-      })
+    	  stat:Object.keys(answer.stats),
+      });
      console.log(itemStats1);
       
       currentItems[0]={
