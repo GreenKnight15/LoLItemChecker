@@ -150,13 +150,13 @@ return tiles;
     	    case key=="FlatPhysicalDamageMod":
     	        key = "Damage"
     	        break;
-    	    case key""== "FlatArmorMod":
+    	    case key== "FlatArmorMod":
     	        key = "Armor"
     	        break;
-    	    case key""== "FlatMagicDamageMod":
+    	    case key== "FlatMagicDamageMod":
     	        key = "Ability Power"
     	        break;
-    	    case key""== "FlatSpellBlockMod":
+    	    case key== "FlatSpellBlockMod":
     	        key = "Magic Resit"
     	        break;
     	    
