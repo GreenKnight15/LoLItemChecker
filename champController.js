@@ -138,7 +138,7 @@ return tiles;
       clickOutsideToClose:true
     })
     .then(function(answer) {
-        console.log("Answer value="+answer);
+        console.log(answer);
       $scope.status = answer;
       $scope.itemName1 = "Name:"+answer.name;
       $scope.itemImage1 = answer.img;
