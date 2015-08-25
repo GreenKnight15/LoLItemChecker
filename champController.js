@@ -201,11 +201,13 @@ return tiles;
     	}
     	  
     	  
+    	  
+    	  
     	  if(Object.keys(answer.stats).length === 0){
     		  $scope.itemStats1 =[];
     		  
     	  }
-    	  
+    		  
     	  if(Object.keys(answer.stats).length === 1){
     		  if($scope.itemStats1.length === 0 ){
     			  $scope.itemStats1.push({
@@ -223,6 +225,10 @@ return tiles;
     		  }
     		  else if($scope.itemStats1.length === 2){
     			 $scope.itemStats1.pop();
+    			 $scope.itemStats1.splice(0,1,{
+       			  "statName":key,
+       			  "statValue":value,
+       		  });
     			 console.log("2-1");
     		  }  
     		  else if($scope.itemStats1.length === 3){
@@ -243,7 +249,7 @@ return tiles;
         			  "statName":key,
         			  "statValue":value,
         		  });
-    			  console.log("0-2-1");
+    			  console.log("0-2");
     		  }
     		  else if($scope.itemStats1.length === 1){
     			  $scope.itemStats1.push({
@@ -253,11 +259,11 @@ return tiles;
     			  console.log("1-2");
     		  }
     		  else if($scope.itemStats1.length === 2){
-    			  $scope.itemStats1.splice(0,1,{
+    			  $scope.itemStats1 =[];
+    			  $scope.itemStats1.push({
         			  "statName":key,
         			  "statValue":value,
         		  });
-    			  $scope.itemStats1.pop();
     			  console.log("2-2");
     		  }  
     		  else if($scope.itemStats1.length === 3){
@@ -280,7 +286,7 @@ return tiles;
     			  console.log("0-3");
     		  }
     		  else if($scope.itemStats1.length === 1){
-    			  $scope.itemStats1.splice(0,1,{
+    			  $scope.itemStats1.push({
         			  "statName":key,
         			  "statValue":value,
         		  });
@@ -294,8 +300,7 @@ return tiles;
     			  console.log("2-3");
     		  }   
     		  else if($scope.itemStats1.length === 3){
-    			  $scope.itemStats1.pop();
-    			  $scope.itemStats1.push({
+    			  $scope.itemStats1.splice(0,2{
         			  "statName":key,
         			  "statValue":value,
         		  });
