@@ -135,7 +135,7 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
     $scope.addedDmg = [];
 
     for (i = 0; i <= $scope.addedDmg; i++) {
-        $scope.totalDmg += Number($scope.addedDmg[i])
+        $scope.totalDmg += Number($scope.addedDmg[i].effect)
     }
 
 
@@ -224,7 +224,7 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
                          var dmg = Number(names.value);
                         console.log("dmg="+dmg);
                         $scope.addedDmg.push({
-                            dmg
+                            effect:dmg
                         });
                     }
 
