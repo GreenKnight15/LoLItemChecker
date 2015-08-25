@@ -179,7 +179,7 @@ return tiles;
 	    	
 	        
 	}
-	  return(key,value);
+	  return({"key":key,"value":value});
    }
     
     $scope.showAdvanced1 = function(ev) {
