@@ -142,10 +142,10 @@ return tiles;
       $scope.status = answer;
       $scope.itemName1 = "Name:"+answer.name;
       $scope.itemImage1 = answer.img;
-      
+      var counter = 0;
       $.each(answer.stats,function(key,value){
     	  console.log("key="+key);
-    	 
+    	 counter = counter + 1;
     		  
     	  switch(key != "") {
     	    case key=="FlatPhysicalDamageMod":
@@ -223,29 +223,13 @@ return tiles;
         		  });
     			  console.log("1-1");
     		  }
-    		  else if($scope.itemStats1.length === 2){
-    			 $scope.itemStats1.pop();
-    			 $scope.itemStats1.splice(0,1,{
+    		  else if($scope.itemStats1.length > 1){
+    			 $scope.itemStats1.splice(0,Number.MAX_VALUE,{
        			  "statName":key,
        			  "statValue":value,
        		  });
     			 console.log("2-1");
-    		  }  
-    		  else if($scope.itemStats1.length === 3){
-    			  $scope.itemStats1 =[];
-    			  $scope.itemStats1.push({
-        			  "statName":key,
-        			  "statValue":value,
-        		  });
-    			  console.log("3-1");
-    		  }
-    		  else if($scope.itemStats1.length === 4){
-    			  $scope.itemStats1 =[];
-    			  $scope.itemStats1.push({
-        			  "statName":key,
-        			  "statValue":value,
-        		  });
-    			  console.log("1-4");
+    			 
     		  }
     	  }
     	  
@@ -267,7 +251,7 @@ return tiles;
     			  console.log("1-2");
     		  }
     		  else if($scope.itemStats1.length === 2){
-    			  $scope.itemStats1 =[];
+    			  $scope.itemStats1.pop();
     			  $scope.itemStats1.push({
         			  "statName":key,
         			  "statValue":value,
@@ -292,9 +276,9 @@ return tiles;
     		  }
     	  }
     	  
-    	  //PROBLEMS
-    	  if(Object.keys(answer.stats).length === 3){
-    		  if($scope.itemStats1.length === 0 ){
+    	  //3 item attributes
+    	  if(Object.keys(answer.stats).length === 3){ 
+    		  if($scope.itemStats1.length === 0 ){ 
     			  $scope.itemStats1.push({
         			  "statName":key,
         			  "statValue":value,
@@ -302,26 +286,46 @@ return tiles;
     			  console.log("0-3");
     		  }
     		  else if($scope.itemStats1.length === 1){
-    			  $scope.itemStats1.push({
+    			  if(counter === 1){
+    			  $scope.itemStats1.splice(0,1,{
         			  "statName":key,
         			  "statValue":value,
         		  });
     			  console.log("1-3");
+    			  }
+    			  if(counter === 2){
+        			  $scope.itemStats1.push({
+            			  "statName":key,
+            			  "statValue":value,
+            		  });
+        			  console.log("1-3-2");
+        			 }
     		  }
     		  else if($scope.itemStats1.length === 2){
-    			  $scope.itemStats1.push({
-        			  "statName":key,
-        			  "statValue":value,
-        		  });
-    			  console.log("2-3");
+    			  if(counter === 2){
+        			  $scope.itemStats1.splice(0,1,{
+            			  "statName":key,
+            			  "statValue":value,
+            		  });
+        			  console.log("2-3");
+        			 }
+    			  if(counter === 3){
+        			  $scope.itemStats1.push({
+            			  "statName":key,
+            			  "statValue":value,
+            		  });
+        			  console.log("1-3");
+        			 }
     		  }   
     		  else if($scope.itemStats1.length === 3){
-    			  $scope.itemStats1.splice(0,Number.MAX_VALUE,{
-        			  "statName":key,
-        			  "statValue":value,
-        		  });
-    			  console.log("3-3");
-    		  }
+    			  if(counter === 3){
+        			  $scope.itemStats1.splice(0,2,{
+            			  "statName":key,
+            			  "statValue":value,
+            		  });
+        			  console.log("3-3");
+        			 }
+    		  } 
     		  else if($scope.itemStats1.length === 4){
     			  $scope.itemStats1 =[];
     			  $scope.itemStats1.push({
