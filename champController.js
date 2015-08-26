@@ -133,6 +133,7 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
     $scope.itemStats2 = [];
 
     $scope.addedDmg = [];
+    console.log($scope.addedDmg);
    
 
     ///PROBLEM
@@ -222,9 +223,8 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
 
                     
                     if (names.key === "Damage") {
-                         
                          var dmg = JSON.stringify(names.value);
-                         numDmg = Number(dmg);
+                         numDmg = parseInts(dmg);
                         console.log("dmg="+dmg);
                         
                         $scope.addedDmg.splice(0,1,{
