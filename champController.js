@@ -229,7 +229,7 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
                         $scope.addedDmg.push({
                             effect:dmg
                         });
-                        console.log(addedDmg);
+                        console.log($scope.addedDmg);
                     }
 
                     
