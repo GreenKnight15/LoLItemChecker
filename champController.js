@@ -373,7 +373,7 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
                             console.log("3-4");
                         }
                     }
-
+                    $scope.test = "test";
                 });
             })
     }
