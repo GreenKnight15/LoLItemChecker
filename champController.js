@@ -224,7 +224,7 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
                     
                     if (names.key === "Damage") {
                          var dmg = JSON.stringify(names.value);
-                         numDmg = parseInts(dmg);
+                         numDmg = parseInt(dmg);
                         console.log("dmg="+dmg);
                         
                         $scope.addedDmg.splice(0,1,{
