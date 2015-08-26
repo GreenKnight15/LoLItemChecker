@@ -223,11 +223,12 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
                     
                     if (names.key === "Damage") {
                          
-                         var dmg = names.value;
+                         var dmg = JSON.stringify(names.value);
+                         numDmg = Number(dmg);
                         console.log("dmg="+dmg);
                         
                         $scope.addedDmg.splice(0,1,{
-                            "effect":dmg
+                            "effect":numDmg
                         });
                         console.log($scope.addedDmg);
                     }
