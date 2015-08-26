@@ -134,9 +134,9 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
 
     $scope.addedDmg = [];
 
-    
+    ///PROBLEM
     for (i = 0; i <= $scope.addedDmg; i++) {
-        $scope.totalDmg += Number($scope.addedDmg[i]);
+        $scope.totalDmg += $scope.addedDmg[i];
         console.log("this is Number($scope.addedDmg)"+ $scope.addedDmg);
     }
 
@@ -225,6 +225,7 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
                          
                          var dmg = Number(names.value);
                         console.log("dmg="+dmg);
+                        Number(dmg);
                         $scope.addedDmg.push({
                             effect:dmg
                         });
