@@ -133,6 +133,7 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
     $scope.itemStats2 = [];
 
     $scope.addedDmg = [];
+   
 
     ///PROBLEM
     for (i = 0; i <= $scope.addedDmg; i++) {
@@ -228,6 +229,7 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
                         $scope.addedDmg.push({
                             effect:dmg
                         });
+                        console.log(addedDmg);
                     }
 
                     
