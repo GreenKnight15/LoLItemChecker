@@ -226,7 +226,7 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
                          var dmg = names.value;
                         console.log("dmg="+dmg);
                         
-                        $scope.addedDmg.splice(0,1{
+                        $scope.addedDmg.splice(0,1,{
                             effect:dmg
                         });
                         console.log($scope.addedDmg);
