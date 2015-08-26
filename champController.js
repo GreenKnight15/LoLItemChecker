@@ -138,7 +138,8 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
 
     ///PROBLEM
     for (i = 0; i <= $scope.addedDmg; i++) {
-        $scope.totalDmg += $scope.addedDmg[i];
+        $scope.totalDmg =+ $scope.addedDmg[i];
+        console.log($scope.addedDmg[i]);
     }
 
 
