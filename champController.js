@@ -132,7 +132,7 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
     $scope.itemStats1 = [];
     $scope.itemStats2 = [];
 
-    $scope.addedDmg = [0,1,2,3,4,5];
+    $scope.addedDmg = [];
    
 
     ///PROBLEM
