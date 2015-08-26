@@ -132,7 +132,7 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
     $scope.itemStats1 = [];
     $scope.itemStats2 = [];
 
-    $scope.addedDmg = [];
+    $scope.addedDmg = [0,0,0,0,0,0];
    
 
     ///PROBLEM
@@ -226,7 +226,7 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
                          var dmg = names.value;
                         console.log("dmg="+dmg);
                         
-                        $scope.addedDmg.push({
+                        $scope.addedDmg.splice(0,1{
                             effect:dmg
                         });
                         console.log($scope.addedDmg);
