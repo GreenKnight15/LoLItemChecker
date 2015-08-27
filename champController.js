@@ -431,7 +431,7 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
             		     .error(function() {
                     	 $scope.runePages=[];
                     	 $scope.showSummonerError();
-                    	}
+                    	})
     			};
 
     $scope.closeToast = function() {
