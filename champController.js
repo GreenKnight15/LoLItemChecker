@@ -464,10 +464,10 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
     	        .position("top right")
     	        .hideDelay(3000)
     	    );
-    	     
+    	     */
     	  };
     	 
-    	  */
+    	  
     	  
     	  
     	  
