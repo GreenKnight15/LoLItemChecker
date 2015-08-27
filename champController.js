@@ -403,7 +403,7 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
 
     $scope.runePages = [];
 
-    $scope.getRunePages = function() {
+    $scope.getRunesPages = function() {
     	console.log("get rune pages");
         $http.post('/getsummonerid', {
                 msg: $scope.summonerName,

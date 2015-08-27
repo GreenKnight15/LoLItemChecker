@@ -65,14 +65,13 @@
     <md-button class="md-accent md-raised" ng-click="getRunesPages()">Get Runes</md-button>
   </md-content>
   
-  <md-content ng-repeat="page in runePages" ng-controller="runeController">
+  <md-content ng-repeat="page in runePages">
   
   <p>{{page}}</p>
   
   </md-content>
   <md-button class="md-accent md-raised" ng-click="selectRune()"> Rune 1</md-button>
   
- 
   </div>
   
   <div layout="column"  ng-controller="statsController">
