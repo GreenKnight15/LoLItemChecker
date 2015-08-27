@@ -153,14 +153,14 @@
  <div flex>
     <md-content>
      <div ng-repeat="rune in currentRunes" >
-      <md-list-item class="md-3-line"  >
+      <div  >
           <img ng-src="{{rune.img}}" class="md-avatar" alt="rune img" layout-align="start start"/>
         <div class="md-list-item-text" >
           <h3>{{ rune.name }}</h3>
-         <!--   <h3>{{ rune.desc }}</h3> -->
+            <h3>{{ rune.desc }}</h3> 
         </div>
-         <md-divider ></md-divider>
-      </md-list-item>
+         <hr>
+      </div>
       </div>
     </md-content>
     </div>
