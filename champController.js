@@ -415,11 +415,11 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
                         msg: response[$scope.summonerName].id ,
                     })
                     .success(function(response) {
-                        $.each(response[$scope.summonerId].pages, function() {
+                        $.each(response[$scope.summonerId].pages.name, function(key,value) {
                         	console.log(this);
                         	
                             $scope.runePages.push({
-                                name: this.name,
+                                name: this.value,
                             })
                         });
                     })
