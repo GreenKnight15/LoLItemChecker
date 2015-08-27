@@ -133,13 +133,13 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
     $scope.itemStats2 = [];
 
     $scope.addedDmg = [];
-    console.log($scope.addedDmg);
+    
 
 
     ///PROBLEM
     for (i = 0; i <= $scope.addedDmg; i++) {
         $scope.totalDmg = +$scope.addedDmg[i];
-        console.log($scope.addedDmg[i]);
+        
     }
 
 
@@ -421,11 +421,6 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
                                 id:this.id,
                                 slots:this.slots,
                             }) 
-                            
-                            $.each(this.slots, function(){
-                            	console.log(this.runeId);
-                            	
-                            })
                         });
                     })
             	})    
@@ -433,9 +428,7 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
 
    $scope.currentRunes = [];
     		
-   $scope.getRuneStats = function(){
-	   console.log($scope.page.slots);
-	   
+   $scope.getRuneStats = function(){ 
 	   $.each($scope.page.slots, function(){
 		    
     	$http.post('/getrunestats', {
@@ -450,7 +443,6 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
                     img:"http://ddragon.leagueoflegends.com/cdn/5.2.1/img/rune/"+response.id+".png"
                     
                 });
-              
             
         });
 	   })
