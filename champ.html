@@ -141,7 +141,12 @@
      <md-button> <ng-md-icon icon="search" size="36" class="md-accent md-raised " ng-click="getRunesPages() "></ng-md-icon> </md-button>
      </div>
      
-    <div layout="row " layout-align="start center " flex>
+    
+
+ <div flex>
+    <md-content style="height:250px">
+    <md-subheader >
+    	<div layout="row " layout-align="start center " flex>
     <md-input-container flex >
         <md-select ng-model="page "  placeholder="Pick Rune Page ">
           <md-optgroup label="Page ">
@@ -150,10 +155,7 @@
         </md-select>
       </md-input-container>
       </div>
-
- <div flex>
-    <md-content style="height:250px">
-    <md-subheader >Runes</md-subheader>
+    </md-subheader>
     <md-list>
       <md-list-item class="md-3-line "  ng-repeat="rune in currentRunes"  >
           <img ng-src="{{rune.img}} " class="md-avatar " alt="rune img " layout-align="start start "/>
