@@ -144,9 +144,7 @@
     
 
  <div flex>
-    <md-content style="height:250px">
-    
-    	<div layout="row " layout-align="start center " flex>
+ <div layout="row " layout-align="start center " flex>
     <md-input-container flex >
         <md-select ng-model="page "  placeholder="Pick Rune Page ">
           <md-optgroup label="Page ">
@@ -155,7 +153,7 @@
         </md-select>
       </md-input-container>
       </div>
-    
+    <md-content style="height:250px">
     <md-list>
       <md-list-item class="md-3-line "  ng-repeat="rune in currentRunes"  >
           <img ng-src="{{rune.img}} " class="md-avatar " alt="rune img " layout-align="start start "/>
