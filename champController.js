@@ -411,7 +411,7 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
             .success(function(response) {
                 console.log(response);
                 $http.post('/getsummonerrunes', {
-                        msg: response.id,
+                        msg: response.$scope.summonerName,
                     })
                     .success(function(response) {
                         console.log(response);
