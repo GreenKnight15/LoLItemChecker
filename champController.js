@@ -423,13 +423,25 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
                             })
                         });
                     })
-            })
-    }
+                    .error(function() {
+                    	 $scope.runePages=[];
+                    	 $scope.showSummonerError();
+                    	})
+            		})
+    			}
 
-    function getRune() {
-
-
-    }
+    $scope.closeToast = function() {
+        $mdToast.hide();
+      };
+      
+      $scope.showSummonerError = function() {
+    	    $mdToast.show(
+    	      $mdToast.simple()
+    	        .content('No summoner under this name')
+    	        .position("top right")
+    	        .hideDelay(3000)
+    	    );
+    	  };}
 
 
     runeArray = [];
