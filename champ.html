@@ -25,7 +25,7 @@
         </md-toolbar>
       </md-content>
       </div>
-    <div layout="row" style="height:500px">
+    <div layout="row" style="height:1000px">
     
     <div layout="column" ng-controller="statsController">
       <md-content >
@@ -73,19 +73,19 @@
       </div>
   </md-content>
  
-   <md-content>
+   <md-content flex>
     <md-list>
-      <md-subheader class="md-no-sticky" ng-repeat="rune in currentRunes">Runes</md-subheader>
-      <md-list-item class="md-2-line" >
-        <img ng-src="{{rune.img}}" class="md-avatar" alt="rune img" />
-        <div class="md-list-item-text">
-          <h3>{{ rune.name }}</h3>
+      <md-subheader class="md-no-sticky" >Runes</md-subheader>
+      <md-list-item class="md-2-line" ng-repeat="rune in currentRunes"  >
+        <img ng-src="{{rune.img}}" class="md-avatar" alt="rune img" layout-align="start start"/>
+        <div class="md-list-item-text" layout-align="end start" layout="column">
+          <h3  start">{{ rune.name }}</h3>
           <h3>{{ rune.desc }}</h3>
         </div>
       </md-list-item>
       <md-divider ></md-divider>
-      </md-list>
-      </md-content>
+     </md-list>
+    </md-content>
   
   
   </div>
