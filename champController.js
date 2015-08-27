@@ -404,6 +404,7 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
     $scope.runePages = [];
 
     $scope.getRunesPages = function() {
+    	$scope.runePages = [];
     	$scope.sumName=  ($scope.summonerName).toLowerCase();
         $http.post('/getsummonerid', {
                 msg: $scope.sumName,
@@ -416,7 +417,6 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
                     .success(function(response) {
                         $.each(response[$scope.summonerId].pages, function() {
                         	console.log(this);
-                        	
                             $scope.runePages.push({
                                 name: this.name,
                             })
