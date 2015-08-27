@@ -410,12 +410,12 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
             })
             .success(function(response) {
                 console.log(response[$scope.summonerName].id);
-                
+                $scope.summonerId = response[$scope.summonerName].id;
                 $http.post('/getsummonerrunes', {
                         msg: response[$scope.summonerName].id ,
                     })
                     .success(function(response) {
-                        $.each(response, function() {
+                        $.each(response[$scope.summonerId].pages, function() {
                         	console.log(this);
                             $scope.runePages.push({
                                 name: this.name,
