@@ -441,14 +441,13 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
             msg: this.runeId
         })
         .success(function(response) {
-            
-
-            	console.log(response);
+        	  $scope.currentRunes = [];
                 $scope.currentRunes.push({
+                    names:response.name,
+                    desc:response.description,
                     
-
                 });
-                
+                console.log($scope.currentRunes);
             
         });
 	   })
