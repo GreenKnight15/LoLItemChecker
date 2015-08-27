@@ -425,26 +425,38 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
             	})    
     		};
 
-
+   $scope.currentRunes = [];
     		
    $scope.getRuneStats = function(){ 
-	   
+	   var counter = 0;
 	   $.each($scope.page.slots, function(){
 		    
     	$http.post('/getrunestats', {
             msg: this.runeId
         })
         .success(function(response) {
-        	console.log(response.image.full);
-        	  
+        	
+        	if(counter === 0){
                 $scope.currentRunes.push({
                     names:response.name,
                     desc:response.description,
                     img:"http://ddragon.leagueoflegends.com/cdn/5.2.1/img/rune/"+response.image.full,
                     
                 });
+        	} else{
+        		counter -= 1
+        		$scope.currentRunes.splice(counter,1,{
+                    names:response.name,
+                    desc:response.description,
+                    img:"http://ddragon.leagueoflegends.com/cdn/5.2.1/img/rune/"+response.image.full,
+                    
+                });
+        		
+        	}
+        	
             
         });
+    	counter++
 	   })
 	   console.log($scope.currentRunes);
     
