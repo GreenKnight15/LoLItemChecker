@@ -425,9 +425,10 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
             	})    
     		};
 
-   $scope.currentRunes = [];
+
     		
    $scope.getRuneStats = function(){ 
+	   
 	   $.each($scope.page.slots, function(){
 		    
     	$http.post('/getrunestats', {
@@ -435,7 +436,7 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
         })
         .success(function(response) {
         	console.log(response.image.full);
-        	  $scope.currentRunes = [];
+        	  
                 $scope.currentRunes.push({
                     names:response.name,
                     desc:response.description,
