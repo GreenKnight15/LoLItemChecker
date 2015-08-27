@@ -420,8 +420,10 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
                                 name: this.name,
                                 id:this.id,
                                 slots:this.slots,
+                            }) 
+                            $.each(this.slots, function(){
+                            	console.log(this);
                             })
-                            console.log(this.slots.runeId);
                         });
                     })
             	})    
