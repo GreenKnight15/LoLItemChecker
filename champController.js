@@ -64,9 +64,66 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
                     level: '2',
                     value: '2'
                 }, {
+                    level: '3',
+                    value: '3'
+                },
+                {
+                    level: '4'',
+                    value: '4'
+                },
+                {
+                    level: '5',
+                    value: '5'
+                },
+                {
+                    level: '6',
+                    value: '6'
+                },
+                {
+                    level: '7',
+                    value: '7'
+                },
+                {
+                    level: '8',
+                    value: '8'
+                },
+                {
+                    level: '9',
+                    value: '9'
+                },
+                {
+                    level: '10',
+                    value: '10'
+                },
+                {
+                    level: '11',
+                    value: '11'
+                },
+                {
+                    level: '12',
+                    value: '12'
+                },
+                {
+                    level: '13',
+                    value: '13'
+                },
+                {
+                    level: '14',
+                    value: '14'
+                },{
+                    level: '15',
+                    value: '15'
+                },{
+                    level: '16',
+                    value: '16'
+                },{
+                    level: '17',
+                    value: '17'
+                },{
                     level: '18',
                     value: '18'
-                }, ];
+                },
+                ];
 
                 $scope.name = response.name;
                 $scope.title = response.title;
