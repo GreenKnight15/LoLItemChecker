@@ -68,7 +68,7 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
                     value: '3'
                 },
                 {
-                    level: '4'',
+                    level: '4',
                     value: '4'
                 },
                 {
