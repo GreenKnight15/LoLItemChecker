@@ -441,7 +441,7 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
             msg: this.runeId
         })
         .success(function(response) {
-            $.each(response, function() {
+            
 
             	console.log(response);
                 $scope.currentRunes.push({
@@ -449,7 +449,7 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
 
                 });
                 
-            })
+            
         });
 	   })
     
