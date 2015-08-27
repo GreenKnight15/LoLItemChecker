@@ -441,6 +441,7 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
             msg: this.runeId
         })
         .success(function(response) {
+        	$scope.page = [];
         	  $scope.currentRunes = [];
                 $scope.currentRunes.push({
                     names:response.name,
