@@ -560,6 +560,182 @@ function changeEffectName(key, value) {
     }
     
     
+    $scope.showAdvanced3 = function(ev) {
+        $mdDialog.show({
+                controller: DialogController,
+                templateUrl: '/items',
+                parent: angular.element(document.body),
+                targetEvent: ev,
+                clickOutsideToClose: true
+            })
+            .then(function(answer) {
+                $scope.status = answer;
+                $scope.itemName3 = "Name:" + answer.name;
+                $scope.itemImage3 = answer.img;
+                var counter = 0;
+
+                $.each(answer.stats, function(key, value) {
+                    counter = counter + 1;
+                    var names = changeEffectName(key, value);
+
+
+                    if (names.key === "Damage") {
+                        var dmg = JSON.stringify(names.value);
+                        numDmg = parseInt(dmg);
+                        console.log("dmg=" + dmg);
+
+                        $scope.addedDmg.splice(0, 1, {
+                            "effect": numDmg
+                        });
+                        console.log($scope.addedDmg);
+                    }
+
+
+
+
+                    if (Object.keys(answer.stats).length === 0) {
+                        $scope.itemStats3 = [];
+                    }
+                    //item with 1 attributes 
+                    if (Object.keys(answer.stats).length === 1) {
+                        if ($scope.itemStats3.length === 0) {
+                            $scope.itemStats3.push({
+                                "statName": names.key,
+                                "statValue": names.value,
+                            });
+                            console.log("0-1");
+                        } else if ($scope.itemStats3.length === 1) {
+                            $scope.itemStats1.splice(0, 1, {
+                                "statName": names.key,
+                                "statValue": names.value,
+                            });
+                            console.log("1-1");
+                        } else if ($scope.itemStats3.length > 1) {
+                            $scope.itemStats1.splice(0, Number.MAX_VALUE, {
+                                "statName": names.key,
+                                "statValue": names.value,
+                            });
+                            console.log("2-1");
+
+                        }
+                    }
+
+
+                    //item with 2 attributes
+                    if (Object.keys(answer.stats).length === 2) {
+                        if ($scope.itemStats3.length === 0) {
+                            $scope.itemStats3.push({
+                                "statName": names.key,
+                                "statValue": names.value,
+                            });
+                            console.log("0-2");
+                        } else if ($scope.itemStats3.length === 1) {
+                            if (counter === 1) {
+                                $scope.itemStats3.splice(0, 1, {
+                                    "statName": names.key,
+                                    "statValue": names.value,
+                                });
+                                console.log("1-2-1");
+                            }
+                            if (counter === 2) {
+                                $scope.itemStats3.push({
+                                    "statName": names.key,
+                                    "statValue": names.value,
+                                });
+                            }
+                            console.log("1-2-2");
+                        } else if ($scope.itemStats3.length === 2) {
+                            if (counter === 1) {
+                                $scope.itemStats3.splice(0, 1, {
+                                    "statName": names.key,
+                                    "statValue": names.value,
+                                });
+                                console.log("2-2-1");
+                            }
+                            if (counter === 2) {
+                                $scope.itemStats3.splice(1, 1, {
+                                    "statName": names.key,
+                                    "statValue": names.value,
+                                });
+                                console.log("2-2-1");
+                            }
+                        } else if ($scope.itemStats3.length === 3) {
+                            if (counter === 1) {
+                                $scope.itemStats3.splice(0, 2, {
+                                    "statName": names.key,
+                                    "statValue": names.value,
+                                });
+                            }
+                            console.log("2-3");
+                        } else if ($scope.itemStats3.length === 4) {
+                            if (counter === 1) {
+                                $scope.itemStats3.splice(0, 3, {
+                                    "statName": names.key,
+                                    "statValue": names.value,
+                                });
+                            }
+                            console.log("2-4");
+                        }
+                    }
+                    //3 item attributes
+                    if (Object.keys(answer.stats).length === 3) {
+                        if ($scope.itemStats3.length === 0) {
+                            $scope.itemStats3.push({
+                                "statName": names.key,
+                                "statValue": names.value,
+                            });
+                            console.log("0-3");
+                        } else if ($scope.itemStats3.length === 1) {
+                            if (counter === 1) {
+                                $scope.itemStats3.splice(0, 1, {
+                                    "statName": names.key,
+                                    "statValue": names.value,
+                                });
+                                console.log("1-3");
+                            }
+                            if (counter === 2) {
+                                $scope.itemStats3.push({
+                                    "statName": names.key,
+                                    "statValue": names.value,
+                                });
+                                console.log("1-3-2");
+                            }
+                        } else if ($scope.itemStats3.length === 2) {
+                            if (counter === 2) {
+                                $scope.itemStats3.splice(0, 1, {
+                                    "statName": names.key,
+                                    "statValue": names.value,
+                                });
+                                console.log("2-3");
+                            }
+                            if (counter === 3) {
+                                $scope.itemStats3.push({
+                                    "statName": names.key,
+                                    "statValue": names.value,
+                                });
+                                console.log("1-3");
+                            }
+                        } else if ($scope.itemStats3.length === 3) {
+                            if (counter === 3) {
+                                $scope.itemStats3.splice(0, 2, {
+                                    "statName": names.key,
+                                    "statValue": names.value,
+                                });
+                                console.log("3-3");
+                            }
+                        } else if ($scope.itemStats3.length === 4) {
+                            $scope.itemStats3 = [];
+                            $scope.itemStats3.push({
+                                "statName": names.key,
+                                "statValue": names.value,
+                            });
+                            console.log("3-4");
+                        }
+                    }
+                });
+            })
+    }
+    
    
 
 
