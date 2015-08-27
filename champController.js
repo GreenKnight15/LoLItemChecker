@@ -431,47 +431,30 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
             	})    
     		};
 
-    	
+   $scope.currentRunes = [];
+    		
    $scope.getRuneStats = function(){
 	   console.log($scope.page.slots);
-	  /*
+	  
 	   $.each($scope.page.slots, function(){
-    	$http.post('/getruneslots', {
-            msg: 
+    	$http.post('/getrunestats', {
+            msg: this.runeId
         })
         .success(function(response) {
             $.each(response, function() {
 
-                tiles.push({
+            	console.log(response);
+                $scope.currentRunes.push({
                     
 
                 });
-                tiles.sort(compare);
-
+                
             })
         });
 	   })
     
-    		
-    $scope.closeToast = function() {
-        $mdToast.hide();
-      };
-      
-      $scope.showSummonerError = function() {
-    	    $mdToast.show(
-    	      $mdToast.simple()
-    	        .content('No summoner under this name')
-    	        .position("top right")
-    	        .hideDelay(3000)
-    	    );
-    	     */
-    	  };
-    	 
-    	  
-    	  
-    	  
-    	  
-    	  
+    	    
+    };
     })
     
 .controller('footerController', function($scope) {
