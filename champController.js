@@ -428,7 +428,7 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
                     	 $scope.showSummonerError();
                     	})
             		})
-    			}
+    			});
 
     $scope.closeToast = function() {
         $mdToast.hide();
@@ -441,7 +441,8 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
     	        .position("top right")
     	        .hideDelay(3000)
     	    );
-    	  };}
+    	  };
+    }
 
 
     runeArray = [];
