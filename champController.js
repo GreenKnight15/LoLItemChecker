@@ -134,11 +134,11 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
 
     $scope.addedDmg = [];
     console.log($scope.addedDmg);
-   
+
 
     ///PROBLEM
     for (i = 0; i <= $scope.addedDmg; i++) {
-        $scope.totalDmg =+ $scope.addedDmg[i];
+        $scope.totalDmg = +$scope.addedDmg[i];
         console.log($scope.addedDmg[i]);
     }
 
@@ -222,21 +222,21 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
                     counter = counter + 1;
                     var names = changeEffectName(key, value);
 
-                    
+
                     if (names.key === "Damage") {
-                         var dmg = JSON.stringify(names.value);
-                         numDmg = parseInt(dmg);
-                        console.log("dmg="+dmg);
-                        
-                        $scope.addedDmg.splice(0,1,{
-                            "effect":numDmg
+                        var dmg = JSON.stringify(names.value);
+                        numDmg = parseInt(dmg);
+                        console.log("dmg=" + dmg);
+
+                        $scope.addedDmg.splice(0, 1, {
+                            "effect": numDmg
                         });
                         console.log($scope.addedDmg);
                     }
 
-                    
-                    
-                    
+
+
+
                     if (Object.keys(answer.stats).length === 0) {
                         $scope.itemStats1 = [];
                     }
@@ -379,105 +379,107 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
                 });
             })
     }
-   
 
-function DialogController($scope, $mdDialog) {
-    $scope.hide = function() {
-        $mdDialog.hide();
-    };
-    $scope.cancel = function() {
-        $mdDialog.cancel();
-    };
-    $scope.answer = function(answer) {
-        $mdDialog.hide(answer);
-    };
 
-};
+    function DialogController($scope, $mdDialog) {
+        $scope.hide = function() {
+            $mdDialog.hide();
+        };
+        $scope.cancel = function() {
+            $mdDialog.cancel();
+        };
+        $scope.answer = function(answer) {
+            $mdDialog.hide(answer);
+        };
+
+    };
 
 })
 
 
 
 
-.controller('runeController', function($scope){
-	
-	   this.runeTiles = (function() {
-	        var tiles = [];
-	        $http.post('/allrunes', {
-	                msg: 'all'
-	            })
-	            .success(function(response) {
+.controller('runeController', function($scope) {
 
-	                $.each(response.data, function() {
+    this.runeTiles = (function() {
+        var tiles = [];
+        $http.post('/allrunes', {
+                msg: 'all'
+            })
+            .success(function(response) {
 
-	                    tiles.push({
-	                        id: this.id,
-	                        name: this.name,
-	                        link: "/stats/" + this.id,
-	                        aria: this.name,
-	                        img: "http://ddragon.leagueoflegends.com/cdn/5.16.1/img/item/" + this.image.full,
-	                        descLong: this.sanitizedDescription,
-	                        cost: this.gold.total,
-	                        stats: this.stats,
+                $.each(response.data, function() {
 
-	                    });
-	                    tiles.sort(compare);
+                    tiles.push({
+                        id: this.id,
+                        name: this.name,
+                        link: "/stats/" + this.id,
+                        aria: this.name,
+                        img: "http://ddragon.leagueoflegends.com/cdn/5.16.1/img/item/" + this.image.full,
+                        descLong: this.sanitizedDescription,
+                        cost: this.gold.total,
+                        stats: this.stats,
 
-	                })
-	            });
+                    });
+                    tiles.sort(compare);
 
-
-	        function compare(a, b) {
-	            if (a.cost < b.cost)
-	                return -1;
-	            if (a.cost > b.cost)
-	                return 1;
-	            return 0;
-	        }
-
-	        return tiles;
-	    })();
-	
-	 $scope.runePages = []; 
-	  
-	$scope.getRunePages = function(){
-		$http.post('/getsummonerid', {
-            msg: $scope.summonerName,
-        })
-        .success(function(response) {
-            	
-            	console.log("got id"+response.id);
-            	 var summonerId = response.id;
-            	$http.post('/getsummonerrunes', {
-                    msg:summonerId ,
                 })
-                .success(function(response) {
-                	console.log("got runes"+this);
-                    $.each(response.pages, function() {
-                    	$scope.runePages.push({
-                    		name:this.name,
-                    		slots:this.slots,
-                    	}) 
-                });
-        })
-	})
-	}
-	
-	function getRune(){
-		
-		
-	}
-	
-	
-	runeArray = [];
-	$scope.selectRune1 = function(){
-		
-		
-	}	
-	
-	
-	
-	
+            });
+
+
+        function compare(a, b) {
+            if (a.cost < b.cost)
+                return -1;
+            if (a.cost > b.cost)
+                return 1;
+            return 0;
+        }
+
+        return tiles;
+    })();
+
+    $scope.runePages = [];
+
+    $scope.getRunePages = function() {
+    	console.log("get rune pages");
+        $http.post('/getsummonerid', {
+                msg: $scope.summonerName,
+            })
+            console.log("getting id");
+            .success(function(response) {
+                console.log("got id" + response.id);
+                var summonerId = response.id;
+                $http.post('/getsummonerrunes', {
+                        msg: summonerId,
+                    })
+                    console.log("get rune pages from summonerid");
+                    .success(function(response) {
+                        console.log("got runes" + this);
+                        $.each(response.pages, function() {
+                            $scope.runePages.push({
+                                name: this.name,
+                                slots: this.slots,
+                            })
+                        });
+                    })
+            })
+    }
+
+    function getRune() {
+
+
+    }
+
+
+    runeArray = [];
+    $scope.selectRune1 = function() {
+
+
+    }
+
+
+
+
 })
 
 .controller('footerController', function($scope) {
