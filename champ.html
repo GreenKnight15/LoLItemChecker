@@ -152,7 +152,8 @@
 
  <div flex>
     <md-list layout="column">
-      <md-subheader class="md-no-sticky" ng-repeat="rune in currentRunes"  >Runes</md-subheader>
+      <md-subheader class="md-no-sticky"  >Runes</md-subheader>
+      <div ng-repeat="rune in currentRunes" >
       <md-list-item class="md-3-line"  >
         <!--  <img ng-src="{{rune.img}}" class="md-avatar" alt="rune img" layout-align="start start"/>-->
         <div class="md-list-item-text" >
@@ -161,6 +162,7 @@
         </div>
          <md-divider ></md-divider>
       </md-list-item>
+      <div>
      </md-list>
     </md-content>
     </div>
