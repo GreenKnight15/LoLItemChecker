@@ -433,10 +433,10 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
 
     	
    $scope.getRuneStats = function(){
-	   console.log($scope.page);
-	   /*
-	   $.each($scope.runePages.slots, function(){
-    	$http.post('/getrunestats', {
+	   console.log($scope.page.slots.runeId);
+	  /*
+	   $.each($scope.page.slots, function(){
+    	$http.post('/getruneslots', {
             msg: 
         })
         .success(function(response) {
@@ -464,9 +464,14 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
     	        .position("top right")
     	        .hideDelay(3000)
     	    );
-    	     */
+    	     
     	  };
     	 
+    	  */
+    	  
+    	  
+    	  
+    	  
     })
     
 .controller('footerController', function($scope) {
