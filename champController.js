@@ -421,8 +421,9 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
                                 id:this.id,
                                 slots:this.slots,
                             }) 
+                            
                             $.each(this.slots, function(){
-                            	console.log(this);
+                            	console.log(this,runeId);
                             })
                         });
                     })
