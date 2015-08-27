@@ -65,14 +65,13 @@
                             Item 1
                         </md-button>
                         <div ng-repeat="stat in itemStats1" layout="row">
-                            <p layout-align="center end">{{stat.statName}}</p>
+                            <p layout-align="start center">{{stat.statName}}</p>
                             <p>{{stat.statValue}}</p>
                         </div>
                         <div style="" layout-align="end center" layout="column">
-                            <img src="{{itemImage1}}" layout-align="center end" />
+                            <img src="{{itemImage1}}" layout-align="center center" />
                         </div>
                     </div>
-
 
 
                     <div style="border:5px solid black;" flex="33">
@@ -80,22 +79,29 @@
                             Item 2
                         </md-button>
                         <div ng-repeat="stat in itemStats2" layout="row">
-                            <p layout-align="center end">{{stat.statName}}</p>
+                            <p layout-align="start center">{{stat.statName}}</p>
                             <p>{{stat.statValue}}</p>
                         </div>
-                        <div style="" layout-align="end center" layout="column">
+                        <div style="" layout-align="center center" layout="column">
                             <img src="{{itemImage2}}" layout-align="center end" />
                         </div>
                     </div>
 
 
                     <div style="border:5px solid black;" flex="33">
-                        <md-button class="md-primary md-raised" ng-click="showAdvanced3($event)">
+                        <md-button class="md-primary md-raised" ng-click="showAdvanced3($event)" layout-align="start start">
                             Item 3
                         </md-button>
-                        <p layout-align="center end">{{itemName3}}</p>
-                        <img src="{{itemImage3}}" />
+                        <div ng-repeat="stat in itemStats3" layout="row">
+                            <p layout-align="start center">{{stat.statName}}</p>
+                            <p>{{stat.statValue}}</p>
+                        </div>
+                        <div style="" layout-align="center center" layout="column">
+                            <img src="{{itemImage3}}" layout-align="center end" />
+                        </div>
                     </div>
+                    
+               
                 </md-content>
 
 
@@ -103,27 +109,43 @@
 
                     <div style="border:5px solid black;" flex="33">
                         <md-button class="md-primary md-raised" ng-click="showAdvanced4($event)" layout-align="start start">
-                            Item 4
+                            Item 2
                         </md-button>
-                        <p layout-align="center end">{{itemName4}}</p>
-                        <img src="{{itemImage4}}" />
+                        <div ng-repeat="stat in itemStats4" layout="row">
+                            <p layout-align="center center">{{stat.statName}}</p>
+                            <p>{{stat.statValue}}</p>
+                        </div>
+                        <div style="" layout-align="center center" layout="column">
+                            <img src="{{itemImage4}}" layout-align="center end" />
+                        </div>
                     </div>
 
                     <div style="border:5px solid black;" flex="33">
                         <md-button class="md-primary md-raised" ng-click="showAdvanced5($event)" layout-align="start start">
-                            Item 5
+                            Item 2
                         </md-button>
-                        <p layout-align="center end">{{itemName5}}</p>
-                        <img src="{{itemImage5}}" />
+                        <div ng-repeat="stat in itemStats5" layout="row">
+                            <p layout-align="start center">{{stat.statName}}</p>
+                            <p>{{stat.statValue}}</p>
+                        </div>
+                        <div style="" layout-align="center center" layout="column">
+                            <img src="{{itemImage5}}" layout-align="center end" />
+                        </div>
                     </div>
 
-                    <div style="border:5px solid black;" " flex="33 ">
-    <md-button class="md-primary md-raised " ng-click="showAdvanced6($event) " layout-align="start start ">
-      Item 6
-    </md-button>
-    <p layout-align="center end ">{{itemName6}}</p>
-    <img src="{{itemImage6}} " />
-    </div> 
+                    <div style="border:5px solid black;" flex="33">
+                        <md-button class="md-primary md-raised" ng-click="showAdvanced6($event)" layout-align="start start">
+                            Item 2
+                        </md-button>
+                        <div ng-repeat="stat in itemStats6" layout="row">
+                            <p layout-align="start center">{{stat.statName}}</p>
+                            <p>{{stat.statValue}}</p>
+                        </div>
+                        <div style="" layout-align="center center" layout="column">
+                            <img src="{{itemImage6}}" layout-align="center end" />
+                        </div>
+                    </div>
+   
     </md-content> 
     
     

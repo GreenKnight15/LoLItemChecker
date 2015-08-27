@@ -160,11 +160,11 @@ function changeEffectName(key, value) {
                 key = "Ability Power"
                 break;
             case key == "FlatSpellBlockMod":
-                key = "+Magic Resit"
+                key = "Magic Resit"
                 break;
             case key == "PercentLifeStealMod":
                 key = "Life Steal"
-                value = (value * 100) + "%";
+                value = (value * 100)+"%";
                 break;
             case key == "FlatHPPoolMod":
                 key = "+Health"
@@ -174,7 +174,7 @@ function changeEffectName(key, value) {
                 value = (value * 100) + "%";
                 break;
             case key == "FlatMPPoolMod":
-                key = "+Mana"
+                key = "Mana"
                 break;
             case key == "FlatMPRegenMod":
                 key = "Mana Regen"
@@ -193,7 +193,7 @@ function changeEffectName(key, value) {
                 value = (value * 100) + "%";
                 break;
             case key == "FlatMovementSpeedMod":
-                key = "+Movment Speed"
+                key = "Movment Speed"
                 break
             default:
                 key = "";
