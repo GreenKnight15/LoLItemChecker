@@ -435,13 +435,13 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
     		
    $scope.getRuneStats = function(){
 	   console.log($scope.page.slots);
-	  
+	   $scope.page = [];
 	   $.each($scope.page.slots, function(){
     	$http.post('/getrunestats', {
             msg: this.runeId
         })
         .success(function(response) {
-        	$scope.page = [];
+        	
         	  $scope.currentRunes = [];
                 $scope.currentRunes.push({
                     names:response.name,
