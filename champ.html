@@ -135,10 +135,10 @@
   <md-content layout-padding >
   <div layout="row ">
   <md-input-container >
-      <input ng-model="summonerName " placeholder="Summoner Name" ng-change="getRunesPages()">
+      <input ng-model="summonerName " placeholder="Summoner Name">
      </md-input-container>
-     <div flex></div>
-     <md-button  class="md-accent md-raised " ng-click="getRunesPages() ">Get Runes</md-button>
+     
+     <ng-md-icon icon="search" size="36" class="md-accent md-raised " ng-click="getRunesPages() ">Get Runes</ng-md-icon>
      </div>
      
     <div layout="row " layout-align="start center " flex>
@@ -164,19 +164,6 @@
          <md-divider ></md-divider>
       </md-list-item>
      </md-list>
-    </md-content>
-    </div>
-    
-     <div flex>
-    <md-content>
-    
-      <div class="md-3-line "  ng-repeat="rune in currentRunes"  >
-          <img ng-src="{{rune.img}} " class="md-avatar " alt="rune img " layout-align="start start "/>
-        	
-          <h3>{{ rune.name }}</h3>
-            <h3>{{ rune.desc }}</h3> 
-        
-</div>
     </md-content>
     </div>
     
