@@ -457,10 +457,10 @@ function DialogController($scope, $mdDialog) {
                     	$scope.runePages.push({
                     		name:this.name,
                     		slots:this.slots,
-                    	})
-                       
+                    	}) 
                 });
-        });
+        })
+	})
 	}
 	
 	function getRune(){
