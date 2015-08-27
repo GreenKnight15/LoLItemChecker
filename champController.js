@@ -425,8 +425,6 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
                     })
             	})    
     		};
-
-   $scope.currentRunes = [];
     		
    $scope.getRuneStats = function(){ 
 	   $.each($scope.page.slots, function(){
