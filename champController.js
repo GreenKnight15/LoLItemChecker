@@ -405,7 +405,7 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
     $scope.currentPage ="";
 
     $scope.getRunesPages = function() {
-    	$scope.sumName=  $scope.summonerName.toLowerCase();
+    	$scope.sumName=  ($scope.summonerName).toLowerCase();
         $http.post('/getsummonerid', {
                 msg: $scope.sumName,
             })
