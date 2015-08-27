@@ -87,6 +87,34 @@ app.post('/allitems',function(req,res){
     });
 });
 
+app.post('/getsummonerid',function(req,res){
+    //get summoner id
+request("https://na.api.pvp.net/api/lol/na/v1.4/summoner/by-name/"+ req.body.msg +"?api_key="+key,
+        function(error,response,body){
+        console.log("making request for suummoner id");
+        if (!error ){
+            console.log('getting summoner id');
+            res.send(body);
+        } else {
+            console.log(error);
+        }
+    });
+});
+
+app.post('/getsummonerrunes',function(req,res){
+    //get summoner runes
+request("https://na.api.pvp.net/api/lol/na/v1.4/summoner/"+ req.body.msg +"/runes?api_key="+key,
+        function(error,response,body){
+        console.log("making request for summoner runes");
+        if (!error ){
+            console.log('getting summoner runes');
+            res.send(body);
+        } else {
+            console.log(error);
+        }
+    });
+});
+
 app.set('port', process.env.OPENSHIFT_NODEJS_PORT || '8080');
 app.set('ip', process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1');
 

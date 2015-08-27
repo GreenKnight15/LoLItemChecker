@@ -396,6 +396,95 @@ function DialogController($scope, $mdDialog) {
 
 })
 
+
+
+
+.controller('runeController', function($scope){
+	
+	   this.runeTiles = (function() {
+	        var tiles = [];
+	        $http.post('/allrunes', {
+	                msg: 'all'
+	            })
+	            .success(function(response) {
+
+	                $.each(response.data, function() {
+
+	                    tiles.push({
+	                        id: this.id,
+	                        name: this.name,
+	                        link: "/stats/" + this.id,
+	                        aria: this.name,
+	                        img: "http://ddragon.leagueoflegends.com/cdn/5.16.1/img/item/" + this.image.full,
+	                        descLong: this.sanitizedDescription,
+	                        cost: this.gold.total,
+	                        stats: this.stats,
+
+	                    });
+	                    tiles.sort(compare);
+
+	                })
+	            });
+
+
+	        function compare(a, b) {
+	            if (a.cost < b.cost)
+	                return -1;
+	            if (a.cost > b.cost)
+	                return 1;
+	            return 0;
+	        }
+
+	        return tiles;
+	    })();
+	
+	 $scope.runePages = []; 
+	   
+	$scope.getRunePages = function(){
+		$http.post('/getsummonerid', {
+            msg: $scope.summonerName,
+        })
+        .success(function(response) {
+
+            $.each(response, function() {
+            	 var summonerId = this.id;
+            	$http.post('/getsummonerrunes', {
+                    msg:summonerId ,
+                })
+                .success(function(response) {
+
+                    $.each(response.data, function() {
+                    	
+                    	$scope.runePages.push({
+                    		name:this.name,
+                    	})
+                        
+                    })
+                });
+
+                
+
+            })
+        });
+	}
+	
+	function getRune(){
+		
+		
+	}
+	
+	
+	runeArray = [];
+	$scope.selectRune1 = function(){
+		
+		
+	}	
+	
+	
+	
+	
+})
+
 .controller('footerController', function($scope) {
     $scope.disclosure = "LoL Item Checker isn’t endorsed by Riot Games and doesn’t reflect the views or opinions of Riot Games or anyone officially involved in producing or managing League of Legends. League of Legends and Riot Games are trademarks or registered trademarks of Riot Games, Inc. League of Legends © Riot Games, Inc.";
 
