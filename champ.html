@@ -57,11 +57,13 @@
   <div flex>
   <div ng-controller="runeController" flex  >
   <md-content layout-padding >
-  <md-input-container>
+  <div layout="row">
+  <md-input-container >
       <input ng-model="summonerName" placeholder="Summoner Name">
-    </md-input-container>
-    <md-button class="md-accent md-raised" ng-click="getRunesPages()">Get Runes</md-button>
-    
+     </md-input-container>
+     <md-button class="md-accent md-raised" ng-click="getRunesPages()">Get Runes</md-button>
+     </div>
+     
     <div layout="row" layout-align="start center" flex>
     <md-input-container flex >
         <md-select ng-model="page" ng-change="getRuneStats()" placeholder="Pick Rune Page ">
@@ -73,7 +75,7 @@
       </div>
   </md-content >
  </div>
- 
+ <div flex></div>
  <div ng-controller="runeController" layout="column"> 
    <md-content>
     <md-list >
