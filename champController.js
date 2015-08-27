@@ -442,7 +442,7 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
     	        .hideDelay(3000)
     	    );
     	  };
-    }
+    })
 
 
     runeArray = [];
@@ -450,9 +450,6 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
 
 
     }
-
-
-
 
 })
 
