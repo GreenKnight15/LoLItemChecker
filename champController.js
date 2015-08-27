@@ -445,14 +445,12 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
         $http.post('/getsummonerid', {
                 msg: $scope.summonerName,
             })
-            console.log("getting id");
             .success(function(response) {
                 console.log("got id" + response.id);
                 var summonerId = response.id;
                 $http.post('/getsummonerrunes', {
                         msg: summonerId,
                     })
-                    console.log("get rune pages from summonerid");
                     .success(function(response) {
                         console.log("got runes" + this);
                         $.each(response.pages, function() {
