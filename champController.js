@@ -439,32 +439,27 @@ function DialogController($scope, $mdDialog) {
 	    })();
 	
 	 $scope.runePages = []; 
-	   
+	  
 	$scope.getRunePages = function(){
 		$http.post('/getsummonerid', {
             msg: $scope.summonerName,
         })
         .success(function(response) {
-
-            $.each(response, function() {
-            	 var summonerId = this.id;
+            	
+            	console.log("got id"+response.id);
+            	 var summonerId = response.id;
             	$http.post('/getsummonerrunes', {
                     msg:summonerId ,
                 })
                 .success(function(response) {
-
-                    $.each(response.data, function() {
-                    	
+                	console.log("got runes"+this);
+                    $.each(response.pages, function() {
                     	$scope.runePages.push({
                     		name:this.name,
+                    		slots:this.slots,
                     	})
-                        
-                    })
+                       
                 });
-
-                
-
-            })
         });
 	}
 	
