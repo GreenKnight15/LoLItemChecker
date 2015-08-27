@@ -405,14 +405,14 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
     $scope.currentPage ="";
 
     $scope.getRunesPages = function() {
-    	console.log("get rune pages");
+    	$scope.sumName=  [$scope.summonerName].toLowerCase();
         $http.post('/getsummonerid', {
-                msg: $scope.summonerName,
+                msg: $scope.sumName,
             })
             .success(function(response) {
                 $scope.summonerId = response[$scope.summonerName].id;
                 $http.post('/getsummonerrunes', {
-                        msg: response[$scope.summonerName].id ,
+                        msg: response[$scope.sumName].id ,
                     })
                     .success(function(response) {
                         $.each(response[$scope.summonerId].pages, function() {
