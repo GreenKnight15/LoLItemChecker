@@ -54,8 +54,8 @@
 </div>
   </md-content>
   </div>
-  
-  <div ng-controller="runeController"  >
+  <div flex>
+  <div ng-controller="runeController" flex  >
   <md-content layout-padding >
   <md-input-container>
       <input ng-model="summonerName" placeholder="Summoner Name">
@@ -89,12 +89,12 @@
      </md-list>
     </md-content>
   </div>
-  
+  </div>
  
   
-  <div layout="column"  ng-controller="statsController" >
+  <div layout="column"  ng-controller="statsController" layout-align="start end">
   
-     <md-content layout="row">
+     <md-content layout="row" >
 
 	<div style="border:5px solid black;" flex="33">
     <md-button  class="md-primary md-raised" ng-click="showAdvanced1($event)" layout-align="start start">
