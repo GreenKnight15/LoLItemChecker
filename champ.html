@@ -76,10 +76,11 @@
    <md-content>
     <md-list>
       <md-subheader class="md-no-sticky">Runes</md-subheader>
-      <md-list-item class="md-3-line" ng-repeat="page in runePages.stats">
-        <img ng-src="" class="md-avatar" alt="{{}}" />
+      <md-list-item class="md-2-line" ng-repeat="rune in currentRunes">
+        <img ng-src="" class="md-avatar" alt="" />
         <div class="md-list-item-text">
-          <h3>{{ page }}</h3>
+          <h3>{{ rune.name }}</h3>
+          <h3>{{ rune.desc }}</h3>
         </div>
       </md-list-item>
       <md-divider ></md-divider>
