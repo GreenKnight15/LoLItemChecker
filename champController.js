@@ -409,10 +409,10 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
                 msg: $scope.summonerName,
             })
             .success(function(response) {
-                console.log(response[$scope.summonerName]);
+                console.log(response[$scope.summonerName].id);
                 
                 $http.post('/getsummonerrunes', {
-                        msg: response[$scope.summonerName] ,
+                        msg: response[$scope.summonerName].id ,
                     })
                     .success(function(response) {
                         console.log(response);
