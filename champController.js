@@ -446,6 +446,7 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
                 $scope.currentRunes.push({
                     names:response.name,
                     desc:response.description,
+                    img:"http://ddragon.leagueoflegends.com/cdn/5.2.1/img/rune/"+response.id+".png"
                     
                 });
                 console.log($scope.currentRunes);

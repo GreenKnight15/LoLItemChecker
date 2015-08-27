@@ -77,7 +77,7 @@
     <md-list>
       <md-subheader class="md-no-sticky">Runes</md-subheader>
       <md-list-item class="md-2-line" ng-repeat="rune in currentRunes">
-        <img ng-src="" class="md-avatar" alt="" />
+        <img ng-src="{{rune.img}}" class="md-avatar" alt="rune img" />
         <div class="md-list-item-text">
           <h3>{{ rune.name }}</h3>
           <h3>{{ rune.desc }}</h3>
