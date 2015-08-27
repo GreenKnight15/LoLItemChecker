@@ -60,13 +60,13 @@
   <md-input-container>
       <input ng-model="summonerName" placeholder="Summoner Name">
     </md-input-container>
-    <!--  <md-button class="md-accent md-raised" ng-click="getRunesPages()">Get Runes</md-button> -->
+    <md-button class="md-accent md-raised" ng-click="getRunesPages()">Get Runes</md-button>
     
     <div layout="row" layout-align="start center">
     <md-input-container flex >
-        <md-select ng-model="currentPage"  md-on-open="getRunePages()" placeholder="Pick Rune Page ">
+        <md-select ng-model="page" ng-change="getRuneStats()" placeholder="Pick Rune Page ">
           <md-optgroup label="Page">
-            <md-option ng-value="page.name" ng-repeat="page in runePages"  >{{page.name}}</md-option>
+            <md-option ng-value="page.name" ng-repeat="page in runePages" ng-click="getRuneStats()" >{{page.name}}</md-option>
           </md-optgroup>
         </md-select>
       </md-input-container>
