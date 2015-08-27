@@ -402,7 +402,7 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
 .controller('runeController', function( $http,$scope,$mdToast, $animate) {
 
     $scope.runePages = [];
-
+console.log($scope.runePages.stats);
     $scope.getRunesPages = function() {
     	$scope.runePages = [];
     	$scope.sumName=  ($scope.summonerName).toLowerCase();
@@ -420,12 +420,34 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
                             $scope.runePages.push({
                                 name: this.name,
                                 id:this.id,
+                                stats:this.stats,
                             })
                         });
                     })
             	})    
     		};
 
+   $scope.getRuneStats = function(){
+	   /*
+	   $.each($scope.runePages.stats, function()){
+    	$http.post('/getrunestats', {
+            msg: 
+        })
+        .success(function(response) {
+
+            $.each(response.data, function() {
+
+                tiles.push({
+                    
+
+                });
+                tiles.sort(compare);
+
+            })
+        });
+	   }
+    }
+    		
     $scope.closeToast = function() {
         $mdToast.hide();
       };
@@ -437,7 +459,9 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
     	        .position("top right")
     	        .hideDelay(3000)
     	    );
+    	     */
     	  };
+    	 
     })
     
 .controller('footerController', function($scope) {
