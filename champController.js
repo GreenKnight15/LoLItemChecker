@@ -401,43 +401,6 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
 
 .controller('runeController', function( $http,$scope) {
 
-    this.runeTiles = (function() {
-        var tiles = [];
-        $http.post('/allrunes', {
-                msg: 'all'
-            })
-            .success(function(response) {
-
-                $.each(response.data, function() {
-
-                    tiles.push({
-                        id: this.id,
-                        name: this.name,
-                        link: "/stats/" + this.id,
-                        aria: this.name,
-                        img: "http://ddragon.leagueoflegends.com/cdn/5.16.1/img/item/" + this.image.full,
-                        descLong: this.sanitizedDescription,
-                        cost: this.gold.total,
-                        stats: this.stats,
-
-                    });
-                    tiles.sort(compare);
-
-                })
-            });
-
-
-        function compare(a, b) {
-            if (a.cost < b.cost)
-                return -1;
-            if (a.cost > b.cost)
-                return 1;
-            return 0;
-        }
-
-        return tiles;
-    })();
-
     $scope.runePages = [];
 
     $scope.getRunePages = function() {
