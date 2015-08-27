@@ -104,7 +104,7 @@ request("https://na.api.pvp.net/api/lol/na/v1.4/summoner/by-name/"+ req.body.msg
 
 app.post('/getrunestats',function(req,res){
     //get summoner id
-request("https://global.api.pvp.net/api/lol/static-data/na/v1.2/rune/"+ req.body.msg +"?runeData=all?api_key="+key,
+request("https://global.api.pvp.net/api/lol/static-data/na/v1.2/rune/"+ req.body.msg +"?runeData=all&api_key="+key,
         function(error,response,body){
         console.log("making request for rune stats");
         if (!error ){
