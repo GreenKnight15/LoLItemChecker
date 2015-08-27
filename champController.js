@@ -419,6 +419,7 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
                         	console.log(this);
                             $scope.runePages.push({
                                 name: this.name,
+                                id:this.id,
                             })
                         });
                     })
