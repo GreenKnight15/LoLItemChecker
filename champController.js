@@ -402,7 +402,6 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
 .controller('runeController', function( $http,$scope,$mdToast, $animate) {
 
     $scope.runePages = [];
-console.log($scope.runePages[0].slots);
     $scope.getRunesPages = function() {
     	$scope.runePages = [];
     	$scope.sumName=  ($scope.summonerName).toLowerCase();
@@ -422,7 +421,7 @@ console.log($scope.runePages[0].slots);
                                 id:this.id,
                                 slots:this.slots,
                             })
-                            console.log(this.slots);
+                            console.log(this.slots.runeId);
                         });
                     })
             	})    
@@ -430,13 +429,12 @@ console.log($scope.runePages[0].slots);
 
    $scope.getRuneStats = function(){
 	   /*
-	   $.each($scope.runePages.stats, function()){
+	   $.each($scope.runePages.slots, function(){
     	$http.post('/getrunestats', {
             msg: 
         })
         .success(function(response) {
-
-            $.each(response.data, function() {
+            $.each(response, function() {
 
                 tiles.push({
                     
@@ -446,8 +444,8 @@ console.log($scope.runePages[0].slots);
 
             })
         });
-	   }
-    }
+	   })
+    
     		
     $scope.closeToast = function() {
         $mdToast.hide();
