@@ -402,7 +402,7 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
 .controller('runeController', function( $http,$scope,$mdToast, $animate) {
 
     $scope.runePages = [];
-console.log($scope.runePages.stats);
+console.log($scope.runePages.slots);
     $scope.getRunesPages = function() {
     	$scope.runePages = [];
     	$scope.sumName=  ($scope.summonerName).toLowerCase();
@@ -420,7 +420,7 @@ console.log($scope.runePages.stats);
                             $scope.runePages.push({
                                 name: this.name,
                                 id:this.id,
-                                stats:this.stats,
+                                slots:this.slots,
                             })
                         });
                     })
