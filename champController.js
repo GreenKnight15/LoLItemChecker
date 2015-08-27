@@ -420,14 +420,17 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
                                 name: this.name,
                                 id:this.id,
                                 slots:this.slots,
+                                img:this.image,
                             }) 
                         });
                     })
             	})    
     		};
+
+   $scope.currentRunes = [];
     		
    $scope.getRuneStats = function(){ 
-	   $.each([$scope.page.slots], function(){
+	   $.each($scope.page.slots, function(){
 		    
     	$http.post('/getrunestats', {
             msg: this.runeId
@@ -438,7 +441,7 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
                 $scope.currentRunes.push({
                     names:response.name,
                     desc:response.description,
-                    img:"http://ddragon.leagueoflegends.com/cdn/5.2.1/img/rune/"+response.id+".png"
+                    img:"http://ddragon.leagueoflegends.com/cdn/5.2.1/img/rune/"+response.img.full+".png",
                     
                 });
             
