@@ -399,7 +399,7 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
 
 
 
-.controller('runeController', function( $http,$scope) {
+.controller('runeController', function( $http,$scope,$mdToast, $animate) {
 
     $scope.runePages = [];
 
