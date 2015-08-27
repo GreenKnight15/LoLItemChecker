@@ -71,7 +71,7 @@
     <md-input-container flex >
         <md-select ng-model="page" ng-change="" >
           <md-optgroup label="Page">
-            <md-option ng-value="" ng-repeat="page in runePages ">{{page.name}}</md-option>
+            <md-option ng-value="page.value" ng-repeat="page in runePages ">{{page.name}}</md-option>
           </md-optgroup>
         </md-select>
       </md-input-container>
