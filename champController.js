@@ -415,8 +415,8 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
                         msg: response[$scope.summonerName].id ,
                     })
                     .success(function(response) {
-                        console.log(response.pages);
                         $.each(response.pages, function() {
+                        	console.log(this);
                             $scope.runePages.push({
                                 name: this.name,
                                 slots: this.slots,
