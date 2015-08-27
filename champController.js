@@ -427,7 +427,7 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
     		};
     		
    $scope.getRuneStats = function(){ 
-	   $.each($scope.page.slots, function(){
+	   $.each([$scope.page.slots], function(){
 		    
     	$http.post('/getrunestats', {
             msg: this.runeId
