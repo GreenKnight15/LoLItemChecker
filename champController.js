@@ -415,7 +415,6 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
                     })
                     .success(function(response) {
                         $.each(response[$scope.summonerId].pages, function() {
-                        	console.log(this);
                             $scope.runePages.push({
                                 name: this.name,
                                 id:this.id,
@@ -435,7 +434,7 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
             msg: this.runeId
         })
         .success(function(response) {
-        	console.log(response);
+        	console.log(response.image.full);
         	  $scope.currentRunes = [];
                 $scope.currentRunes.push({
                     names:response.name,
