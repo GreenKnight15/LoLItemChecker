@@ -410,7 +410,7 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
                 msg: $scope.sumName,
             })
             .success(function(response) {
-                $scope.summonerId = response[$scope.summonerName].id;
+                $scope.summonerId = response[$scope.sumName].id;
                 $http.post('/getsummonerrunes', {
                         msg: response[$scope.sumName].id ,
                     })
