@@ -420,7 +420,6 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
                                 name: this.name,
                                 id:this.id,
                                 slots:this.slots,
-                                img:this.image.full,
                             }) 
                         });
                     })
