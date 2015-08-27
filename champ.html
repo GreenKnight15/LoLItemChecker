@@ -28,9 +28,10 @@
     <div layout="row" style="height:500px">
     
     <div layout="column" ng-controller="statsController">
-      <md-content>
-       <md-input-container layout="row">
-           <label>Pick Champion Level</label>
+      <md-content >
+      <label>Pick Champion Level</label>
+       <md-input-container >
+           
         <md-select ng-model="level" ng-change="levelChamp()">
           <md-optgroup label="Level">
             <md-option ng-value="level.value" ng-repeat="level in levels ">{{level.value}}</md-option>
@@ -56,20 +57,27 @@
   </md-content>
   </div>
   
-  <div ng-controller="runeController" flex>
+  <div ng-controller="runeController" >
   <md-content layout-padding >
-  <md-input-container>
       <label>Summoner Name</label>
+  <md-input-container>
+  
       <input ng-model="summonerName">
     </md-input-container>
     <md-button class="md-accent md-raised" ng-click="getRunesPages()">Get Runes</md-button>
+    
+    <div layout="column" >
+     <label>Pick Rune Page</label >
+    <md-input-container  >
+        <md-select ng-model="page" ng-change="" >
+          <md-optgroup label="Page">
+            <md-option ng-value="" ng-repeat="page in runePages ">{{page.name}}</md-option>
+          </md-optgroup>
+        </md-select>
+      </md-input-container>
+      </div>
   </md-content>
-  
-  <md-content ng-repeat="page in runePages">
-  
-  <p>{{page.name}}</p>
-  
-  </md-content>
+ 
   <md-button class="md-accent md-raised" ng-click="selectRune()"> Rune 1</md-button>
   
   </div>

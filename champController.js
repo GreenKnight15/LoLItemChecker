@@ -409,7 +409,6 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
                 msg: $scope.summonerName,
             })
             .success(function(response) {
-                console.log(response[$scope.summonerName].id);
                 $scope.summonerId = response[$scope.summonerName].id;
                 $http.post('/getsummonerrunes', {
                         msg: response[$scope.summonerName].id ,
@@ -423,16 +422,8 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
                             })
                         });
                     })
-                    .error(function() {
-                    	 $scope.runePages=[];
-                    	 $scope.showSummonerError();
-                    	})
-            		})
-            		     .error(function() {
-                    	 $scope.runePages=[];
-                    	 $scope.showSummonerError();
-                    	})
-    			};
+            	})    
+    		};
 
     $scope.closeToast = function() {
         $mdToast.hide();
