@@ -402,7 +402,6 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
 .controller('runeController', function( $http,$scope,$mdToast, $animate) {
 
     $scope.runePages = [];
-    $scope.currentPage ="";
 
     $scope.getRunesPages = function() {
     	$scope.sumName=  ($scope.summonerName).toLowerCase();
