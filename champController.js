@@ -428,7 +428,7 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
                     	 $scope.showSummonerError();
                     	})
             		})
-    			});
+    			};
 
     $scope.closeToast = function() {
         $mdToast.hide();
