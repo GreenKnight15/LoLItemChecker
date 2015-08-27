@@ -399,7 +399,7 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
 
 
 
-.controller('runeController', function($scope) {
+.controller('runeController', function( $http,$scope) {
 
     this.runeTiles = (function() {
         var tiles = [];
