@@ -423,7 +423,7 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
                             }) 
                             
                             $.each(this.slots, function(){
-                            	console.log(this,runeId);
+                            	console.log(this.runeId);
                             })
                         });
                     })
