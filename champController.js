@@ -422,6 +422,7 @@ console.log($scope.runePages.slots);
                                 id:this.id,
                                 slots:this.slots,
                             })
+                            console.log(this.slots);
                         });
                     })
             	})    
