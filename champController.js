@@ -167,7 +167,7 @@ function changeEffectName(key, value) {
                 value = (value * 100)+"%";
                 break;
             case key == "FlatHPPoolMod":
-                key = "+Health"
+                key = "Health"
                 break;
             case key == "FlatCritChanceMod":
                 key = "Critical Chance"
