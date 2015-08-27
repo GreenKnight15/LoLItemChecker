@@ -424,13 +424,16 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
                             
                             $.each(this.slots, function(){
                             	console.log(this.runeId);
+                            	
                             })
                         });
                     })
             	})    
     		};
 
+    	
    $scope.getRuneStats = function(){
+	   console.log($scope.currentPage);
 	   /*
 	   $.each($scope.runePages.slots, function(){
     	$http.post('/getrunestats', {
