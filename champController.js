@@ -433,7 +433,7 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
 
     	
    $scope.getRuneStats = function(){
-	   console.log($scope.currentPage);
+	   console.log($scope.page);
 	   /*
 	   $.each($scope.runePages.slots, function(){
     	$http.post('/getrunestats', {
