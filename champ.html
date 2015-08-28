@@ -68,9 +68,9 @@
                     <md-list-item ng-repeat="item in itemSet" class="md-3-line" style="border:2px solid grey">
                     <div  layout-align="center center" layout="column" >
                         <div layout="row" layout-padding>
-                            <img src="{{item.answer.img}}" style="height:36px" layout-align="center end" />
-                            <p>{{item.answer.name}}</p>
-                            <p>Price:{{item.answer.cost}}</p>
+                            <img src="{{item.answer.img}}" style="height:36px" layout-align="center end" flex="33"/>
+                            <p flex="33">{{item.answer.name}}</p>
+                            <p flex="33">Price:{{item.answer.cost}}</p>
                             </div>
                             
                             <p>{{item.answer.descLong}}</p>
