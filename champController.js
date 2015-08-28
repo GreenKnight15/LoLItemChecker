@@ -2,7 +2,7 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
 
 .config(function($mdThemingProvider) {
     $mdThemingProvider.theme('default')
-        .primaryPalette('light-blue',{
+        .primaryPalette('blue',{
         	'default':'500',
         	'hue-1':'400',
         })
