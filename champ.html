@@ -44,7 +44,7 @@
                     <p>Range:{{range}}</p>
                 </md-content>
             </div>
-            <div flex layout="column">
+            <div layout="column">
             
             <md-input-container >
      			 <input ng-model="itemSetName" placeholder="Item Set Name">
@@ -56,23 +56,26 @@
 
                 <md-content >
                     <div  >
-                        <md-button class="md-primary md-raised" ng-click="showShop($event)" layout-align="start start">
+                        <md-button class="md-primary md-raised" ng-click="showShop($event)" layout-align="start center">
                             Shop
                         </md-button>
                     </div>
-                    
-                    <div ng-repeat="item in itemSet">
-                        <md-button class="" ng-click="deleteItem($event)" layout-align="start start">
+                    <md-list>
+                    <md-list-item ng-repeat="item in itemSet">
+                    <div style="" layout-align="center center" layout="column">
+                        <div layout="row">
+                            <img src="{{item.answer.img}}" layout-align="center end" />
+                            <p>{{item.answer.name}}</p>
+                            </div>
+                            <p>{{item.answer.cost}}</p>
+                            <p>{{item.answer.stats.descLong}}</p>
+                        </div>
+                        <md-button class="md-accent" ng-click="deleteItem($event)" layout-align="start end">
                             <ng-md-icon icon="close"></ng-md-icon>
                         </md-button>
-                        
-                        
-                        <div style="" layout-align="center center" layout="row">
-                            <img src="{{item.answer.img}}" layout-align="center end" />
-                            <p>{{item.anwer.name}}</p>
-                        </div>
-                    </div>
-<!-- 
+                    </md-list-item>
+                    </md-list>
+<!-- 				
 
                     <div style="border:5px solid black;" flex="33">
                         <md-button class="md-primary md-raised" ng-click="showAdvanced2($event)" layout-align="start start">
@@ -152,7 +155,6 @@
     
 </div>
   
-  <div flex="5"></div>
   <div flex>
   
   <div ng-controller="runeController " flex  >
