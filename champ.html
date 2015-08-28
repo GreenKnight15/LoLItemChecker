@@ -52,15 +52,15 @@
      			 <input ng-model="itemSetName" placeholder="Item Set Name">
    			  </md-input-container>
 			<div  >
-                       <ng-md-icon icon="add_box" size="36"style="fill:gold" >
+                       
                         <md-button class="md-primary md-raised" ng-click="showShop($event)" layout-align="start center">
+                       <ng-md-icon icon="add_box" size="36"style="fill:gold" ></ng-md-icon>
                         </md-button>
-                         </ng-md-icon>
                     </div>
-                <md-content style="border:2px solid" flex>
+                <md-content  flex>
                    
                     <md-list> 
-                    <md-list-item ng-repeat="item in itemSet" class="md-3-line">
+                    <md-list-item ng-repeat="item in itemSet" class="md-3-line" style="border:2px solid grey">
                     <div  layout-align="center center" layout="column">
                         <div layout="row" layout-padding>
                             <img src="{{item.answer.img}}" layout-align="center end" />
@@ -72,7 +72,7 @@
                         <md-button class="md-accent" ng-click="deleteItem($event)" layout-align="start end">
                             <ng-md-icon icon="highlight_remove" size="36"style="fill:red" ></ng-md-icon>
                         </md-button>
-                        <md-divider></md-divider>
+                        
                     </md-list-item>
                     </md-list>
 <!-- 				
