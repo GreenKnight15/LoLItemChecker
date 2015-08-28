@@ -61,18 +61,19 @@
                         </md-button>
                     </div>
                     <md-list>
-                    <md-list-item ng-repeat="item in itemSet">
+                    <md-list-item ng-repeat="item in itemSet" class="md-3-line">
                     <div style="" layout-align="center center" layout="column">
-                        <div layout="row">
+                        <md-subheader layout="row">
                             <img src="{{item.answer.img}}" layout-align="center end" />
                             <p>{{item.answer.name}}</p>
-                            </div>
+                            </md-subheader>
                             <p>{{item.answer.cost}}</p>
                             <p>{{item.answer.stats.descLong}}</p>
                         </div>
                         <md-button class="md-accent" ng-click="deleteItem($event)" layout-align="start end">
                             <ng-md-icon icon="close"></ng-md-icon>
                         </md-button>
+                        <md-divider></md-divider>
                     </md-list-item>
                     </md-list>
 <!-- 				
