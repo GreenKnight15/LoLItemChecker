@@ -69,11 +69,11 @@
                     <div  layout-align="center center" layout="column" >
                         <div layout="row" layout-padding>
                             <img src="{{item.answer.img}}" style="height:36px" layout-align="center end" />
-                            <p flex="33">{{item.answer.name}}</p>
-                            <p flex="33">Price:{{item.answer.cost}}</p>
+                            <p >{{item.answer.name}}</p>
+                            <p flex>Price:{{item.answer.cost}}</p>
                             </div>
                             
-                            <p>{{item.answer.descLong}}</p>
+                            <p class="md-caption"> {{item.answer.descLong}}</p>
                         </div>
                         <md-button class="" ng-click="deleteItem($event)" layout-align="start end">
                             <ng-md-icon icon="highlight_remove" size="36"style="fill:red" ></ng-md-icon>
