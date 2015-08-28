@@ -44,23 +44,20 @@
                     <p>Range:{{range}}</p>
                 </md-content>
             </div>
-            <div layout="column">
-            
-            <md-input-container >
-     			 <input ng-model="itemSetName" placeholder="Item Set Name">
-   			  </md-input-container>
-            
-            </div>
+
 
             <div layout="column" ng-controller="statsController" layout-align="start end">
 
+				<md-input-container >
+     			 <input ng-model="itemSetName" placeholder="Item Set Name">
+   			  </md-input-container>
 			<div  >
                        <ng-md-icon icon="add_box" size="36"style="fill:gold" >
                         <md-button class="md-primary md-raised" ng-click="showShop($event)" layout-align="start center">
                         </md-button>
                          </ng-md-icon>
                     </div>
-                <md-content style="border:2px solid" >
+                <md-content style="border:2px solid" flex>
                    
                     <md-list> 
                     <md-list-item ng-repeat="item in itemSet" class="md-3-line">
