@@ -28,8 +28,8 @@
         </div>
         <div layout="row" style="height:600px">
 
-            <div layout="column" ng-controller="statsController">
-                <md-content>
+            <div layout="column" ng-controller="statsController" flex="33">
+                <md-content >
                     <md-input-container>
                         <md-select ng-model="level" ng-change="levelChamp()" placeholder="Choose Champion Level">
                             <md-optgroup label="Level">
@@ -46,22 +46,23 @@
             </div>
 
 
-            <div layout="column" ng-controller="statsController" layout-align="start end">
+            <div layout="column" ng-controller="statsController" layout-align="start end" flex="33">
 
-				<md-input-container >
-     			 <input ng-model="itemSetName" placeholder="Item Set Name">
-   			  </md-input-container>
-			<div  >
-                       
-                        <md-button class="md-primary md-raised" ng-click="showShop($event)" layout-align="start center">
+
+					<div layout="row">
+                       <md-button class="md-primary md-raised" ng-click="showShop($event)" layout-align="start start">
                        <ng-md-icon icon="add_box" size="36"style="fill:gold" ></ng-md-icon>
                         </md-button>
+                        <md-input-container layout-align="start end" >
+     			 <input ng-model="itemSetName" placeholder="Item Set Name">
+   			  </md-input-container>
                     </div>
-                <md-content  flex>
+                    
+                <md-content  >
                    
-                    <md-list> 
+                    <md-list > 
                     <md-list-item ng-repeat="item in itemSet" class="md-3-line" style="border:2px solid grey">
-                    <div  layout-align="center center" layout="column">
+                    <div  layout-align="center center" layout="column" >
                         <div layout="row" layout-padding>
                             <img src="{{item.answer.img}}" layout-align="center end" />
                             <p>{{item.answer.name}}</p>
@@ -80,11 +81,11 @@
 
     
 </div>
-  <div flex="10"></div>
+ 
   <div flex>
   
-  <div ng-controller="runeController " flex  >
-  <md-content layout-padding>
+  <div ng-controller="runeController "  >
+  <md-content layout-padding flex="33">
   <div layout="row ">
   <md-input-container >
       <input ng-model="summonerName " placeholder="Summoner Name">
