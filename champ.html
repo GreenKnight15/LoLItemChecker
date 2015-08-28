@@ -55,16 +55,17 @@
             <div layout="column" ng-controller="statsController" layout-align="start end">
 
 			<div  >
+                       <ng-md-icon icon="add_box" size="36"style="fill:gold" >
                         <md-button class="md-primary md-raised" ng-click="showShop($event)" layout-align="start center">
-                            <ng-md-icon icon="add_box" style="fill:red" ></ng-md-icon>
                         </md-button>
+                         </ng-md-icon>
                     </div>
                 <md-content style="border:2px solid" >
                    
                     <md-list> 
                     <md-list-item ng-repeat="item in itemSet" class="md-3-line">
                     <div  layout-align="center center" layout="column">
-                        <div layout="row">
+                        <div layout="row" layout-padding>
                             <img src="{{item.answer.img}}" layout-align="center end" />
                             <p>{{item.answer.name}}</p>
                             </div>
@@ -72,7 +73,7 @@
                             <p>{{item.answer.stats.descLong}}</p>
                         </div>
                         <md-button class="md-accent" ng-click="deleteItem($event)" layout-align="start end">
-                            <ng-md-icon icon="highlight_remove"></ng-md-icon>
+                            <ng-md-icon icon="highlight_remove" size="36"style="fill:red" ></ng-md-icon>
                         </md-button>
                         <md-divider></md-divider>
                     </md-list-item>
