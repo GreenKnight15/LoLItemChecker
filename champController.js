@@ -290,6 +290,12 @@ function DialogController($scope, $mdDialog) {
 
 };
 
+$scope.deleteItem = function(ev){
+	var index=ev.target.getAttribute('id');
+	$scope.itemSet.splice(index,1);
+	
+}
+
 /*
     $scope.showAdvanced1 = function(ev) {
         $mdDialog.show({
