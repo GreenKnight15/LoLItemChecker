@@ -51,32 +51,14 @@
    			  </md-input-container>
             
             </div>
-            <div layout="column" ng-controller="statsController">
-                <md-content>
-                    <div style="height:110px">
 
-                    </div>
-
-                    <div ng-repeat="effect in addedDmg" layout="column">
-                        <p>Added Damage:{{effect.effect}}</p>
-                    </div>
-                </md-content>
-            </div>
             <div layout="column" ng-controller="statsController" layout-align="start end">
 
-                <md-content layout="row">
-
-                    <div style="border:5px solid black;  flex="33">
+                <md-content >
+                    <div  >
                         <md-button class="md-primary md-raised" ng-click="showShop($event)" layout-align="start start">
-                            Item 1
+                            Shop
                         </md-button>
-                        <div  layout="row">
-                            <p layout-align="start center">{{itemSet}} +</p>
-
-                        </div>
-                        <div style="" layout-align="center center" layout="column">
-                            <img src="{{}}" layout-align="center center" />
-                        </div>
                     </div>
 <!-- 
 
