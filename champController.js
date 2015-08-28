@@ -187,6 +187,7 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
     getStats();
 
     $scope.itemStats1 = [];
+    console.log(itemStats1);
     $scope.itemStats2 = [];
     $scope.itemStats3 = [];
     $scope.itemStats4 = [];
@@ -195,7 +196,49 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
     
     $scope.addedDmg = [];
     
-
+   
+  itemSet=[ 
+    {
+        "title": ""+$scope.itemSetName+"",
+        "type": "custom",
+        "map": "any",
+        "mode": "any",
+        "priority": false,
+        "sortrank": 0,
+        "blocks": [
+            {
+                "type": "Block 1",
+                "recMath": false,
+                "minSummonerLevel": -1,
+                "maxSummonerLevel": -1,
+                "showIfSummonerSpell": "",
+                "hideIfSummonerSpell": "",
+                "items": [
+                    {
+                        "id": "1001",
+                        "count": 1
+                    },
+                    ...   // Additional items
+                ]
+            },
+            {
+                "type": "Block 2",
+                "recMath": false,
+                "minSummonerLevel": -1,
+                "maxSummonerLevel": -1,
+                "showIfSummonerSpell": "",
+                "hideIfSummonerSpell": "",
+                "items": [
+                    {
+                        "id": "1001",
+                        "count": 1
+                    },
+                    ...   // Additional items
+                ]
+            },
+        ]
+    }
+];
 
     ///PROBLEM
     for (i = 0; i <= $scope.addedDmg; i++) {
