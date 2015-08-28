@@ -62,12 +62,14 @@
                     </div>
                     
                     <div ng-repeat="item in itemSet">
-                        <md-button class="md-primary md-raised" ng-click="deleteItem($event)" layout-align="start start">
+                        <md-button class="" ng-click="deleteItem($event)" layout-align="start start">
                             <ng-md-icon icon="close"></ng-md-icon>
                         </md-button>
                         
-                        <div style="" layout-align="center center" layout="column">
-                            <img src="{{item.img}}" layout-align="center end" />
+                        
+                        <div style="" layout-align="center center" layout="row">
+                            <img src="{{item.answer.img}}" layout-align="center end" />
+                            <p>{{item.anwer.name}}</p>
                         </div>
                     </div>
 <!-- 
