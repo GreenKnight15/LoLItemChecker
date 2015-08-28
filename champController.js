@@ -157,7 +157,6 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
                     tiles.push({
                         id: this.id,
                         name: this.name,
-                        link: "/stats/" + this.id,
                         aria: this.name,
                         img: "http://ddragon.leagueoflegends.com/cdn/5.16.1/img/item/" + this.image.full,
                         descLong: this.sanitizedDescription,
@@ -185,66 +184,15 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
 
 
     getStats();
-
+    $scope.itemSet = [];
+    /*
     $scope.itemStats1 = [];
-    console.log($scope.itemStats1);
     $scope.itemStats2 = [];
     $scope.itemStats3 = [];
     $scope.itemStats4 = [];
     $scope.itemStats5 = [];
     $scope.itemStats6 = [];
     
-    $scope.addedDmg = [];
-    
-   
-  itemSet=[ 
-    {
-        "title": ""+$scope.itemSetName+"",
-        "type": "custom",
-        "map": "any",
-        "mode": "any",
-        "priority": false,
-        "sortrank": 0,
-        "blocks": [
-            {
-                "type": "Block 1",
-                "recMath": false,
-                "minSummonerLevel": -1,
-                "maxSummonerLevel": -1,
-                "showIfSummonerSpell": "",
-                "hideIfSummonerSpell": "",
-                "items": [
-                    {
-                        "id": "1001",
-                        "count": 1
-                    },
-                ]
-            },
-            {
-                "type": "Block 2",
-                "recMath": false,
-                "minSummonerLevel": -1,
-                "maxSummonerLevel": -1,
-                "showIfSummonerSpell": "",
-                "hideIfSummonerSpell": "",
-                "items": [
-                    {
-                        "id": "1001",
-                        "count": 1
-                    },
-                ]
-            },
-        ]
-    }
-];
-
-    ///PROBLEM
-    for (i = 0; i <= $scope.addedDmg; i++) {
-        $scope.totalDmg = +$scope.addedDmg[i];
-        
-    }
-
-
 function changeEffectName(key, value) {
         switch (key != "") {
             case key == "FlatPhysicalDamageMod":
@@ -304,7 +252,45 @@ function changeEffectName(key, value) {
             "value": value
         });
     }
+*/
+    
+$scope.showShop = function(ev) {
+    $mdDialog.show({
+            controller: DialogController,
+            templateUrl: '/items',
+            parent: angular.element(document.body),
+            targetEvent: ev,
+            clickOutsideToClose: true
+        })
+        .then(function(answer) {
+        	/*
+            $scope.status = answer;
+            $scope.itemName = "Name:" + answer.name;
+            $scope.itemImage = answer.img;
+            */
+            $scope.itemSet.push({
+            	answer,
+            })
+            
+            console.log($scope.itemSet);
+            
+        })
+};
 
+function DialogController($scope, $mdDialog) {
+    $scope.hide = function() {
+        $mdDialog.hide();
+    };
+    $scope.cancel = function() {
+        $mdDialog.cancel();
+    };
+    $scope.answer = function(answer) {
+        $mdDialog.hide(answer);
+    };
+
+};
+
+/*
     $scope.showAdvanced1 = function(ev) {
         $mdDialog.show({
                 controller: DialogController,
@@ -322,20 +308,6 @@ function changeEffectName(key, value) {
                 $.each(answer.stats, function(key, value) {
                     counter = counter + 1;
                     var names = changeEffectName(key, value);
-
-
-                    if (names.key === "Damage") {
-                        var dmg = JSON.stringify(names.value);
-                        numDmg = parseInt(dmg);
-                        console.log("dmg=" + dmg);
-
-                        $scope.addedDmg.splice(0, 1, {
-                            "effect": numDmg
-                        });
-                        console.log($scope.addedDmg);
-                    }
-
-
 
 
                     if (Object.keys(answer.stats).length === 0) {
@@ -834,21 +806,9 @@ function changeEffectName(key, value) {
             })
     }
     
-   
-
-
-    function DialogController($scope, $mdDialog) {
-        $scope.hide = function() {
-            $mdDialog.hide();
-        };
-        $scope.cancel = function() {
-            $mdDialog.cancel();
-        };
-        $scope.answer = function(answer) {
-            $mdDialog.hide(answer);
-        };
-
-    };
+    */
+    
+  
 
 })
 
