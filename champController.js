@@ -187,7 +187,7 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
     getStats();
 
     $scope.itemStats1 = [];
-    console.log(itemStats1);
+    console.log($scope.itemStats1);
     $scope.itemStats2 = [];
     $scope.itemStats3 = [];
     $scope.itemStats4 = [];
