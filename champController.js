@@ -218,7 +218,6 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
                         "id": "1001",
                         "count": 1
                     },
-                    ...   // Additional items
                 ]
             },
             {
@@ -233,7 +232,6 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
                         "id": "1001",
                         "count": 1
                     },
-                    ...   // Additional items
                 ]
             },
         ]
