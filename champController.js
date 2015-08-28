@@ -4,7 +4,7 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
     $mdThemingProvider.theme('default')
         .primaryPalette('light-blue',{
         	'default':'400',
-        	'hue-1':'100'
+        	'hue-1':'100',
         })
         .accentPalette('orange');
 })
