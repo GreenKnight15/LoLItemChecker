@@ -54,24 +54,25 @@
 
             <div layout="column" ng-controller="statsController" layout-align="start end">
 
-                <md-content >
-                    <div  >
+			<div  >
                         <md-button class="md-primary md-raised" ng-click="showShop($event)" layout-align="start center">
-                            Shop
+                            <ng-md-icon icon="add_box" style="fill:red" ></ng-md-icon>
                         </md-button>
                     </div>
-                    <md-list>
+                <md-content style="border:2px solid" >
+                   
+                    <md-list> 
                     <md-list-item ng-repeat="item in itemSet" class="md-3-line">
-                    <div style="" layout-align="center center" layout="column">
-                        <md-subheader layout="row">
+                    <div  layout-align="center center" layout="column">
+                        <div layout="row">
                             <img src="{{item.answer.img}}" layout-align="center end" />
                             <p>{{item.answer.name}}</p>
-                            </md-subheader>
+                            </div>
                             <p>{{item.answer.cost}}</p>
                             <p>{{item.answer.stats.descLong}}</p>
                         </div>
                         <md-button class="md-accent" ng-click="deleteItem($event)" layout-align="start end">
-                            <ng-md-icon icon="close"></ng-md-icon>
+                            <ng-md-icon icon="highlight_remove"></ng-md-icon>
                         </md-button>
                         <md-divider></md-divider>
                     </md-list-item>
