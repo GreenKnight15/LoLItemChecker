@@ -19,16 +19,16 @@
         <div ng-controller="statsController">
             <md-content>
                 <md-toolbar>
-                    <div layout="row" class="md-toolbar" style="height:85px">
+                    <div layout="row" layout-align="start center"  class="md-toolbar" style="height:85px">
                         <img src="{{imgLink}}" height="84px" />
-                        <p class="md-display-1" layout-align="center start">{{name}} - {{title}}</p>
+                        <p class="md-display-1" layout-padding>{{name}} - {{title}}</p>
                     </div>
                 </md-toolbar>
             </md-content>
         </div>
         <div layout="row" style="height:600px">
 
-            <div layout="column" ng-controller="statsController" flex="33">
+            <div layout="column" layout-align="start center" ng-controller="statsController" flex="33">
                 <md-content >
                     <md-input-container>
                         <md-select ng-model="level" ng-change="levelChamp()" placeholder="Choose Champion Level">
@@ -46,7 +46,7 @@
             </div>
 
 
-            <div layout="column" ng-controller="statsController" layout-align="start end" flex="33">
+            <div layout="column" ng-controller="statsController" layout-align="start center" flex="33">
 					<div layout="row">
                         <md-input-container layout-align="start end" >
      			 <input ng-model="itemSetName" placeholder="Item Set Name">
@@ -78,7 +78,7 @@
     
 </div>
  
-  <div flex>
+  <div flex layout-align="start center">
   
   <div ng-controller="runeController "  >
   <md-content layout-padding flex="33">
