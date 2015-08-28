@@ -3,8 +3,8 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
 .config(function($mdThemingProvider) {
     $mdThemingProvider.theme('default')
         .primaryPalette('light-blue',{
-        	'default':'400',
-        	'hue-1':'500',
+        	'default':'500',
+        	'hue-1':'400',
         })
         .accentPalette('orange');
 })
