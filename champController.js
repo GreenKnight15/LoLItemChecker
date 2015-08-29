@@ -315,18 +315,15 @@ $scope.deleteItem = function(ev){
  	   $scope.mode = 'query';
 	    $scope.determinateValue = 5;
 	    $interval(function() {
-	      $scope.determinateValue += 1;
+	      $scope.determinateValue += 5;
 	      if ($scope.determinateValue > 100) {
 	        $scope.determinateValue = 0;
+	        var e = document.getElementById(id);
+	        e.style.display = 'none';
 	      }
 	    }, 100, 0, true);
 	    
-	    var e = document.getElementById(id);
-	       if($scope.determinateValue >= 100){
-	          e.style.display = 'none';
-	       }else{
-	          e.style.display = 'block';
-	    }
+	  
     	
     	$scope.sumName=  ($scope.summonerName).toLowerCase();
         $http.post('/getsummonerid', {
