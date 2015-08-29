@@ -114,11 +114,11 @@
     <md-input-container flex >
         <md-select ng-model="page "  placeholder="Pick Rune Page ">
           <md-optgroup label="Page ">
-            <md-option ng-value="page " ng-repeat="page in runePages " ng-click="getRuneStats() " >{{page.name}}</md-option>
+            <md-option ng-value="page " ng-repeat="page in runePages " ng-click="getRuneStats('progress') " >{{page.name}}</md-option>
           </md-optgroup>
         </md-select>
       </md-input-container>
-      <div layout="row" layout-sm="column" layout-align="space-around">
+      <div layout="row" layout-sm="column" layout-align="space-around" id="progress" style="display:none">
       <md-progress-circular md-mode="determinate" value="{{determinateValue}}"></md-progress-circular>
     </div>
       </div>

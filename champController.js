@@ -309,17 +309,24 @@ $scope.deleteItem = function(ev){
 
 .controller('runeController', function( $http,$scope,$mdToast, $animate, $interval) {
 
-    $scope.getRunesPages = function() {
+    $scope.getRunesPages = function(id) {
     	$scope.runePages = [];
     	
  	   $scope.mode = 'query';
-	    $scope.determinateValue = 30;
+	    $scope.determinateValue = 5;
 	    $interval(function() {
 	      $scope.determinateValue += 5;
 	      if ($scope.determinateValue > 100) {
-	        $scope.determinateValue = 30;
+	        $scope.determinateValue = 5;
 	      }
 	    }, 100, 0, true);
+	    
+	    var e = document.getElementById(id);
+	       if(e.style.display == 'block')
+	          e.style.display = 'none';
+	       else if($scope.determinateValue = 100)
+	          e.style.display = 'block';
+	    }
     	
     	$scope.sumName=  ($scope.summonerName).toLowerCase();
         $http.post('/getsummonerid', {
