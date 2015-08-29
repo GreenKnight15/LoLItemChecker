@@ -187,6 +187,7 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
     $scope.addDmg =[]
     $scope.addMagicDmg = [];
     
+    if($scope.itemSet.length > 0){
     $.each($scope.itemSet.answer.stats, function(key,value){
     	switch (key != "") {
         case key == "FlatPhysicalDamageMod":
@@ -244,7 +245,7 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
 
     }
     })
-
+    }
     console.log($scope.addDmg);
     
     getStats();
