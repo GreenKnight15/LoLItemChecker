@@ -187,7 +187,7 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
     $scope.addDmg =[]
     $scope.addMagicDmg = [];
     
-    $.each($scope.itemSet.name, function(key,value){
+    $.each($scope.itemSet.answer.stats, function(key,value){
     	switch (key != "") {
         case key == "FlatPhysicalDamageMod":
             key = "Damage";
