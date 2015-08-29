@@ -184,8 +184,69 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
         return tiles;
     })();
 
+    $scope.addDmg =[]
+    $scope.addMagicDmg = [];
+    
+    $.each($scope.itemSet, function(key,value){
+    	switch (key != "") {
+        case key == "FlatPhysicalDamageMod":
+            key = "Damage";
+            $scope.addDmg.push({
+            	value,
+            })
+            break;
+        case key == "FlatArmorMod":
+            key = "Armor"
+            break;
+        case key == "FlatMagicDamageMod":
+            key = "Ability Power"
+            break;
+        case key == "FlatSpellBlockMod":
+            key = "Magic Resit"
+            break;
+        case key == "PercentLifeStealMod":
+            key = "Life Steal"
+            value = (value * 100)+"%";
+            break;
+        case key == "FlatHPPoolMod":
+            key = "Health"
+            break;
+        case key == "FlatCritChanceMod":
+            key = "Critical Chance"
+            value = (value * 100) + "%";
+            break;
+        case key == "FlatMPPoolMod":
+            key = "Mana"
+            break;
+        case key == "FlatMPRegenMod":
+            key = "Mana Regen"
+            value = value + " Per Second"
+            break;
+        case key == "FlatHPPoolMod":
+            key = "Health Regen"
+            value = value + " Per Second"
+            break;
+        case key == "PercentAttackSpeedMod":
+            key = "Percent Attack Speed"
+            value = (value * 100) + "%";
+            break;
+        case key == "PercentMovementSpeedMod":
+            key = "Percent Movment Speed"
+            value = (value * 100) + "%";
+            break;
+        case key == "FlatMovementSpeedMod":
+            key = "Movment Speed"
+            break
+        default:
+            key = "";
+            break;
 
 
+    }
+    })
+
+    console.log($scope.addDmg);
+    
     getStats();
     $scope.itemSet = [];
     /*
