@@ -322,9 +322,9 @@ $scope.deleteItem = function(ev){
 	    }, 100, 0, true);
 	    
 	    var e = document.getElementById(id);
-	       if(e.style.display == 'block' && $scope.determinateValue >= 100)
+	       if(e.style.display == 'block' && $scope.determinateValue >= 100){
 	          e.style.display = 'none';
-	       else
+	       }else{
 	          e.style.display = 'block';
 	    }
     	
