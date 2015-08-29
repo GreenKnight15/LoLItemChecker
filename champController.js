@@ -307,9 +307,8 @@ $scope.deleteItem = function(ev){
 
 
 
-.controller('runeController', function( $http,$scope,$mdToast, $animate) {
+.controller('runeController', function( $http,$scope,$mdToast, $animate, $interval) {
 
-    $scope.runePages = [];
     $scope.getRunesPages = function() {
     	$scope.runePages = [];
     	$scope.sumName=  ($scope.summonerName).toLowerCase();
@@ -337,6 +336,18 @@ $scope.deleteItem = function(ev){
     		
    $scope.getRuneStats = function(){ 
 	   var counter = 0;
+	   
+	   $scope.mode = 'query';
+	    $scope.determinateValue = 30;
+	    $interval(function() {
+	      $scope.determinateValue += 1;
+	      if ($scope.determinateValue > 100) {
+	        $scope.determinateValue = 30;
+	      }
+	    }, 100, 0, true);
+	  
+	    })
+	   
 	   $.each($scope.page.slots, function(){
 		    
     	$http.post('/getrunestats', {
@@ -370,7 +381,8 @@ $scope.deleteItem = function(ev){
     
     	    
     };
-    })
+    
+    
     
 .controller('footerController', function($scope) {
     $scope.disclosure = "LoL Item Checker isn’t endorsed by Riot Games and doesn’t reflect the views or opinions of Riot Games or anyone officially involved in producing or managing League of Legends. League of Legends and Riot Games are trademarks or registered trademarks of Riot Games, Inc. League of Legends © Riot Games, Inc.";
