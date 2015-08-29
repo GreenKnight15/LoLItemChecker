@@ -184,10 +184,12 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
         return tiles;
     })();
 
-    $scope.addDmg =[]
-    $scope.addMagicDmg = [];
     
     if($scope.itemSet != null){
+    	console.log("itemSet is not emppty")
+    	$scope.addDmg =[];
+        $scope.addMagicDmg = [];
+    	 console.log($scope.addDmg);
     $.each($scope.itemSet.answer.stats, function(key,value){
     	switch (key != "") {
         case key == "FlatPhysicalDamageMod":
@@ -246,7 +248,7 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
     }
     })
     }
-    console.log($scope.addDmg);
+   
     
     getStats();
     $scope.itemSet = [];
