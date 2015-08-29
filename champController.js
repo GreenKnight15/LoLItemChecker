@@ -317,10 +317,12 @@ $scope.deleteItem = function(ev){
 	    $interval(function() {
 	    	 var e = document.getElementById(id);
 	    	  e.style.display = 'block';
+	    	  if($scope.summonerName == ""){
+	  	        e.style.display = 'none';
+	    	  }
 	      $scope.determinateValue += 5;
 	      if ($scope.determinateValue > 100) {
-	        $scope.determinateValue = 0;
-	       
+
 	        e.style.display = 'none';
 	      }
 	    }, 100, 0, true);
