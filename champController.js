@@ -311,6 +311,16 @@ $scope.deleteItem = function(ev){
 
     $scope.getRunesPages = function() {
     	$scope.runePages = [];
+    	
+ 	   $scope.mode = 'query';
+	    $scope.determinateValue = 30;
+	    $interval(function() {
+	      $scope.determinateValue += 5;
+	      if ($scope.determinateValue > 100) {
+	        $scope.determinateValue = 30;
+	      }
+	    }, 100, 0, true);
+    	
     	$scope.sumName=  ($scope.summonerName).toLowerCase();
         $http.post('/getsummonerid', {
                 msg: $scope.sumName,
@@ -336,18 +346,7 @@ $scope.deleteItem = function(ev){
     		
    $scope.getRuneStats = function(){ 
 	   var counter = 0;
-	   
-	   $scope.mode = 'query';
-	    $scope.determinateValue = 30;
-	    $interval(function() {
-	      $scope.determinateValue += 1;
-	      if ($scope.determinateValue > 100) {
-	        $scope.determinateValue = 30;
-	      }
-	    }, 100, 0, true);
 	  
-
-	   
 	   $.each($scope.page.slots, function(){
 		    
     	$http.post('/getrunestats', {
