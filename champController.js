@@ -315,14 +315,14 @@ $scope.deleteItem = function(ev){
  	   $scope.mode = 'query';
 	    $scope.determinateValue = 5;
 	    $interval(function() {
-	      $scope.determinateValue += 5;
+	      $scope.determinateValue += 1;
 	      if ($scope.determinateValue > 100) {
-	        $scope.determinateValue = 5;
+	        $scope.determinateValue = 0;
 	      }
 	    }, 100, 0, true);
 	    
 	    var e = document.getElementById(id);
-	       if(e.style.display == 'block' && $scope.determinateValue >= 100){
+	       if($scope.determinateValue >= 100){
 	          e.style.display = 'none';
 	       }else{
 	          e.style.display = 'block';
