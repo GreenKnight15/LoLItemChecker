@@ -185,7 +185,7 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
     })();
 
     
-    if($scope.itemSet != null){
+    if($scope.itemSet != ""){
     	console.log("itemSet is not emppty")
     	$scope.addDmg =[];
         $scope.addMagicDmg = [];
