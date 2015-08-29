@@ -185,7 +185,13 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
     })();
 
     
-    if($scope.itemSet != ""){
+
+    
+    getStats();
+    $scope.itemSet = [];
+    
+    
+    if($scope.itemSet.length != 0){
     	console.log("itemSet is not emppty")
     	$scope.addDmg =[];
         $scope.addMagicDmg = [];
@@ -250,8 +256,7 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
     }
    
     
-    getStats();
-    $scope.itemSet = [];
+    
     /*
     $scope.itemStats1 = [];
     $scope.itemStats2 = [];
