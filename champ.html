@@ -113,8 +113,8 @@
  <div layout="row " layout-align="start center " flex>
     <md-input-container flex >
         <md-select ng-model="page "  placeholder="Pick Rune Page ">
-          <md-optgroup label="Page ">
-            <md-option ng-value="page " ng-repeat="page in runePages " ng-change="getRuneStats()" >{{page.name}}</md-option>
+          <md-optgroup label="Page" ng-change="getRuneStats()">
+            <md-option ng-value="page " ng-repeat="page in runePages "  >{{page.name}}</md-option>
           </md-optgroup>
         </md-select>
       </md-input-container>
