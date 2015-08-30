@@ -348,7 +348,7 @@ default:
 
 
 }
-	}
+	})
 })
 
  console.log($scope.addDmg);
