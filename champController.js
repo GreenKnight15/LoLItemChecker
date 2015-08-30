@@ -291,7 +291,8 @@ $scope.showShop = function(ev) {
 $scope.addDmg =[];
 $scope.addMagicDmg = [];
 
-$.each($scope.itemSet.answer.stats, function(key,value){
+$.each($scope.itemSet, function(){
+	$.each(this.answer.stats, function(key,value){
 switch (key != "") {
 case key == "FlatPhysicalDamageMod":
     key = "Damage";
@@ -347,6 +348,7 @@ default:
 
 
 }
+	}
 })
 
  console.log($scope.addDmg);
