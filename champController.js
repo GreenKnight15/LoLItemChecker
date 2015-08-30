@@ -283,6 +283,12 @@ $scope.showShop = function(ev) {
             	answer,
             })
             
+            if($scope.itemSet.length >= 6 ){
+            	$scope.itemSet.splice(5,1{
+                	answer,
+                })
+            }
+        })
             console.log($scope.itemSet);
         	
         })
@@ -371,11 +377,6 @@ $scope.deleteItem = function(ev){
 	$scope.itemSet.splice(index,1);
 	
 }
-
-
-  
-
-})
 
 
 
