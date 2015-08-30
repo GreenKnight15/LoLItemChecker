@@ -284,7 +284,7 @@ $scope.showShop = function(ev) {
             })
             
             if($scope.itemSet.length >= 6 ){
-            	$scope.itemSet.splice(5,1{
+            	$scope.itemSet.splice(5,1,{
                 	answer,
                 })
             }
