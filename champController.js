@@ -393,7 +393,7 @@ $scope.getItemSet = function() {
     "sortrank": 0,
     "blocks": [
         {
-            "type": "Block 2",
+            "type": "Block",
             "recMath": false,
             "minSummonerLevel": -1,
             "maxSummonerLevel": -1,
@@ -431,7 +431,7 @@ $scope.getItemSet = function() {
 	    "sortrank": 0,
 	    "blocks": [
 	        {
-	            "type": "Block 2",
+	            "type": "Block",
 	            "recMath": false,
 	            "minSummonerLevel": -1,
 	            "maxSummonerLevel": -1,
@@ -445,14 +445,209 @@ $scope.getItemSet = function() {
 	    ]
 	};
 	}
-	
 	if($scope.itemSet.length == 3){
+		var id1 = String($scope.itemSet[0].answer.id);
+		var id2 = String($scope.itemSet[1].answer.id);
 		var id3 = String($scope.itemSet[2].answer.id);
+		var item1 = {
+	            "id": id1,
+	            "count": 1
+	        }
 		var item2 = {
+	            "id": id2,
+	            "count": 1
+	        }
+		var item3 = {
 	            "id": id3,
 	            "count": 1
 	        }
+		var itemSetJson = 
+		{
+	    "title":itemSetName ,
+	    "type": "custom",
+	    "map": "any",
+	    "mode": "any",
+	    "priority": false,
+	    "sortrank": 0,
+	    "blocks": [
+	        {
+	            "type": "Block",
+	            "recMath": false,
+	            "minSummonerLevel": -1,
+	            "maxSummonerLevel": -1,
+	            "showIfSummonerSpell": "",
+	            "hideIfSummonerSpell": "",
+	            "items": [
+	                item1,
+	                item2,
+	                item3
+	            ]
+	        }
+	    ]
+	};
 	}
+	if($scope.itemSet.length == 4){
+		var id1 = String($scope.itemSet[0].answer.id);
+		var id2 = String($scope.itemSet[1].answer.id);
+		var id3 = String($scope.itemSet[2].answer.id);
+		var id4 = String($scope.itemSet[3].answer.id);
+		var item1 = {
+	            "id": id1,
+	            "count": 1
+	        }
+		var item2 = {
+	            "id": id2,
+	            "count": 1
+	        }
+		var item3 = {
+	            "id": id3,
+	            "count": 1
+	        }
+		var item4 = {
+	            "id": id4,
+	            "count": 1
+	        }
+		var itemSetJson = 
+		{
+	    "title":itemSetName ,
+	    "type": "custom",
+	    "map": "any",
+	    "mode": "any",
+	    "priority": false,
+	    "sortrank": 0,
+	    "blocks": [
+	        {
+	            "type": "Block",
+	            "recMath": false,
+	            "minSummonerLevel": -1,
+	            "maxSummonerLevel": -1,
+	            "showIfSummonerSpell": "",
+	            "hideIfSummonerSpell": "",
+	            "items": [
+	                item1,
+	                item2,
+	                item3,
+	                item4
+	            ]
+	        }
+	    ]
+	};
+	}
+	if($scope.itemSet.length == 5){
+		var id1 = String($scope.itemSet[0].answer.id);
+		var id2 = String($scope.itemSet[1].answer.id);
+		var id3 = String($scope.itemSet[2].answer.id);
+		var id4 = String($scope.itemSet[3].answer.id);
+		var id5 = String($scope.itemSet[4].answer.id);
+		var item1 = {
+	            "id": id1,
+	            "count": 1
+	        }
+		var item2 = {
+	            "id": id2,
+	            "count": 1
+	        }
+		var item3 = {
+	            "id": id3,
+	            "count": 1
+	        }
+		var item4 = {
+	            "id": id4,
+	            "count": 1
+	        }
+		var item5 = {
+	            "id": id5,
+	            "count": 1
+	        }
+		var itemSetJson = 
+		{
+	    "title":itemSetName ,
+	    "type": "custom",
+	    "map": "any",
+	    "mode": "any",
+	    "priority": false,
+	    "sortrank": 0,
+	    "blocks": [
+	        {
+	            "type": "Block",
+	            "recMath": false,
+	            "minSummonerLevel": -1,
+	            "maxSummonerLevel": -1,
+	            "showIfSummonerSpell": "",
+	            "hideIfSummonerSpell": "",
+	            "items": [
+	                item1,
+	                item2,
+	                item3,
+	                item4,
+	                item5
+	            ]
+	        }
+	    ]
+	};
+	}
+	if($scope.itemSet.length == 6){
+		var id1 = String($scope.itemSet[0].answer.id);
+		var id2 = String($scope.itemSet[1].answer.id);
+		var id3 = String($scope.itemSet[2].answer.id);
+		var id4 = String($scope.itemSet[3].answer.id);
+		var id5 = String($scope.itemSet[4].answer.id);
+		var id5 = String($scope.itemSet[5].answer.id);
+		var item1 = {
+	            "id": id1,
+	            "count": 1
+	        }
+		var item2 = {
+	            "id": id2,
+	            "count": 1
+	        }
+		var item3 = {
+	            "id": id3,
+	            "count": 1
+	        }
+		var item4 = {
+	            "id": id4,
+	            "count": 1
+	        }
+		var item5 = {
+	            "id": id5,
+	            "count": 1
+	        }
+		var item6 = {
+	            "id": id6,
+	            "count": 1
+	        }
+		var itemSetJson = 
+		{
+	    "title":itemSetName ,
+	    "type": "custom",
+	    "map": "any",
+	    "mode": "any",
+	    "priority": false,
+	    "sortrank": 0,
+	    "blocks": [
+	        {
+	            "type": "Block",
+	            "recMath": false,
+	            "minSummonerLevel": -1,
+	            "maxSummonerLevel": -1,
+	            "showIfSummonerSpell": "",
+	            "hideIfSummonerSpell": "",
+	            "items": [
+	                item1,
+	                item2,
+	                item3,
+	                item4,
+	                item5,
+	                item6
+	            ]
+	        }
+	    ]
+	};
+	}
+	
+	
+	
 	
 	
 
