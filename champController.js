@@ -424,15 +424,15 @@ $scope.getItemSet = function () {
 		  };
 
 
-		  var create = document.getElementById('create'),
-		    textbox = document.getElementById('textbox');
+		  var create = document.getElementById('create');
+		    
 
 		  create.addEventListener('click', function () {
 		    var link = document.getElementById('downloadlink');
 		    link.href = makeTextFile(itemSetJson);
 		    link.style.display = 'block';
 		  }, false);
-		})();
+		};
 }
 
 
