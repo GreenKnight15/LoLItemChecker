@@ -377,7 +377,7 @@ $scope.getItemSet = function() {
 	if($scope.itemSet.length >= 1){
 	console.log("getItemSet");
 	console.log(itemSetJson);
-	var itemSetJson = [
+	var itemSetJson = 
 {
     "title": $scope.itemSetName,
     "type": "custom",
@@ -406,8 +406,8 @@ $scope.getItemSet = function() {
         },
           // Additional blocks
     ]
-}
-  ];
+};
+  
 	
 		var textFile = null,
 		  makeTextFile = function (text) {
