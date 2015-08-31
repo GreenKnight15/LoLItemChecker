@@ -372,7 +372,7 @@ $scope.deleteItem = function(ev){
 	
 }
 
-)};
+});
 
 
 .controller('runeController', function( $http,$scope,$mdToast, $animate, $interval) {
