@@ -374,7 +374,7 @@ $scope.deleteItem = function(ev){
 
 if($scope.itemSet.length >= 1){
 	
-
+console.log(itemSetJson);
 var itemSetJson = [
 {
     "title": $scope.itemSetName,
