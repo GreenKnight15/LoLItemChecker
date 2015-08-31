@@ -369,7 +369,10 @@ function DialogController($scope, $mdDialog) {
 $scope.deleteItem = function(ev){
 	var index=ev.target.getAttribute('id');
 	$scope.itemSet.splice(index,1);
-	
+	var item2 = {
+            "id": id2,
+            "count": 1
+        },
 }
 
 	
@@ -381,7 +384,12 @@ $scope.getItemSet = function() {
 	console.log($scope.itemSetName);
 	
 	var id1 = String($scope.itemSet[0].answer.id);
-	var id2 = String($scope.itemSet[1].answer.id);
+	
+	if($scope.itemSet.length = 2){
+		var id2 = String($scope.itemSet[1].answer.id);
+	}
+	
+	
 	var id3 = String($scope.itemSet[2].answer.id);
 	var id4 = String($scope.itemSet[3].answer.id);
 	var id5 = String($scope.itemSet[4].answer.id);
@@ -410,10 +418,7 @@ $scope.getItemSet = function() {
                     "id": id1,
                     "count": 1
                 },
-                {
-                    "id": id2,
-                    "count": 1
-                },
+                item2
                 {
                     "id": id3,
                     "count": 1
