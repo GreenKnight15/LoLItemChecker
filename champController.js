@@ -287,7 +287,7 @@ $scope.showShop = function(ev) {
             console.log($scope.itemSet);
         	
         }
-};
+)};
 
 $scope.addDmg =[];
 $scope.addMagicDmg = [];
