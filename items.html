@@ -24,7 +24,7 @@
             md-row-height-gt-md="1.5:1" md-row-height="2:1"
             md-gutter="12px" md-gutter-gt-sm="8px" flex>
             <md-grid-tile ng-repeat="tile in appCtrl.itemTiles"  flex="55"> 
-                 <md-grid-tile-header>
+                 <md-grid-tile-header ng-click=answer(tile) >
                     <h3>{{tile.name}}</h3>
                 </md-grid-tile-header>
                 
