@@ -415,7 +415,7 @@ $scope.getItemSet = function() {
                     "count": 1
                 },
                 {
-                    "id": id3",
+                    "id": id3,
                     "count": 1
                 }
             ]
@@ -437,7 +437,7 @@ $scope.getItemSet = function() {
                     "count": 1
                 },
                 {
-                    "id": id6",
+                    "id": id6,
                     "count": 1
                 }
             ]
