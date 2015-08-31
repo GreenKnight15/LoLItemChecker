@@ -402,12 +402,12 @@ var itemSetJson = [
           // Additional blocks
     ]
 }
-  ]
+  ];
 
 
 
 	
-$scope.getItemSet = function () {
+$scope.getItemSet = function() {
 		var textFile = null,
 		  makeTextFile = function (text) {
 		    var data = new Blob([text], {type: 'application/json'});
@@ -433,7 +433,7 @@ $scope.getItemSet = function () {
 		    link.style.display = 'block';
 		  }, false);
 		};
-}
+
 
 
 })
