@@ -369,10 +369,7 @@ function DialogController($scope, $mdDialog) {
 $scope.deleteItem = function(ev){
 	var index=ev.target.getAttribute('id');
 	$scope.itemSet.splice(index,1);
-	var item2 = {
-            "id": id2,
-            "count": 1
-        },
+	
 }
 
 	
@@ -385,8 +382,20 @@ $scope.getItemSet = function() {
 	
 	var id1 = String($scope.itemSet[0].answer.id);
 	
-	if($scope.itemSet.length = 2){
+	if($scope.itemSet.length == 2){
 		var id2 = String($scope.itemSet[1].answer.id);
+		var item2 = {
+	            "id": id2,
+	            "count": 1
+	        }
+	}
+	
+	if($scope.itemSet.length == 3){
+		var id3 = String($scope.itemSet[2].answer.id);
+		var item2 = {
+	            "id": id3,
+	            "count": 1
+	        }
 	}
 	
 	
@@ -418,11 +427,8 @@ $scope.getItemSet = function() {
                     "id": id1,
                     "count": 1
                 },
-                item2
-                {
-                    "id": id3,
-                    "count": 1
-                }
+                item2,
+                item3
             ]
         },
         {
@@ -434,15 +440,15 @@ $scope.getItemSet = function() {
             "hideIfSummonerSpell": "",
             "items": [
                 {
-                    "id": id4,
+                    "id": "100",
                     "count": 1
                 },
                 {
-                    "id": id5,
+                    "id": "12",
                     "count": 1
                 },
                 {
-                    "id": id6,
+                    "id": "11",
                     "count": 1
                 }
             ]
