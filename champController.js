@@ -372,10 +372,12 @@ $scope.deleteItem = function(ev){
 	
 }
 
-if($scope.itemSet.length >= 1){
 	
-console.log(itemSetJson);
-var itemSetJson = [
+$scope.getItemSet = function() {
+	if($scope.itemSet.length >= 1){
+	console.log("getItemSet");
+	console.log(itemSetJson);
+	var itemSetJson = [
 {
     "title": $scope.itemSetName,
     "type": "custom",
@@ -406,13 +408,7 @@ var itemSetJson = [
     ]
 }
   ];
-
-
-}
 	
-$scope.getItemSet = function() {
-	if($scope.itemSet.length >= 1){
-	console.log("getItemSet");
 		var textFile = null,
 		  makeTextFile = function (text) {
 		    var data = new Blob([text], {type: 'application/json'});
