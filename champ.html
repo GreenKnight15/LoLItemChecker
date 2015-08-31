@@ -56,19 +56,24 @@
 			
 					</md-toolbar>
 					<div layout="row">
-				<md-button id="create" class="md-raised md-accent" ng-click="getItemSet() showAlert($event)" layout-align="start start" >
-                        Save Set
-                        </md-button>
                         <a download="ItemSet.json" id="downloadlink" style="display: none">Download</a>
                         <md-input-container layout-align="start center" >
      			 <input ng-model="itemSetName" placeholder="Item Set Name">
    			  
    			  </md-input-container>
-   			  
-   			  
+   			  <div layout="column">
+   			  <div layout="row">
+   			  <md-button id="create" class="md-raised md-accent" ng-click="getItemSet()" layout-align="start start" >
+                        Save Set
+                        </md-button>
+                        <md-button id="create" class="md-raised md-accent" ng-click="showDownload($event)" layout-align="start start" >
+                        ?
+                        </md-button>
+               </div>
    			  <md-button class="md-raised md-accent"ng-click="showShop($event)" layout-align="" >
                         Add Item
                         </md-button>
+                        </div>
                     </div>
                 <md-content  >
                     <md-list > 
