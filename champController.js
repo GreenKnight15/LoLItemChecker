@@ -373,6 +373,8 @@ $scope.deleteItem = function(ev){
 }
 
 $scope.getItemSet = function(){
+	
+
 	var textFile = null,
 	  makeTextFile = function (text) {
 	    var data = new Blob([text], {type: 'text/plain'});
@@ -384,6 +386,7 @@ $scope.getItemSet = function(){
 	    textFile = window.URL.createObjectURL(data);
 
 	    return textFile;
+	}
 }
 
 
