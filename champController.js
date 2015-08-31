@@ -380,28 +380,8 @@ $scope.getItemSet = function() {
 	console.log($scope.itemSet[0].answer.id);
 	console.log($scope.itemSetName);
 	
+	if($scope.itemSet.length == 1){
 	var id1 = String($scope.itemSet[0].answer.id);
-	
-	if($scope.itemSet.length == 2){
-		var id2 = String($scope.itemSet[1].answer.id);
-		var item2 = {
-	            "id": id2,
-	            "count": 1
-	        }
-	}
-	
-	if($scope.itemSet.length == 3){
-		var id3 = String($scope.itemSet[2].answer.id);
-		var item2 = {
-	            "id": id3,
-	            "count": 1
-	        }
-	}
-	
-	
-
-	
-	var itemSetName= String($scope.itemSetName);
 	
 	var itemSetJson = 
 	{
@@ -423,36 +403,63 @@ $scope.getItemSet = function() {
                 {
                     "id": id1,
                     "count": 1
-                },
-                item2,
-                item3
-            ]
-        },
-        {
-            "type": "Block 2",
-            "recMath": false,
-            "minSummonerLevel": -1,
-            "maxSummonerLevel": -1,
-            "showIfSummonerSpell": "",
-            "hideIfSummonerSpell": "",
-            "items": [
-                {
-                    "id": "100",
-                    "count": 1
-                },
-                {
-                    "id": "12",
-                    "count": 1
-                },
-                {
-                    "id": "11",
-                    "count": 1
                 }
             ]
         }
     ]
 };
-  
+	}
+	
+	if($scope.itemSet.length == 2){
+		var id1 = String($scope.itemSet[0].answer.id);
+		var id2 = String($scope.itemSet[1].answer.id);
+		var item1 = {
+	            "id": id1,
+	            "count": 1
+	        }
+		var item2 = {
+	            "id": id2,
+	            "count": 1
+	        }
+		var itemSetJson = 
+		{
+	    "title":itemSetName ,
+	    "type": "custom",
+	    "map": "any",
+	    "mode": "any",
+	    "priority": false,
+	    "sortrank": 0,
+	    "blocks": [
+	        {
+	            "type": "Block 2",
+	            "recMath": false,
+	            "minSummonerLevel": -1,
+	            "maxSummonerLevel": -1,
+	            "showIfSummonerSpell": "",
+	            "hideIfSummonerSpell": "",
+	            "items": [
+	                item1,
+	                item2
+	            ]
+	        }
+	    ]
+	};
+	}
+	
+	if($scope.itemSet.length == 3){
+		var id3 = String($scope.itemSet[2].answer.id);
+		var item2 = {
+	            "id": id3,
+	            "count": 1
+	        }
+	}
+	
+	
+
+	
+	var itemSetName= String($scope.itemSetName);
+	
+
 	itemJson = JSON.stringify(itemSetJson);
 	
 		var textFile = null,
