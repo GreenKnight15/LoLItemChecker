@@ -1,51 +1,49 @@
 <md-dialog aria-label="Pick an Item">
-  <form>
-  <md-toolbar flex>
-    <div class="md-toolbar-tools">
-      <h2>Pick Item</h2>
-      <span flex></span>
-      <md-button class="md-icon-button" ng-click="answer('no item selected')">
-        <ng-md-icon style="fill:white;" icon="close" aria-label="Close dialog"></md-icon>
-      </md-button>
-    </div>
-  </md-toolbar>
-      
-  <md-dialog-content style="width:1000px;height:810px; " >
-<div>
-      <div ng-controller="statsController" layout-align="start" flex layout="row">
-<md-switch ng-model="data.cb1" aria-label="Switch 1">
-    Switch 1: {{ data.cb1 }}
-  </md-switch>
-      </div>  
-    
-<div ng-controller="statsController as appCtrl" class="gridListdemoResponsiveUsage" >
-    <md-content layout-align="end center" flex>    
-        <md-grid-list  md-cols-sm="1" md-cols-md="2" md-cols-gt-md="2"
-            md-row-height-gt-md="1.5:1" md-row-height="2:1"
-            md-gutter="12px" md-gutter-gt-sm="8px" flex>
-            <md-grid-tile ng-repeat="tile in appCtrl.itemTiles"  flex="55"> 
-                 <md-grid-tile-header ng-click=answer(tile) >
-                    <h3>{{tile.name}}</h3>
-                </md-grid-tile-header>
-                
-                 <img flex="10" src="{{tile.img}}" height="54px" width="54px" layout="start start" style="padding:5px;"/>
-                <div id="descDiv" class="md-caption">{{tile.descLong}}</div>
-                <md-button layout="center end"  class="md-raised md-primary" id="itemOne" ng-click=answer(tile)  aria-label="{{tile.aria}}">Add Item </md-button>
-                <md-grid-tile-footer >
-                    <div layout="row">
-                    <h3 flex="66" layout-align="start center">Cost:{{tile.cost}}</h3>
-                    </div>
-                </md-grid-tile-footer>
-            </md-grid-tile>
-        </md-grid-list>
-    </md-content>
-</div>
-        
-        
-        
-    </div>
-  </md-dialog-content>
-      
-  
-  </form>
+    <form>
+        <md-toolbar flex>
+            <div class="md-toolbar-tools">
+                <h2>Pick Item</h2>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="answer('no item selected')">
+                    <ng-md-icon style="fill:white;" icon="close" aria-label="Close dialog">
+                        </md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+
+        <md-dialog-content style="width:1000px;height:810px; ">
+            <div>
+                <div ng-controller="statsController" layout-align="start" flex layout="row">
+                    <md-switch ng-model="data.cb1" aria-label="Switch 1">
+                        Switch 1: {{ data.cb1 }}
+                    </md-switch>
+                </div>
+
+                <div ng-controller="statsController as appCtrl" class="gridListdemoResponsiveUsage">
+                    <md-content layout-align="end center" flex>
+                        <md-grid-list md-cols-sm="1" md-cols-md="2" md-cols-gt-md="2" md-row-height-gt-md="1.5:1" md-row-height="2:1" md-gutter="12px" md-gutter-gt-sm="8px" flex>
+                            <md-grid-tile ng-repeat="tile in appCtrl.itemTiles" flex="55">
+                                <md-grid-tile-header ng-click=answer(tile)>
+                                    <h3>{{tile.name}}</h3>
+                                </md-grid-tile-header>
+
+                                <img flex="10" src="{{tile.img}}" height="54px" width="54px" layout="start start" style="padding:5px;" />
+                                <div id="descDiv" class="md-caption">{{tile.descLong}}</div>
+                                <md-button layout="center end" class="md-raised md-primary" id="itemOne" ng-click=answer(tile) aria-label="{{tile.aria}}">Add Item </md-button>
+                                <md-grid-tile-footer>
+                                    <div layout="row">
+                                        <h3 flex="66" layout-align="start center">Cost:{{tile.cost}}</h3>
+                                    </div>
+                                </md-grid-tile-footer>
+                            </md-grid-tile>
+                        </md-grid-list>
+                    </md-content>
+                </div>
+
+
+            </div>
+        </md-dialog-content>
+
+
+    </form>
 </md-dialog>
