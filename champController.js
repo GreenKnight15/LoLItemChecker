@@ -190,11 +190,6 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
     getStats();
     $scope.itemSet = [];
     
-   
-    
-   
-   
-    
     
     /*
     $scope.itemStats1 = [];
@@ -292,7 +287,7 @@ $scope.showShop = function(ev) {
             console.log($scope.itemSet);
         	
         }
-)};
+};
 
 $scope.addDmg =[];
 $scope.addMagicDmg = [];
