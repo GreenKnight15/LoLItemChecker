@@ -287,8 +287,6 @@ $scope.showShop = function(ev) {
             console.log($scope.itemSet);
         	
         }
-	)}
-)};
 
 $scope.addDmg =[];
 $scope.addMagicDmg = [];
@@ -374,7 +372,7 @@ $scope.deleteItem = function(ev){
 	
 }
 
-
+)};
 
 
 .controller('runeController', function( $http,$scope,$mdToast, $animate, $interval) {
