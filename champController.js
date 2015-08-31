@@ -381,6 +381,12 @@ $scope.getItemSet = function() {
 	console.log($scope.itemSetName);
 	
 	var id1 = String($scope.itemSet[0].answer.id);
+	var id2 = String($scope.itemSet[1].answer.id);
+	var id3 = String($scope.itemSet[2].answer.id);
+	var id4 = String($scope.itemSet[3].answer.id);
+	var id5 = String($scope.itemSet[4].answer.id);
+	var id6 = String($scope.itemSet[5].answer.id);
+	
 	var itemSetName= String($scope.itemSetName);
 	
 	var itemSetJson = 
@@ -405,9 +411,35 @@ $scope.getItemSet = function() {
                     "count": 1
                 },
                 {
-                    "id": "1001",
+                    "id": id2,
                     "count": 1
                 },
+                {
+                    "id": id3",
+                    "count": 1
+                }
+            ]
+        },
+        {
+            "type": "A block with just boots",
+            "recMath": false,
+            "minSummonerLevel": -1,
+            "maxSummonerLevel": -1,
+            "showIfSummonerSpell": "",
+            "hideIfSummonerSpell": "",
+            "items": [
+                {
+                    "id": id4,
+                    "count": 1
+                },
+                {
+                    "id": id5,
+                    "count": 1
+                },
+                {
+                    "id": id6",
+                    "count": 1
+                }
             ]
         }
     ]
