@@ -274,15 +274,11 @@ $scope.showShop = function(ev) {
             $scope.itemName = "Name:" + answer.name;
             $scope.itemImage = answer.img;
             */
-        	if($scope.itemSet.length >= 6 ){
-            	$scope.itemSet.splice(5,1,{
-                	answer,
-                });
-            }else{
+        	
             $scope.itemSet.push({
             	answer,
             });
-            } 
+            
            
         })
             console.log($scope.itemSet);
