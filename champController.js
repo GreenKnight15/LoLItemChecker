@@ -399,7 +399,7 @@ $scope.getItemSet = function() {
     "sortrank": 0,
     "blocks": [
         {
-            "type": "A block with just boots",
+            "type": "Block 2",
             "recMath": false,
             "minSummonerLevel": -1,
             "maxSummonerLevel": -1,
@@ -421,7 +421,7 @@ $scope.getItemSet = function() {
             ]
         },
         {
-            "type": "A block with just boots",
+            "type": "Block 2",
             "recMath": false,
             "minSummonerLevel": -1,
             "maxSummonerLevel": -1,
