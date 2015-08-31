@@ -380,7 +380,7 @@ $scope.getItemSet = function() {
 	console.log($scope.itemSet[0].answer.id);
 	var itemSetJson = 
 {
-    "title": $scope.itemSetName,
+    "title": ""+$scope.itemSetName+"",
     "type": "custom",
     "map": "any",
     "mode": "any",
@@ -396,7 +396,7 @@ $scope.getItemSet = function() {
             "hideIfSummonerSpell": "",
             "items": [
                 {
-                    "id": $scope.itemSet[0].answer.id,
+                    "id": ""+$scope.itemSet[0].answer.id+"",
                     "count": 1
                 },
                 {
