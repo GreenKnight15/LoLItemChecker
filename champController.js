@@ -372,6 +372,9 @@ $scope.deleteItem = function(ev){
 	
 }
 
+if($scope.itemSet){
+	
+
 var itemSetJson = [
 {
     "title": $scope.itemSetName,
@@ -434,7 +437,7 @@ $scope.getItemSet = function() {
 		  }, false);
 		};
 
-
+}
 
 })
 
