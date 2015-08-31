@@ -685,7 +685,7 @@ $scope.getItemSet = function() {
 			        .parent(angular.element(document.querySelector('#popupContainer')))
 			        .clickOutsideToClose(true)
 			        .title('Saving Item Set')
-			        .content('Save File in League of Legends\Config\Global\Recommended\ or to be champion Champion Specific add the file to League of Legends\Config\Champions\{championKey}\Recommended\ If the folder are not there make them(*Mac* Global/Recommended)')
+			        .content('Save File in League of Legends'+\+'Config'+\+'Global'+\+'Recommended'+\+' or to be champion Champion Specific add the file to League of Legends'+\+'Config'+\+'Champions'+\+'{championKey}'+\+'Recommended'+\+' If the folder are not there make them(*Mac* Global/Recommended)')
 			        .ariaLabel('Alert Dialog Demo')
 			        .ok('Got it!')
 			        .targetEvent(ev)
