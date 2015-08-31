@@ -411,6 +411,7 @@ var itemSetJson = [
 
 	
 $scope.getItemSet = function() {
+	console.log("getItemSet");
 		var textFile = null,
 		  makeTextFile = function (text) {
 		    var data = new Blob([text], {type: 'application/json'});
