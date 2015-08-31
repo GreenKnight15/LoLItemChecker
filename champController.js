@@ -390,7 +390,7 @@ var itemSetJson = [
             "hideIfSummonerSpell": "",
             "items": [
                 {
-                    "id": $scope.itemSet[0].id,
+                    "id": $scope.itemSet[0].answer.id,
                     "count": 1
                 },
                 {
