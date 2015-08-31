@@ -378,6 +378,7 @@ $scope.getItemSet = function() {
 	console.log("getItemSet");
 	console.log(itemSetJson);
 	console.log($scope.itemSet[0].answer.id);
+	console.log($scope.itemSetName);
 	var itemSetJson = 
 {
     "title": ""+$scope.itemSetName+"",
