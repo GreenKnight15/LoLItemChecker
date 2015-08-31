@@ -411,6 +411,7 @@ var itemSetJson = [
 }
 	
 $scope.getItemSet = function() {
+	if($scope.itemSet.length >= 1){
 	console.log("getItemSet");
 		var textFile = null,
 		  makeTextFile = function (text) {
@@ -436,6 +437,7 @@ $scope.getItemSet = function() {
 		    link.href = makeTextFile(itemSetJson);
 		    link.style.display = 'block';
 		  }, false);
+	}
 		};
 
 
