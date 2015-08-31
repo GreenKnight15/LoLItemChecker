@@ -372,21 +372,67 @@ $scope.deleteItem = function(ev){
 	
 }
 
-$scope.getItemSet = function(){
+var itemSetJson = [
+{
+    "title": $scope.itemSetName,
+    "type": "custom",
+    "map": "any",
+    "mode": "any",
+    "priority": false,
+    "sortrank": 0,
+    "blocks": [
+        {
+            "type": "A block with just boots",
+            "recMath": false,
+            "minSummonerLevel": -1,
+            "maxSummonerLevel": -1,
+            "showIfSummonerSpell": "",
+            "hideIfSummonerSpell": "",
+            "items": [
+                {
+                    "id": $scope.itemSet[0].id,
+                    "count": 1
+                },
+                {
+                    "id": "1001",
+                    "count": 1
+                },
+            ]
+        },
+          // Additional blocks
+    ]
+}
+  ]
+
+
+
 	
+$scope.getItemSet = function () {
+		var textFile = null,
+		  makeTextFile = function (text) {
+		    var data = new Blob([text], {type: 'application/json'});
 
-	var textFile = null,
-	  makeTextFile = function (text) {
-	    var data = new Blob([text], {type: 'text/plain'});
-	    
-	    if (textFile !== null) {
-	      window.URL.revokeObjectURL(textFile);
-	    }
+		    // If we are replacing a previously generated file we need to
+		    // manually revoke the object URL to avoid memory leaks.
+		    if (textFile !== null) {
+		      window.URL.revokeObjectURL(textFile);
+		    }
 
-	    textFile = window.URL.createObjectURL(data);
+		    textFile = window.URL.createObjectURL(data);
 
-	    return textFile;
-	}
+		    return textFile;
+		  };
+
+
+		  var create = document.getElementById('create'),
+		    textbox = document.getElementById('textbox');
+
+		  create.addEventListener('click', function () {
+		    var link = document.getElementById('downloadlink');
+		    link.href = makeTextFile(itemSetJson);
+		    link.style.display = 'block';
+		  }, false);
+		})();
 }
 
 
