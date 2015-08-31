@@ -72,8 +72,10 @@
                     <md-list-item ng-repeat="item in itemSet" class="md-3-line" style="border:2px solid grey">
                     <div  layout-align="center center" layout="column" >
                         <div layout="row" layout-padding>
-                            <img src="{{item.answer.img}}" style="height:48px" layout-align="center end" />
-                            <p flex>{{item.answer.name}} Price:{{item.answer.cost}}</p>
+                        	<div layout="row"layout-align="start start">
+                            <img src="{{item.answer.img}}" style="height:48px" layout-align="start start" />
+                            <p layout-align="start end">{{item.answer.name}} Price:{{item.answer.cost}}</p>
+                            </div>
                             <md-button class="" ng-click="deleteItem($event)" layout-align="start end">
                            		 <ng-md-icon icon="highlight_remove" size="36"style="fill:red" ></ng-md-icon>
                       	 	 </md-button>
