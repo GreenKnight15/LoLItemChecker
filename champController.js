@@ -408,7 +408,7 @@ var itemSetJson = [
   ];
 
 
-
+}
 	
 $scope.getItemSet = function() {
 	console.log("getItemSet");
@@ -438,7 +438,7 @@ $scope.getItemSet = function() {
 		  }, false);
 		};
 
-}
+
 
 })
 
