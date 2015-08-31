@@ -399,10 +399,7 @@ $scope.getItemSet = function() {
 	}
 	
 	
-	var id3 = String($scope.itemSet[2].answer.id);
-	var id4 = String($scope.itemSet[3].answer.id);
-	var id5 = String($scope.itemSet[4].answer.id);
-	var id6 = String($scope.itemSet[5].answer.id);
+
 	
 	var itemSetName= String($scope.itemSetName);
 	
