@@ -379,9 +379,13 @@ $scope.getItemSet = function() {
 	console.log(itemSetJson);
 	console.log($scope.itemSet[0].answer.id);
 	console.log($scope.itemSetName);
+	
+	var id1 = String($scope.itemSet[0].answer.id);
+	var itemSetName= String($scope.itemSetName);
+	
 	var itemSetJson = 
-{
-    "title": '"'+$scope.itemSetName+'"',
+	{
+    "title":itemSetName ,
     "type": "custom",
     "map": "any",
     "mode": "any",
@@ -397,7 +401,7 @@ $scope.getItemSet = function() {
             "hideIfSummonerSpell": "",
             "items": [
                 {
-                    "id": '"'+$scope.itemSet[0].answer.id+'"',
+                    "id": id1,
                     "count": 1
                 },
                 {
@@ -405,15 +409,15 @@ $scope.getItemSet = function() {
                     "count": 1
                 },
             ]
-        },
-          // Additional blocks
+        }
     ]
 };
   
+	itemJson = JSON.stringify(itemSetJson);
 	
 		var textFile = null,
 		  makeTextFile = function (text) {
-		    var data = new Blob([text], {type: 'text/plain'});
+		    var data = new Blob([text], {type: 'application/json'});
 
 		    // If we are replacing a previously generated file we need to
 		    // manually revoke the object URL to avoid memory leaks.
@@ -432,7 +436,7 @@ $scope.getItemSet = function() {
 
 		  create.addEventListener('click', function () {
 		    var link = document.getElementById('downloadlink');
-		    link.href = makeTextFile(itemSetJson);
+		    link.href = makeTextFile(itemJson);
 		    link.style.display = 'block';
 		  }, false);
 	}
