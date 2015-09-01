@@ -13,12 +13,6 @@
 
         <md-dialog-content style="width:1000px;height:810px; ">
             <div>
-                <div ng-controller="statsController" layout-align="start" flex layout="row">
-                    <md-switch ng-model="data.cb1" aria-label="Switch 1">
-                        Switch 1: {{ data.cb1 }}
-                    </md-switch>
-                </div>
-
                 <div ng-controller="statsController as appCtrl" class="gridListdemoResponsiveUsage">
                     <md-content layout-align="end center" flex>
                         <md-grid-list md-cols-sm="1" md-cols-md="2" md-cols-gt-md="2" md-row-height-gt-md="1.5:1" md-row-height="2:1" md-gutter="12px" md-gutter-gt-sm="8px" flex>

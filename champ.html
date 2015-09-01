@@ -22,17 +22,23 @@
                     <div layout="row" layout-align="start center" class="md-toolbar" style="height:85px">
                         <img src="{{imgLink}}" height="84px" />
                         <p class="md-display-1" layout-padding>{{name}} - {{title}}</p>
+                        <div flex></div>
+                       <a href="/"><md-button layout-align="center center" class="md-icon-button" aria-label="back">
+          					<ng-md-icon icon="keyboard_backspace" style="fill:white;" size="36"  ></ng-md-icon>
+       					 </md-button></a> 
+       					 <div flex="5"></div>
                     </div>
                 </md-toolbar>
             </md-content>
         </div>
         <div layout="row" style="height:600px">
 
-            <div class="md-whiteframe-z2" layout="column" layout-align="start center" ng-controller="statsController" flex="33">
+            <div class="md-whiteframe-z2" layout="column" layout-align="start start" ng-controller="statsController" flex="33">
                 <md-toolbar class="md-primary md-hue-1 md-title md-whiteframe-z1" layout-align="center center">
-                    <p style="color:white">Review Champion Stats!</p>
+                    <p style="color:white">Review Champion Scaling!</p>
                 </md-toolbar>
                 <md-content>
+                <div  layout-padding>
                     <md-input-container>
                         <md-select ng-model="level" ng-change="levelChamp()" placeholder="Choose Champion Level">
                             <md-optgroup label="Level">
@@ -40,11 +46,18 @@
                             </md-optgroup>
                         </md-select>
                     </md-input-container>
-
-                    <p>Attack Damgae: {{atkDmgLvl}}</p>
+				
+                    <p>Attack Damage: {{atkDmgLvl}}</p>
                     <p>Health: {{hpLvl}}</p>
                     <p>Mana: {{manaLvl}}</p>
-                    <p>Range:{{range}}</p>
+                    <p>Armor: {{armorLvl}}</p>
+                    <p>Mana Regen: {{mpRegenLvl}}</p>
+                    <p>Health Regen: {{hpRegenLvl}}</p>
+                    <p>Crit Chance: {{critLvl}}</p>
+                    <p>Magic Resist: {{mrLvl}}</p>
+                    <p>Range: {{range}}</p>
+                    <p>Movement Speed: {{move}}</p>
+                  </div>
                 </md-content>
             </div>
 
@@ -56,10 +69,8 @@
 
                 </md-toolbar>
                 <div layout="row">
-                    <a download="ItemSet.json" id="downloadlink" style="display: none">Download</a>
-                    <md-input-container layout-align="start center">
+                	<md-input-container layout-align="start center" layout-padding>
                         <input ng-model="itemSetName" placeholder="Item Set Name">
-
                     </md-input-container>
                     <div layout="column">
                         <div layout="row">
@@ -73,6 +84,7 @@
                         <md-button class="md-raised md-accent" ng-click="showShop($event)" layout-align="">
                             Add Item
                         </md-button>
+                        <a download="ItemSet.json" id="downloadlink" style="display: none">Download</a>
                     </div>
                 </div>
                 <md-content>
@@ -82,7 +94,10 @@
                                 <div layout="row" layout-padding>
                                     <div layout="row" layout-align="start start">
                                         <img src="{{item.answer.img}}" style="height:48px" layout-align="start start" />
-                                        <p layout-align="start end">{{item.answer.name}} Price:{{item.answer.cost}}</p>
+                                        <div layout-align="start end">
+                                      	   <p layout-padding>{{item.answer.name}} </p>
+                                       	    <p layout-padding> Price:{{item.answer.cost}}</p>
+                                       	</div>
                                     </div>
                                     <md-button class="" ng-click="deleteItem($event)" layout-align="start end">
                                         <ng-md-icon icon="highlight_remove" size="36" style="fill:red"></ng-md-icon>
@@ -108,7 +123,7 @@
                     </md-toolbar>
                     <md-content layout-padding flex="33">
                         <div layout="row ">
-                            <md-input-container>
+                            <md-input-container layout-padding>
                                 <input ng-model="summonerName " placeholder="Summoner Name">
                             </md-input-container>
 

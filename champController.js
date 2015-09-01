@@ -2,11 +2,12 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
 
 .config(function($mdThemingProvider) {
     $mdThemingProvider.theme('default')
-        .primaryPalette('blue', {
+    .primaryPalette('blue', {
             'default': '800',
             'hue-1': '500',
         })
         .accentPalette('orange');
+    
 })
 
 .controller('AppCtrl', function($scope, $http) {
@@ -124,11 +125,22 @@ angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngAria', 'ngRoute', 'ngAnim
                 $scope.atkDmg = response.stats.attackdamage;
                 $scope.health = response.stats.hp;
                 $scope.mana = response.stats.mp;
+                $scope.armor = response.stats.armor;
+                $scope.mpregen = response.stats.mpregen;
+                $scope.hpregen = response.stats.hpregen;
+                $scope.crit = response.stats.crit;
+                $scope.mr = response.stats.spellblock;
+                $scope.move = response.stats.movespeed;
 
                 $scope.levelChamp = function() {
                     $scope.atkDmgLvl = Math.round(response.stats.attackdamageperlevel * $scope.level + $scope.atkDmg);
                     $scope.hpLvl = Math.round(response.stats.hpperlevel * $scope.level + $scope.health);
                     $scope.manaLvl = Math.round(response.stats.mpperlevel * $scope.level + $scope.mana);
+                    $scope.armorLvl = Math.round(response.stats.armorperlevel * $scope.level + $scope.armor); 
+                    $scope.mpRegenLvl = Math.round(response.stats.mpregenperlevel * $scope.level + $scope.mpregen);
+                    $scope.hpRegenLvl = Math.round(response.stats.hpregenperlevel * $scope.level + $scope.hpregen);
+                    $scope.critLvl = (response.stats.critperlevel * $scope.level + $scope.crit);
+                    $scope.mrLvl = (response.stats.spellblockperlevel * $scope.level + $scope.mr);
                 }
             })
             .error(function() {
